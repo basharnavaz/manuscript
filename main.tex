@@ -1025,7 +1025,7 @@ The objective is to estimate the full state of the system with higher derivative
 \end{figure}
 
 \subsection{Parameter Estimation}
-A sliding window approach is used with the window containing 51 samples with a sampling frequency is 1kHz. The most recent time instant is the point of estimation since this method is intended to be applied to a system in real-time. The parameters are estimated for each window using the  optimization techniques mentioned in Section \ref{Sec:ridge} and  \ref{Sec:pseudo}. 
+A sliding window approach is used with the window containing 51 samples with a sampling frequency is 1kHz. The most recent time instant is the point of estimation since this method is intended to be applied to a system in real-time. The parameters are estimated for each window using the  optimization techniques mentioned in Section \ref{Sec:ridge} and  \ref{Sec:pseudo}. \\
 \textbf{Dynamic Ridge regression:} The numerical optimization problem posed by Equation \eqref{eqn:paramdynamic} requires an initializer. The initializer for a given window is the optimization result obtained from the previous window snapshot. The initializer for the first window is $\textbf{w}_{1}^{0}=[1,1,1,1]$. 
 
 We select an arbitrary window and go through the process of estimation. The window is chosen to start at 6 seconds. We use the measured output between 6.0s and 6.051s and the optimization initializer as optimal parameters estimated in the previous window, 
