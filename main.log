@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.20)  27 JAN 2020 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.20)  28 JAN 2020 22:19
 entering extended mode
 **./main.tex
 (main.tex
@@ -1995,11 +1995,7 @@ Package: relsize 2003/07/04 ver 3.1
  (refs.aux)
 \openout4 = `refs.aux'.
 
- (main.aux
-
-LaTeX Warning: Label `Tab:realControllerGainsKDO' multiply defined.
-
-)
+ (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
@@ -2019,12 +2015,14 @@ LaTeX Font Info:    ... okay on input line 124.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 124.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 124.
 
- ("C:\Users\Bashar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Users\Bashar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 124.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 124.
- ("C:\Users\Bashar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+
+("C:\Users\Bashar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 ("C:\Users\Bashar\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.m
@@ -2205,12 +2203,12 @@ Underfull \hbox (badness 3323) in paragraph at lines 39--39
 \openout6 = `main.toc'.
 
  [12] (main.lot
-Underfull \hbox (badness 4981) in paragraph at lines 14--14
+Underfull \hbox (badness 4981) in paragraph at lines 13--13
  \T1/ptm/m/n/12 trajectory tracking by the three observers without external 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
   \T1/ptm/m/n/12 Table[][][]Root Mean Square (RMS) error in each component of 
  []
 
@@ -2273,7 +2271,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
-<Figures/quad/linearmotor.png, id=849, 778.40813pt x 408.77719pt>
+<Figures/quad/linearmotor.png, id=856, 778.40813pt x 408.77719pt>
 File: Figures/quad/linearmotor.png Graphic file (type png)
 <use Figures/quad/linearmotor.png>
 Package pdftex.def Info: Figures/quad/linearmotor.png  used on input line 455.
@@ -2285,7 +2283,7 @@ Package amsmath Warning: Foreign command \over;
 (amsmath)                 on input line 504.
 
 [19]
-<Figures/quad/sss_c2.png, id=905, 383.4325pt x 234.8775pt>
+<Figures/quad/sss_c2.png, id=912, 383.4325pt x 234.8775pt>
 File: Figures/quad/sss_c2.png Graphic file (type png)
 <use Figures/quad/sss_c2.png>
 Package pdftex.def Info: Figures/quad/sss_c2.png  used on input line 534.
@@ -2301,7 +2299,7 @@ Package epstopdf Info: Source file: <Figures/quad/rcd_c2.eps>
 verted-to.pdf Figures/quad/rcd_c2.eps>
 (epstopdf)             \includegraphics on input line 576.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/quad/rcd_c2-eps-converted-to.pdf, id=931, 268.00125pt x 270.00874pt>
+<Figures/quad/rcd_c2-eps-converted-to.pdf, id=938, 268.00125pt x 270.00874pt>
 File: Figures/quad/rcd_c2-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/quad/rcd_c2-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/quad/rcd_c2-eps-converted-to.pdf  used on inpu
@@ -2347,36 +2345,36 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\new@ifnextchar' on input line 817.
 
 [36] [37] [38] [39] [40] [41] [42]
-<Figures/kdo/outputs.png, id=1218, 481.8pt x 361.35pt>
+<Figures/kdo/outputs.png, id=1225, 481.8pt x 361.35pt>
 File: Figures/kdo/outputs.png Graphic file (type png)
 <use Figures/kdo/outputs.png>
 Package pdftex.def Info: Figures/kdo/outputs.png  used on input line 1023.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
  [43]
-<Figures/kdo/varFacWin.png, id=1232, 493.845pt x 420.82219pt>
+<Figures/kdo/varFacWin.png, id=1239, 493.845pt x 420.82219pt>
 File: Figures/kdo/varFacWin.png Graphic file (type png)
 <use Figures/kdo/varFacWin.png>
 Package pdftex.def Info: Figures/kdo/varFacWin.png  used on input line 1041.
 (pdftex.def)             Requested size: 338.76563pt x 288.67241pt.
  [44 <./Figures/kdo/outputs.png>]
-<Figures/kdo/kernels.png, id=1240, 722.7pt x 542.025pt>
+<Figures/kdo/kernels.png, id=1247, 722.7pt x 542.025pt>
 File: Figures/kdo/kernels.png Graphic file (type png)
 <use Figures/kdo/kernels.png>
 Package pdftex.def Info: Figures/kdo/kernels.png  used on input line 1049.
 (pdftex.def)             Requested size: 338.76563pt x 254.0736pt.
-<Figures/kdo/winEst.png, id=1244, 481.8pt x 361.35pt>
+<Figures/kdo/winEst.png, id=1251, 481.8pt x 361.35pt>
 File: Figures/kdo/winEst.png Graphic file (type png)
 <use Figures/kdo/winEst.png>
 Package pdftex.def Info: Figures/kdo/winEst.png  used on input line 1054.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/kdo/recon.png, id=1246, 481.8pt x 361.35pt>
+<Figures/kdo/recon.png, id=1253, 481.8pt x 361.35pt>
 File: Figures/kdo/recon.png Graphic file (type png)
 <use Figures/kdo/recon.png>
 Package pdftex.def Info: Figures/kdo/recon.png  used on input line 1060.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 
 [45 <./Figures/kdo/varFacWin.png>]
-<Figures/kdo/minvar.png, id=1256, 481.8pt x 361.35pt>
+<Figures/kdo/minvar.png, id=1263, 481.8pt x 361.35pt>
 File: Figures/kdo/minvar.png Graphic file (type png)
 <use Figures/kdo/minvar.png>
 Package pdftex.def Info: Figures/kdo/minvar.png  used on input line 1067.
@@ -2408,7 +2406,7 @@ turbances/dis_m1_pos-eps-converted-to.pdf Figures/results/chaotic_disturbances/
 dis_m1_pos.eps>
 (epstopdf)             \includegraphics on input line 1137.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/chaotic_disturbances/dis_m1_pos-eps-converted-to.pdf, id=1308,
+<Figures/results/chaotic_disturbances/dis_m1_pos-eps-converted-to.pdf, id=1315,
  497.86pt x 350.30875pt>
 File: Figures/results/chaotic_disturbances/dis_m1_pos-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -2430,7 +2428,7 @@ turbances/dis_m1_att-eps-converted-to.pdf Figures/results/chaotic_disturbances/
 dis_m1_att.eps>
 (epstopdf)             \includegraphics on input line 1144.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/chaotic_disturbances/dis_m1_att-eps-converted-to.pdf, id=1319,
+<Figures/results/chaotic_disturbances/dis_m1_att-eps-converted-to.pdf, id=1326,
  1396.21625pt x 733.74126pt>
 File: Figures/results/chaotic_disturbances/dis_m1_att-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -2452,7 +2450,7 @@ mates/dis_m1_est_yaw_ndo.eps>
 (epstopdf)             \includegraphics on input line 1177.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_1_estimates/dis_m1_est_yaw_ndo-eps-converted-to.pdf, i
-d=1320, 421.575pt x 316.18124pt>
+d=1327, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_1_estimates/dis_m1_est_yaw_ndo-eps-converted-to.p
 df Graphic file (type pdf)
 <use Figures/results/chaotic_1_estimates/dis_m1_est_yaw_ndo-eps-converted-to.pd
@@ -2474,7 +2472,7 @@ tes/dis_m1_est_y_sto.eps>
 (epstopdf)             \includegraphics on input line 1184.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_1_estimates/dis_m1_est_y_sto-eps-converted-to.pdf, id=
-1321, 421.575pt x 316.18124pt>
+1328, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_1_estimates/dis_m1_est_y_sto-eps-converted-to.pdf
  Graphic file (type pdf)
 <use Figures/results/chaotic_1_estimates/dis_m1_est_y_sto-eps-converted-to.pdf>
@@ -2496,7 +2494,7 @@ mates/dis_m1_est_yaw_kdo.eps>
 (epstopdf)             \includegraphics on input line 1191.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_1_estimates/dis_m1_est_yaw_kdo-eps-converted-to.pdf, i
-d=1322, 421.575pt x 316.18124pt>
+d=1329, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_1_estimates/dis_m1_est_yaw_kdo-eps-converted-to.p
 df Graphic file (type pdf)
 <use Figures/results/chaotic_1_estimates/dis_m1_est_yaw_kdo-eps-converted-to.pd
@@ -2517,7 +2515,7 @@ trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/x_trac_dis_m1_ndo
 .eps>
 (epstopdf)             \includegraphics on input line 1200.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/x_trac_dis_m1_ndo-eps-converted-to.pdf, id=1323, 421.
+<Figures/results/tracking/x_trac_dis_m1_ndo-eps-converted-to.pdf, id=1330, 421.
 575pt x 316.18124pt>
 File: Figures/results/tracking/x_trac_dis_m1_ndo-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2540,7 +2538,7 @@ trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/x_trac_dis_m1_sto
 .eps>
 (epstopdf)             \includegraphics on input line 1207.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/x_trac_dis_m1_sto-eps-converted-to.pdf, id=1340, 421.
+<Figures/results/tracking/x_trac_dis_m1_sto-eps-converted-to.pdf, id=1347, 421.
 575pt x 316.18124pt>
 File: Figures/results/tracking/x_trac_dis_m1_sto-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2561,7 +2559,7 @@ trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/x_trac_dis_m1_kdo
 .eps>
 (epstopdf)             \includegraphics on input line 1214.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/x_trac_dis_m1_kdo-eps-converted-to.pdf, id=1341, 421.
+<Figures/results/tracking/x_trac_dis_m1_kdo-eps-converted-to.pdf, id=1348, 421.
 575pt x 316.18124pt>
 File: Figures/results/tracking/x_trac_dis_m1_kdo-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2582,7 +2580,7 @@ trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/y_trac_dis_m1_ndo
 .eps>
 (epstopdf)             \includegraphics on input line 1221.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/y_trac_dis_m1_ndo-eps-converted-to.pdf, id=1342, 421.
+<Figures/results/tracking/y_trac_dis_m1_ndo-eps-converted-to.pdf, id=1349, 421.
 575pt x 316.18124pt>
 File: Figures/results/tracking/y_trac_dis_m1_ndo-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2603,7 +2601,7 @@ trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/y_trac_dis_m1_sto
 .eps>
 (epstopdf)             \includegraphics on input line 1228.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/y_trac_dis_m1_sto-eps-converted-to.pdf, id=1343, 421.
+<Figures/results/tracking/y_trac_dis_m1_sto-eps-converted-to.pdf, id=1350, 421.
 575pt x 316.18124pt>
 File: Figures/results/tracking/y_trac_dis_m1_sto-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2624,7 +2622,7 @@ trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/y_trac_dis_m1_kdo
 .eps>
 (epstopdf)             \includegraphics on input line 1235.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/y_trac_dis_m1_kdo-eps-converted-to.pdf, id=1344, 421.
+<Figures/results/tracking/y_trac_dis_m1_kdo-eps-converted-to.pdf, id=1351, 421.
 575pt x 316.18124pt>
 File: Figures/results/tracking/y_trac_dis_m1_kdo-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2645,7 +2643,7 @@ trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/z_trac_dis_m1_ndo
 .eps>
 (epstopdf)             \includegraphics on input line 1242.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/z_trac_dis_m1_ndo-eps-converted-to.pdf, id=1345, 421.
+<Figures/results/tracking/z_trac_dis_m1_ndo-eps-converted-to.pdf, id=1352, 421.
 575pt x 316.18124pt>
 File: Figures/results/tracking/z_trac_dis_m1_ndo-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2666,7 +2664,7 @@ trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/z_trac_dis_m1_sto
 .eps>
 (epstopdf)             \includegraphics on input line 1249.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/z_trac_dis_m1_sto-eps-converted-to.pdf, id=1346, 421.
+<Figures/results/tracking/z_trac_dis_m1_sto-eps-converted-to.pdf, id=1353, 421.
 575pt x 316.18124pt>
 File: Figures/results/tracking/z_trac_dis_m1_sto-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2687,7 +2685,7 @@ trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/z_trac_dis_m1_kdo
 .eps>
 (epstopdf)             \includegraphics on input line 1256.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/z_trac_dis_m1_kdo-eps-converted-to.pdf, id=1347, 421.
+<Figures/results/tracking/z_trac_dis_m1_kdo-eps-converted-to.pdf, id=1354, 421.
 575pt x 316.18124pt>
 File: Figures/results/tracking/z_trac_dis_m1_kdo-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2708,7 +2706,7 @@ ll_trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/roll_trac_dis_
 m1_ndo.eps>
 (epstopdf)             \includegraphics on input line 1263.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/roll_trac_dis_m1_ndo-eps-converted-to.pdf, id=1348, 4
+<Figures/results/tracking/roll_trac_dis_m1_ndo-eps-converted-to.pdf, id=1355, 4
 21.575pt x 316.18124pt>
 File: Figures/results/tracking/roll_trac_dis_m1_ndo-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2729,7 +2727,7 @@ ll_trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/roll_trac_dis_
 m1_sto.eps>
 (epstopdf)             \includegraphics on input line 1270.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/roll_trac_dis_m1_sto-eps-converted-to.pdf, id=1349, 4
+<Figures/results/tracking/roll_trac_dis_m1_sto-eps-converted-to.pdf, id=1356, 4
 21.575pt x 316.18124pt>
 File: Figures/results/tracking/roll_trac_dis_m1_sto-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2750,7 +2748,7 @@ ll_trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/roll_trac_dis_
 m1_kdo.eps>
 (epstopdf)             \includegraphics on input line 1277.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/roll_trac_dis_m1_kdo-eps-converted-to.pdf, id=1350, 4
+<Figures/results/tracking/roll_trac_dis_m1_kdo-eps-converted-to.pdf, id=1357, 4
 21.575pt x 316.18124pt>
 File: Figures/results/tracking/roll_trac_dis_m1_kdo-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2771,7 +2769,7 @@ tch_trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/pitch_trac_di
 s_m1_ndo.eps>
 (epstopdf)             \includegraphics on input line 1284.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/pitch_trac_dis_m1_ndo-eps-converted-to.pdf, id=1351, 
+<Figures/results/tracking/pitch_trac_dis_m1_ndo-eps-converted-to.pdf, id=1358, 
 421.575pt x 316.18124pt>
 File: Figures/results/tracking/pitch_trac_dis_m1_ndo-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -2792,7 +2790,7 @@ tch_trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/pitch_trac_di
 s_m1_sto.eps>
 (epstopdf)             \includegraphics on input line 1291.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/pitch_trac_dis_m1_sto-eps-converted-to.pdf, id=1352, 
+<Figures/results/tracking/pitch_trac_dis_m1_sto-eps-converted-to.pdf, id=1359, 
 421.575pt x 316.18124pt>
 File: Figures/results/tracking/pitch_trac_dis_m1_sto-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -2813,7 +2811,7 @@ tch_trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/pitch_trac_di
 s_m1_kdo.eps>
 (epstopdf)             \includegraphics on input line 1298.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/pitch_trac_dis_m1_kdo-eps-converted-to.pdf, id=1353, 
+<Figures/results/tracking/pitch_trac_dis_m1_kdo-eps-converted-to.pdf, id=1360, 
 421.575pt x 316.18124pt>
 File: Figures/results/tracking/pitch_trac_dis_m1_kdo-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -2834,7 +2832,7 @@ w_trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/yaw_trac_dis_m1
 _ndo.eps>
 (epstopdf)             \includegraphics on input line 1305.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/yaw_trac_dis_m1_ndo-eps-converted-to.pdf, id=1354, 42
+<Figures/results/tracking/yaw_trac_dis_m1_ndo-eps-converted-to.pdf, id=1361, 42
 1.575pt x 316.18124pt>
 File: Figures/results/tracking/yaw_trac_dis_m1_ndo-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2855,7 +2853,7 @@ w_trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/yaw_trac_dis_m1
 _sto.eps>
 (epstopdf)             \includegraphics on input line 1312.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/yaw_trac_dis_m1_sto-eps-converted-to.pdf, id=1355, 42
+<Figures/results/tracking/yaw_trac_dis_m1_sto-eps-converted-to.pdf, id=1362, 42
 1.575pt x 316.18124pt>
 File: Figures/results/tracking/yaw_trac_dis_m1_sto-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2876,7 +2874,7 @@ w_trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/yaw_trac_dis_m1
 _kdo.eps>
 (epstopdf)             \includegraphics on input line 1319.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/yaw_trac_dis_m1_kdo-eps-converted-to.pdf, id=1356, 42
+<Figures/results/tracking/yaw_trac_dis_m1_kdo-eps-converted-to.pdf, id=1363, 42
 1.575pt x 316.18124pt>
 File: Figures/results/tracking/yaw_trac_dis_m1_kdo-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2917,7 +2915,7 @@ turbances/dis_m2_pos-eps-converted-to.pdf Figures/results/chaotic_disturbances/
 dis_m2_pos.eps>
 (epstopdf)             \includegraphics on input line 1342.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/chaotic_disturbances/dis_m2_pos-eps-converted-to.pdf, id=1455,
+<Figures/results/chaotic_disturbances/dis_m2_pos-eps-converted-to.pdf, id=1462,
  482.80376pt x 346.29375pt>
 File: Figures/results/chaotic_disturbances/dis_m2_pos-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -2944,7 +2942,7 @@ turbances/dis_m2_att-eps-converted-to.pdf Figures/results/chaotic_disturbances/
 dis_m2_att.eps>
 (epstopdf)             \includegraphics on input line 1349.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/chaotic_disturbances/dis_m2_att-eps-converted-to.pdf, id=1494,
+<Figures/results/chaotic_disturbances/dis_m2_att-eps-converted-to.pdf, id=1501,
  1403.2425pt x 713.66624pt>
 File: Figures/results/chaotic_disturbances/dis_m2_att-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -2969,7 +2967,7 @@ tes/dis_m2_est_y_ndo.eps>
 (epstopdf)             \includegraphics on input line 1379.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_2_estimates/dis_m2_est_y_ndo-eps-converted-to.pdf, id=
-1516, 421.575pt x 316.18124pt>
+1523, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_2_estimates/dis_m2_est_y_ndo-eps-converted-to.pdf
  Graphic file (type pdf)
 <use Figures/results/chaotic_2_estimates/dis_m2_est_y_ndo-eps-converted-to.pdf>
@@ -2991,7 +2989,7 @@ tes/dis_m2_est_y_sto.eps>
 (epstopdf)             \includegraphics on input line 1386.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_2_estimates/dis_m2_est_y_sto-eps-converted-to.pdf, id=
-1517, 421.575pt x 316.18124pt>
+1524, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_2_estimates/dis_m2_est_y_sto-eps-converted-to.pdf
  Graphic file (type pdf)
 <use Figures/results/chaotic_2_estimates/dis_m2_est_y_sto-eps-converted-to.pdf>
@@ -3013,7 +3011,7 @@ tes/dis_m2_est_y_kdo.eps>
 (epstopdf)             \includegraphics on input line 1393.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo-eps-converted-to.pdf, id=
-1518, 421.575pt x 316.18124pt>
+1525, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo-eps-converted-to.pdf
  Graphic file (type pdf)
 <use Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo-eps-converted-to.pdf>
@@ -3029,13 +3027,13 @@ Chapter 5
 [65
 
 ] [66]
-<Figures/practical/quad_red_balls.png, id=1562, 4047.12pt x 3035.34pt>
+<Figures/practical/quad_red_balls.png, id=1569, 4047.12pt x 3035.34pt>
 File: Figures/practical/quad_red_balls.png Graphic file (type png)
 <use Figures/practical/quad_red_balls.png>
 Package pdftex.def Info: Figures/practical/quad_red_balls.png  used on input li
 ne 1481.
 (pdftex.def)             Requested size: 338.76563pt x 254.04051pt.
-<Figures/practical/quad_flying.png, id=1563, 1284.8pt x 963.6pt>
+<Figures/practical/quad_flying.png, id=1570, 1284.8pt x 963.6pt>
 File: Figures/practical/quad_flying.png Graphic file (type png)
 <use Figures/practical/quad_flying.png>
 Package pdftex.def Info: Figures/practical/quad_flying.png  used on input line 
@@ -3047,7 +3045,7 @@ Overfull \hbox (4.42587pt too wide) in paragraph at lines 22--23
  []
 
 ) [68 <./Figures/practical/quad_red_balls.png>]
-<Figures/practical/battery.png, id=1574, 4047.12pt x 3035.34pt>
+<Figures/practical/battery.png, id=1581, 4047.12pt x 3035.34pt>
 File: Figures/practical/battery.png Graphic file (type png)
 <use Figures/practical/battery.png>
 Package pdftex.def Info: Figures/practical/battery.png  used on input line 1505
@@ -3055,202 +3053,204 @@ Package pdftex.def Info: Figures/practical/battery.png  used on input line 1505
 (pdftex.def)             Requested size: 338.76563pt x 254.04051pt.
  [69 <./Figures/practical/quad_flying.png>] [70] [71 <./Figures/practical/batte
 ry.png>] [72] [73] [74] [75]
-<Figures/results/practical/res1/xyztrac.png, id=1637, 361.35pt x 401.24907pt>
+<Figures/results/practical/res1/xyztrac.png, id=1646, 361.35pt x 401.24907pt>
 File: Figures/results/practical/res1/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res1/xyztrac.png>
 Package pdftex.def Info: Figures/results/practical/res1/xyztrac.png  used on in
 put line 1702.
 (pdftex.def)             Requested size: 338.76563pt x 376.1762pt.
-<Figures/results/practical/res1/xyzerr.png, id=1638, 481.8pt x 361.35pt>
+
+[76]
+<Figures/results/practical/res1/xyzerr.png, id=1651, 481.8pt x 361.35pt>
 File: Figures/results/practical/res1/xyzerr.png Graphic file (type png)
 <use Figures/results/practical/res1/xyzerr.png>
 Package pdftex.def Info: Figures/results/practical/res1/xyzerr.png  used on inp
 ut line 1708.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res1/yaw.png, id=1639, 481.8pt x 361.35pt>
+<Figures/results/practical/res1/yaw.png, id=1652, 481.8pt x 361.35pt>
 File: Figures/results/practical/res1/yaw.png Graphic file (type png)
 <use Figures/results/practical/res1/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res1/yaw.png  used on input 
 line 1714.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res1/3d1.png, id=1640, 408.77719pt x 481.04718pt>
-File: Figures/results/practical/res1/3d1.png Graphic file (type png)
-<use Figures/results/practical/res1/3d1.png>
-Package pdftex.def Info: Figures/results/practical/res1/3d1.png  used on input 
-line 1719.
-(pdftex.def)             Requested size: 338.76563pt x 398.68184pt.
-
-[76] [77] [78 <./Figures/results/practical/res1/xyztrac.png>] [79 <./Figures/re
-sults/practical/res1/xyzerr.png> <./Figures/results/practical/res1/yaw.png>]
-[80 <./Figures/results/practical/res1/3d1.png>]
-<Figures/results/practical/res2/xyztrac.png, id=1670, 360.59718pt x 422.32782pt
+<Figures/results/practical/res1/view.png, id=1653, 867.24pt x 594.72188pt>
+File: Figures/results/practical/res1/view.png Graphic file (type png)
+<use Figures/results/practical/res1/view.png>
+Package pdftex.def Info: Figures/results/practical/res1/view.png  used on input
+ line 1719.
+(pdftex.def)             Requested size: 338.76563pt x 232.31265pt.
+ [77] [78 <./Figures/results/practical/res1/xyztrac.png>] [79 <./Figures/result
+s/practical/res1/xyzerr.png> <./Figures/results/practical/res1/yaw.png>]
+[80 <./Figures/results/practical/res1/view.png>]
+<Figures/results/practical/res2/xyztrac.png, id=1679, 360.59718pt x 422.32782pt
 >
 File: Figures/results/practical/res2/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res2/xyztrac.png>
 Package pdftex.def Info: Figures/results/practical/res2/xyztrac.png  used on in
 put line 1756.
 (pdftex.def)             Requested size: 338.76563pt x 396.75621pt.
-<Figures/results/practical/res2/xyzerr.png, id=1671, 481.8pt x 361.35pt>
+<Figures/results/practical/res2/xyzerr.png, id=1680, 481.8pt x 361.35pt>
 File: Figures/results/practical/res2/xyzerr.png Graphic file (type png)
 <use Figures/results/practical/res2/xyzerr.png>
 Package pdftex.def Info: Figures/results/practical/res2/xyzerr.png  used on inp
 ut line 1762.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res2/yaw.png, id=1672, 481.8pt x 361.35pt>
+<Figures/results/practical/res2/yaw.png, id=1681, 481.8pt x 361.35pt>
 File: Figures/results/practical/res2/yaw.png Graphic file (type png)
 <use Figures/results/practical/res2/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res2/yaw.png  used on input 
 line 1768.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res2/3d1.png, id=1673, 472.76625pt x 499.8675pt>
-File: Figures/results/practical/res2/3d1.png Graphic file (type png)
-<use Figures/results/practical/res2/3d1.png>
-Package pdftex.def Info: Figures/results/practical/res2/3d1.png  used on input 
-line 1773.
-(pdftex.def)             Requested size: 338.76563pt x 358.19579pt.
+<Figures/results/practical/res2/view.png, id=1682, 532.99126pt x 505.13719pt>
+File: Figures/results/practical/res2/view.png Graphic file (type png)
+<use Figures/results/practical/res2/view.png>
+Package pdftex.def Info: Figures/results/practical/res2/view.png  used on input
+ line 1773.
+(pdftex.def)             Requested size: 338.76563pt x 321.06686pt.
  [81
 
 ] [82 <./Figures/results/practical/res2/xyztrac.png>] [83 <./Figures/results/pr
 actical/res2/xyzerr.png> <./Figures/results/practical/res2/yaw.png>] [84 <./Fig
-ures/results/practical/res2/3d1.png>]
-<Figures/results/practical/res3/xyztrac.png, id=1700, 361.35pt x 421.575pt>
+ures/results/practical/res2/view.png>]
+<Figures/results/practical/res3/xyztrac.png, id=1709, 361.35pt x 421.575pt>
 File: Figures/results/practical/res3/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res3/xyztrac.png>
 Package pdftex.def Info: Figures/results/practical/res3/xyztrac.png  used on in
 put line 1800.
 (pdftex.def)             Requested size: 338.76563pt x 395.23201pt.
-<Figures/results/practical/res3/xyzerr.png, id=1701, 481.8pt x 361.35pt>
+<Figures/results/practical/res3/xyzerr.png, id=1710, 481.8pt x 361.35pt>
 File: Figures/results/practical/res3/xyzerr.png Graphic file (type png)
 <use Figures/results/practical/res3/xyzerr.png>
 Package pdftex.def Info: Figures/results/practical/res3/xyzerr.png  used on inp
 ut line 1806.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res3/yaw.png, id=1702, 481.8pt x 361.35pt>
+<Figures/results/practical/res3/yaw.png, id=1711, 481.8pt x 361.35pt>
 File: Figures/results/practical/res3/yaw.png Graphic file (type png)
 <use Figures/results/practical/res3/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res3/yaw.png  used on input 
 line 1812.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res3/3d1.png, id=1703, 302.63063pt x 329.73187pt>
-File: Figures/results/practical/res3/3d1.png Graphic file (type png)
-<use Figures/results/practical/res3/3d1.png>
-Package pdftex.def Info: Figures/results/practical/res3/3d1.png  used on input 
-line 1817.
-(pdftex.def)             Requested size: 338.76563pt x 369.10597pt.
+<Figures/results/practical/res3/view.png, id=1712, 520.94624pt x 551.05875pt>
+File: Figures/results/practical/res3/view.png Graphic file (type png)
+<use Figures/results/practical/res3/view.png>
+Package pdftex.def Info: Figures/results/practical/res3/view.png  used on input
+ line 1817.
+(pdftex.def)             Requested size: 338.76563pt x 358.3521pt.
  [85
 
 ] [86 <./Figures/results/practical/res3/xyztrac.png>] [87 <./Figures/results/pr
 actical/res3/xyzerr.png> <./Figures/results/practical/res3/yaw.png>] [88 <./Fig
-ures/results/practical/res3/3d1.png>]
-<Figures/dist_pract/dryer.png, id=1725, 1284.8pt x 963.6pt>
+ures/results/practical/res3/view.png>]
+<Figures/dist_pract/dryer.png, id=1734, 1284.8pt x 963.6pt>
 File: Figures/dist_pract/dryer.png Graphic file (type png)
 <use Figures/dist_pract/dryer.png>
 Package pdftex.def Info: Figures/dist_pract/dryer.png  used on input line 1826.
 
 (pdftex.def)             Requested size: 338.76563pt x 254.0736pt.
-<Figures/dist_pract/res1/xyztrac.png, id=1731, 451.6875pt x 602.25pt>
+<Figures/dist_pract/res1/xyztrac.png, id=1740, 451.6875pt x 602.25pt>
 File: Figures/dist_pract/res1/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res1/xyztrac.png>
 Package pdftex.def Info: Figures/dist_pract/res1/xyztrac.png  used on input lin
 e 1833.
 (pdftex.def)             Requested size: 338.76563pt x 451.71394pt.
-<Figures/dist_pract/res1/xyzerr.png, id=1732, 481.8pt x 361.35pt>
+ [89
+
+ <./Figures/dist_pract/dryer.png>]
+<Figures/dist_pract/res1/xyzerr.png, id=1746, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res1/xyzerr.png Graphic file (type png)
 <use Figures/dist_pract/res1/xyzerr.png>
 Package pdftex.def Info: Figures/dist_pract/res1/xyzerr.png  used on input line
  1839.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res1/yaw.png, id=1733, 481.8pt x 361.35pt>
+<Figures/dist_pract/res1/yaw.png, id=1747, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res1/yaw.png Graphic file (type png)
 <use Figures/dist_pract/res1/yaw.png>
 Package pdftex.def Info: Figures/dist_pract/res1/yaw.png  used on input line 18
 45.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res1/3d1.png, id=1734, 283.0575pt x 302.63063pt>
-File: Figures/dist_pract/res1/3d1.png Graphic file (type png)
-<use Figures/dist_pract/res1/3d1.png>
-Package pdftex.def Info: Figures/dist_pract/res1/3d1.png  used on input line 18
-50.
-(pdftex.def)             Requested size: 338.76563pt x 362.22214pt.
- [89
-
- <./Figures/dist_pract/dryer.png>] [90 <./Figures/dist_pract/res1/xyztrac.png>]
- [91 <./Figures/dist_pract/res1/xyzerr.png>] [92 <./Figures/dist_pract/res1/yaw
-.png>] [93 <./Figures/dist_pract/res1/3d1.png>]
-<Figures/dist_pract/res2/xyztrac.png, id=1766, 451.6875pt x 602.25pt>
+<Figures/dist_pract/res1/view.png, id=1748, 764.10469pt x 603.75563pt>
+File: Figures/dist_pract/res1/view.png Graphic file (type png)
+<use Figures/dist_pract/res1/view.png>
+Package pdftex.def Info: Figures/dist_pract/res1/view.png  used on input line 1
+850.
+(pdftex.def)             Requested size: 338.76563pt x 267.67084pt.
+ [90 <./Figures/dist_pract/res1/xyztrac.png>] [91 <./Figures/dist_pract/res1/xy
+zerr.png>] [92 <./Figures/dist_pract/res1/yaw.png>] [93 <./Figures/dist_pract/r
+es1/view.png>]
+<Figures/dist_pract/res2/xyztrac.png, id=1775, 451.6875pt x 602.25pt>
 File: Figures/dist_pract/res2/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res2/xyztrac.png>
 Package pdftex.def Info: Figures/dist_pract/res2/xyztrac.png  used on input lin
 e 1862.
 (pdftex.def)             Requested size: 338.76563pt x 451.71394pt.
-<Figures/dist_pract/res2/xyzerr.png, id=1767, 481.8pt x 361.35pt>
+<Figures/dist_pract/res2/xyzerr.png, id=1776, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res2/xyzerr.png Graphic file (type png)
 <use Figures/dist_pract/res2/xyzerr.png>
 Package pdftex.def Info: Figures/dist_pract/res2/xyzerr.png  used on input line
  1868.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res2/yaw.png, id=1768, 481.8pt x 361.35pt>
+<Figures/dist_pract/res2/yaw.png, id=1777, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res2/yaw.png Graphic file (type png)
 <use Figures/dist_pract/res2/yaw.png>
 Package pdftex.def Info: Figures/dist_pract/res2/yaw.png  used on input line 18
 74.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res2/3d1.png, id=1769, 288.3272pt x 307.1475pt>
-File: Figures/dist_pract/res2/3d1.png Graphic file (type png)
-<use Figures/dist_pract/res2/3d1.png>
-Package pdftex.def Info: Figures/dist_pract/res2/3d1.png  used on input line 18
-79.
-(pdftex.def)             Requested size: 338.76563pt x 360.89366pt.
+<Figures/dist_pract/res2/view.png, id=1778, 782.17218pt x 600.74437pt>
+File: Figures/dist_pract/res2/view.png Graphic file (type png)
+<use Figures/dist_pract/res2/view.png>
+Package pdftex.def Info: Figures/dist_pract/res2/view.png  used on input line 1
+879.
+(pdftex.def)             Requested size: 338.76563pt x 260.18503pt.
  [94
 
 ] [95 <./Figures/dist_pract/res2/xyztrac.png>]
 [96 <./Figures/dist_pract/res2/xyzerr.png> <./Figures/dist_pract/res2/yaw.png>]
-[97 <./Figures/dist_pract/res2/3d1.png>]
-<Figures/dist_pract/res3/xyztrac.png, id=1795, 451.6875pt x 602.25pt>
+[97 <./Figures/dist_pract/res2/view.png>]
+<Figures/dist_pract/res3/xyztrac.png, id=1804, 451.6875pt x 602.25pt>
 File: Figures/dist_pract/res3/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res3/xyztrac.png>
 Package pdftex.def Info: Figures/dist_pract/res3/xyztrac.png  used on input lin
-e 1906.
+e 1892.
 (pdftex.def)             Requested size: 338.76563pt x 451.71394pt.
-<Figures/dist_pract/res3/xyzerr.png, id=1796, 481.8pt x 361.35pt>
+<Figures/dist_pract/res3/xyzerr.png, id=1805, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res3/xyzerr.png Graphic file (type png)
 <use Figures/dist_pract/res3/xyzerr.png>
 Package pdftex.def Info: Figures/dist_pract/res3/xyzerr.png  used on input line
- 1912.
+ 1898.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res3/yaw.png, id=1797, 481.8pt x 361.35pt>
+<Figures/dist_pract/res3/yaw.png, id=1806, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res3/yaw.png Graphic file (type png)
 <use Figures/dist_pract/res3/yaw.png>
 Package pdftex.def Info: Figures/dist_pract/res3/yaw.png  used on input line 19
-18.
+04.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res3/3d1.png, id=1798, 278.54062pt x 307.1475pt>
-File: Figures/dist_pract/res3/3d1.png Graphic file (type png)
-<use Figures/dist_pract/res3/3d1.png>
-Package pdftex.def Info: Figures/dist_pract/res3/3d1.png  used on input line 19
-23.
-(pdftex.def)             Requested size: 338.76563pt x 373.56647pt.
+<Figures/dist_pract/res3/view.png, id=1807, 606.01407pt x 522.45187pt>
+File: Figures/dist_pract/res3/view.png Graphic file (type png)
+<use Figures/dist_pract/res3/view.png>
+Package pdftex.def Info: Figures/dist_pract/res3/view.png  used on input line 1
+909.
+(pdftex.def)             Requested size: 338.76563pt x 292.05287pt.
  [98
 
 ] [99 <./Figures/dist_pract/res3/xyztrac.png>] [100 <./Figures/dist_pract/res3/
 xyzerr.png> <./Figures/dist_pract/res3/yaw.png>] [101 <./Figures/dist_pract/res
-3/3d1.png>] [102
+3/view.png>] [102
 
 ] [103] [104
 
 ]
-[105] [106]
+[105] [106] [107] [108
+
+]
 Appendix I
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1996.
-[107
-
-] [108] [109] [110]
-Overfull \hbox (24.34859pt too wide) detected at line 2157
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1984.
+[109] [110] [111] [112]
+Overfull \hbox (24.34859pt too wide) detected at line 2145
 []
  []
 
-[111] [112] [113] [114] [115] [116] [117] [118] [119] (main.bbl [120
+[113] [114] [115] [116] [117] [118] [119] [120] [121] (main.bbl [122
 
 ]
 Underfull \hbox (badness 1226) in paragraph at lines 50--55
@@ -3258,12 +3258,12 @@ Underfull \hbox (badness 1226) in paragraph at lines 50--55
 n es-ti-ma-tion and
  []
 
-[121] [122] [123] [124] [125]) [126]
+[123] [124] [125] [126] [127]) [128]
 No file refs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2472.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2472.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2460.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2460.
 (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2472.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2460.
 
 
  *File List*
@@ -3491,47 +3491,44 @@ Figures/practical/battery.png
 Figures/results/practical/res1/xyztrac.png
 Figures/results/practical/res1/xyzerr.png
 Figures/results/practical/res1/yaw.png
-Figures/results/practical/res1/3d1.png
+Figures/results/practical/res1/view.png
 Figures/results/practical/res2/xyztrac.png
 Figures/results/practical/res2/xyzerr.png
 Figures/results/practical/res2/yaw.png
-Figures/results/practical/res2/3d1.png
+Figures/results/practical/res2/view.png
 Figures/results/practical/res3/xyztrac.png
 Figures/results/practical/res3/xyzerr.png
 Figures/results/practical/res3/yaw.png
-Figures/results/practical/res3/3d1.png
+Figures/results/practical/res3/view.png
 Figures/dist_pract/dryer.png
 Figures/dist_pract/res1/xyztrac.png
 Figures/dist_pract/res1/xyzerr.png
 Figures/dist_pract/res1/yaw.png
-Figures/dist_pract/res1/3d1.png
+Figures/dist_pract/res1/view.png
 Figures/dist_pract/res2/xyztrac.png
 Figures/dist_pract/res2/xyzerr.png
 Figures/dist_pract/res2/yaw.png
-Figures/dist_pract/res2/3d1.png
+Figures/dist_pract/res2/view.png
 Figures/dist_pract/res3/xyztrac.png
 Figures/dist_pract/res3/xyzerr.png
 Figures/dist_pract/res3/yaw.png
-Figures/dist_pract/res3/3d1.png
+Figures/dist_pract/res3/view.png
     main.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2472.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2460.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AE98B240DFC6F59A6149819D98C02DF8;4099.
+(rerunfilecheck)             Checksum: BFBE2D749E1F577DA12092C59410D824;4099.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.05998pt have occurred.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 42089 strings out of 493305
- 835253 string characters out of 3129367
- 1000108 words of memory out of 3000000
+ 42090 strings out of 493305
+ 835278 string characters out of 3129367
+ 1001953 words of memory out of 3000000
  44314 multiletter control sequences out of 15000+200000
  650673 words of font info for 216 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3552,9 +3549,9 @@ X 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Bashar/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Bashar/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Bashar/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (148 pages, 53569537 bytes).
+Output written on main.pdf (150 pages, 53683902 bytes).
 PDF statistics:
- 2194 PDF objects out of 2487 (max. 8388607)
- 533 named destinations out of 1000 (max. 500000)
+ 2211 PDF objects out of 2487 (max. 8388607)
+ 534 named destinations out of 1000 (max. 500000)
  759 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,6 +10,5 @@
 \contentsline {table}{\numberline {5.4}{\ignorespaces Observer gains for STO\relax }}{81}{table.caption.224}
 \contentsline {table}{\numberline {5.5}{\ignorespaces Controller gains for STO\relax }}{81}{table.caption.225}
 \contentsline {table}{\numberline {5.6}{\ignorespaces Controller gains for KDO\relax }}{85}{table.caption.231}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Controller gains for KDO\relax }}{98}{table.caption.249}
-\contentsline {table}{\numberline {5.8}{\ignorespaces Root Mean Square (RMS) error in each component of reference trajectory tracking by the three observers without external disturbances\relax }}{102}{table.caption.256}
-\contentsline {table}{\numberline {5.9}{\ignorespaces Root Mean Square (RMS) error in each component of reference trajectory tracking by the three observers under external disturbances\relax }}{103}{table.caption.257}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Root Mean Square (RMS) error in each component of reference trajectory tracking by the three observers without external disturbances\relax }}{102}{table.caption.255}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Root Mean Square (RMS) error in each component of reference trajectory tracking by the three observers under external disturbances\relax }}{103}{table.caption.256}

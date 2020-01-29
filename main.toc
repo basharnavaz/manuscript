@@ -47,7 +47,7 @@
 \contentsline {subsection}{\numberline {5.4.1}Non-Linear Disturbance Observer Results}{89}{subsection.238}
 \contentsline {subsection}{\numberline {5.4.2}Super-Twisting Observer}{94}{subsection.243}
 \contentsline {subsection}{\numberline {5.4.3}Kernel Disturbance Observer}{98}{subsection.248}
-\contentsline {section}{\numberline {5.5}Summary}{102}{section.254}
-\contentsline {chapter}{CONCLUSION AND RECOMMENDATIONS}{105}{chapter*.258}
-\contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Appendix\ I}\hfil }\uppercase {Appendix example }}}{107}{chapter.259}
-\contentsline {chapter}{BIBLIOGRAPHY}{120}{equation.311}
+\contentsline {section}{\numberline {5.5}Summary}{102}{section.253}
+\contentsline {chapter}{CONCLUSION AND RECOMMENDATIONS}{105}{chapter*.257}
+\contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Appendix\ I}\hfil }\uppercase {Appendix example }}}{109}{chapter.258}
+\contentsline {chapter}{BIBLIOGRAPHY}{122}{equation.310}

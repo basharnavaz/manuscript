@@ -635,7 +635,7 @@ The rotational disturbances which affect the orientation of the quadcopter is de
 \hat{d}_\Theta&=z_\Theta + L_\Theta\dot{\Theta}
 \end{split}
 \end{equation}
-where $U_\Theta=\Psi(\Theta)[U_2\ \ U_3\ \ U_4]^T$, and $\widehat{d}_\Theta$ is the estimation of the rotational disturbance. The variable $z_\Theta$ is the state vector of the observer, and $L_\Theta=l_\Theta I_{3 \times 3}$,  $l_\Theta >0$, are the observer gain matrices to be tuned.
+where $U_\Theta=[U_2\ \ U_3\ \ U_4]^T$, and $\widehat{d}_\Theta$ is the estimate of the rotational disturbance. The variable $z_\Theta$ is the state vector of the observer, and $L_\Theta=l_\Theta I_{3 \times 3}$,  $l_\Theta >0$, are the observer gain matrices to be tuned.
 
 For brevity, only the main results are mentioned here without their proofs. \citep{RN114}] gives the proof to the proposition that with sufficiently high positive gains, $l_p>0$ and $l_\Theta>0$, any given accuracy can be achieved after a certain time such that the subsequent time instances have the disturbance estimation accuracy greater than the required accuracy, $\epsilon$. In other words, for a sufficiently large time $T^*$, the subsequent time instances will have an estimation error less than a given threshold.
 \begin{align} \label{eqn:NDO3}
@@ -719,7 +719,7 @@ where $e_3$ and $e_4$ are the attitude and angular velocity tracking error vecto
 \chapter{Kernel Disturbance Observer} \label{Chap:KDO}
 The Kernel Disturbance Observer (KDO) is a multi-step algorithm, as outlined in Algorithm \ref{algo:1} and uses the double-sided kernel estimation approach. The Double-sided Kernel approach was developed in \citep{RN119} and \citep{RN76}, and further developed for fourth-order kernel representation in \citep{RN83} and \citep{RN120} and will be produced here for completeness. We start by presenting the details of the different steps in Algorithm \ref{algo:1}. 
 
-The steps 2-7 present the procedure in obtaining the disturbance estimates, $\hat{d_p}(t_k)$ and ,$\hat{d_\Theta}(t_k)$, at the time instant $t_k$, for the positional and rotational systems respectively. The input is the complete attitude between the time instants $t_k-\delta$ and $t_k$. This is represented by the vectors $[p_M(t_k-\delta) : p_{M}(t_k-\delta)]$ and $[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$. The variable $\zeta_M$ refers to the flat measured output from a system that is being observed, $\hat{\zeta}$ refers to the estimated output. ${\zeta}^{(2)}$ is the higher order derivative. The algorithm uses a sliding window approach to take input for the algorithm; this is explained in Section \ref{Sec:MovWin}. Step 3 of the algorithm is parameter estimation; the different approaches are explained in Section \ref{Sec:ParEst}. Steps 4-7 estimate the full state of the quadcopter and thereby observe the disturbances using methods explained in Section \ref{Sec:FullStateEst}.
+The steps 2-7 present the procedure in obtaining the disturbance estimates, $\hat{d_p}(t_k)$ and $\hat{d_\Theta}(t_k)$, at the time instant $t_k$, for the positional and rotational systems respectively. The input is the complete attitude between the time instants $t_k-\delta$ and $t_k$. This is represented by the vectors $[p_M(t_k-\delta) : p_{M}(t_k-\delta)]$ and $[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$. The variable $\zeta_M$ refers to the flat measured output from a system that is being observed, $\hat{\zeta}$ refers to the estimated output. ${\zeta}^{(2)}$ is the higher order derivative. The algorithm uses a sliding window approach to take input for the algorithm; this is explained in Section \ref{Sec:MovWin}. Step 3 of the algorithm is parameter estimation; the different approaches are explained in Section \ref{Sec:ParEst}. Steps 4-7 estimate the full state of the quadcopter and thereby observe the disturbances using methods explained in Section \ref{Sec:FullStateEst}.
 \begin{algorithm}  %add [H] for Here
 \SetAlgoLined
 \KwIn{$\mathbf{p_M}=[p_M(t_k-\delta) : p_{M}(t_k-\delta)]$, $\Theta_\mathbf{M}=[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$}
@@ -1130,7 +1130,7 @@ a'_2(t) &= 0.15\big(\rho a_1 - a_1 a_3 - a_2\big)\\
 a'_3(t) &= 0.15\big(a_1 a_2 - \beta a_3\big)
 \end{align}
 \end{subequations}
-where the constants $\sigma=10$, $\rho=28$, $\beta=\sfrac{8}{3}$, $k=0.0.1$, $\omega=0.5$ with initial values of $a_i$ for $i=1...6$ are given by the vector $[-6,-5,22,-10,-12,24]$, the phase shift values, $\phi_i$ for $i=1...6$ is given by the vector, $[25,45,65,10,30,50]$. This results in the applied disturbances to be non-periodic and chaotic, as seen in Figures \ref{dis_m1_pos} and \ref{dis_m1_att}.
+where the constants $\sigma=10$, $\rho=28$, $\beta=\sfrac{8}{3}$, $k=0.0.1$, $\omega=0.5$ with initial values of $a_i$ for $i=1...6$ are given by the vector $[-6,-5,22,-10,-12,24]$, the phase shift values, $\phi_i$ for $i=1...6$ is given by the vector, $[25,45,65,10,30,50]$. With this the applied disturbances are non-periodic and chaotic, as seen in Figures \ref{dis_m1_pos} and \ref{dis_m1_att}.
 
 \begin{figure}[H]
 \centering
@@ -1335,7 +1335,7 @@ a'_2(t) &= 0.1\big(\rho a_1 - a_1 a_3 - a_2\big)\\
 a'_3(t) &= 0.1\big(a_1 a_2 - \beta a_3\big)
 \end{align}
 \end{subequations}
-where the constants $\sigma=10$, $\rho=28$, $\beta=\sfrac{8}{3}$, $k=0.0.1$, $\omega=0.5$ with initial values of $a_i$ for $i=1...6$ are given by the vector $[-2,-8,15,-4,-15,20]$, the phase shift values, $\phi_i$ for $i=1...6$ is given by the vector, $[-20,-40-60,-15,-35,-55]$. This results in the applied disturbances to be non-periodic and chaotic, as seen in Figures \ref{dis_m2_pos} and \ref{dis_m2_att}.
+where the constants $\sigma=10$, $\rho=28$, $\beta=\sfrac{8}{3}$, $k=0.0.1$, $\omega=0.5$ with initial values of $a_i$ for $i=1...6$ are given by the vector $[-2,-8,15,-4,-15,20]$, the phase shift values, $\phi_i$ for $i=1...6$ is given by the vector, $[-20,-40-60,-15,-35,-55]$. With this the applied disturbances are non-periodic and chaotic, as seen in Figures \ref{dis_m2_pos} and \ref{dis_m2_att}.
 
 \begin{figure}[H]
 \centering
@@ -1669,7 +1669,7 @@ The above method can be applied to the Backward Kernel and result in a Double-Si
 For the quadcopter, the latency is set to zero to estimate the attitude and orientation of the quadcopter in real-time. While this is not the optimal $t_k$ to minimize estimation variance, setting the latency to a minimum is needed for effective control rather than minimizing the variance. 
 
 \section{Experimental Validation without Disturbances}
-The three algorithms were first tested on the quadcopter without any external disturbances. The results for each algorithm are presented in different subsections. 
+The three algorithms were first tested on the quadcopter without any external disturbances. The results for each algorithm are presented in different subsections. The controller gains were tuned by trial and error. The controller gains presented in \citep{RN117} were used as a starting point for tuning. The gains were adjusted in either increments or decrements of 0.1. The gains obtained are presented in individual subsections. 
 \subsection{Non-Linear Disturbance Observer Results}
 The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. Similar to the finding in simulations, the performance of NDO was found to be susceptible to improper tuning of the observer gains. After several iterations the values of gains that gave the best tracking in terms of error and overshoot is presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. The figures subsequent to the tables show the real flight tracking of the referenct trajectory variables, which are the position($x$, $y$, $z$) and yaw ($\psi$). 
 \begin{table}
@@ -1688,12 +1688,12 @@ $l_z$ & 50 & $l_\psi$    & 10  \\ \hline
 \begin{tabular}{|c|c|c|c|}
 \hline
 {\bf Gain} & {\bf Value} & {\bf Gain}         & {\bf Value}  \\ \hline
-$k_x$      & 2.0313      & $k_\theta$         & 15           \\ \hline
-$k_y$      & 2.0313      & $k_\phi$           & 15           \\ \hline
-$k_z$      & 2.216       & $k_\psi$           & 12.861       \\ \hline 
-$k_{xx}$   & 0.0313      & $k_{\theta\theta}$ & 12.861       \\ \hline
-$k_{yy}$   &  0.0313     & $k_{\phi\phi}$     & 12.861       \\ \hline
-$k_{zz}$   & 0.216       & $k_{\psi\psi}$     & 10.861       \\ \hline 
+$k_x$      & 2.2313      & $k_\theta$         & 15           \\ \hline
+$k_y$      & 2.2313      & $k_\phi$           & 15           \\ \hline
+$k_z$      & 2.116       & $k_\psi$           & 12.961       \\ \hline 
+$k_{xx}$   & 0.1313      & $k_{\theta\theta}$ & 12.961       \\ \hline
+$k_{yy}$   & 0.1313      & $k_{\phi\phi}$     & 12.961       \\ \hline
+$k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline 
 \end{tabular}
 \end{table}
 
@@ -1716,7 +1716,7 @@ $k_{zz}$   & 0.216       & $k_{\psi\psi}$     & 10.861       \\ \hline
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res1/3d1.png}}
+	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res1/view.png}}
 	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using NDO based controller\label{Fig:3dNDO}}}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. Due to problems with the battery life, the complete trajectory could not be tracked. Although it should be noted that the part of the trajectory that could not be tracked does not change values and similar results can be expected for the subsequent duration of the flight. \\
@@ -1742,12 +1742,12 @@ $\lambda_z$ & 50 & $\lambda_\psi$    & 12  & $\alpha_z$ & 30 & $\alpha_\psi$    
 \begin{tabular}{|c|c|c|c|}
 \hline
 {\bf Gain} & {\bf Value} & {\bf Gain}         & {\bf Value}  \\ \hline
-$k_x$      & 2.0313      & $k_\theta$         & 15           \\ \hline
-$k_y$      & 2.0313      & $k_\phi$           & 15           \\ \hline
-$k_z$      & 2.216       & $k_\psi$           & 12.861       \\ \hline 
-$k_{xx}$   & 0.0313      & $k_{\theta\theta}$ & 12.861       \\ \hline
-$k_{yy}$   &  0.0313     & $k_{\phi\phi}$     & 12.861       \\ \hline
-$k_{zz}$   & 0.216       & $k_{\psi\psi}$     & 10.861       \\ \hline 
+$k_x$      & 2.2313      & $k_\theta$         & 15           \\ \hline
+$k_y$      & 2.2313      & $k_\phi$           & 15           \\ \hline
+$k_z$      & 2.116       & $k_\psi$           & 12.961       \\ \hline 
+$k_{xx}$   & 0.1313      & $k_{\theta\theta}$ & 12.961       \\ \hline
+$k_{yy}$   & 0.1313      & $k_{\phi\phi}$     & 12.961       \\ \hline
+$k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline 
 \end{tabular}
 \end{table}
 
@@ -1770,7 +1770,7 @@ $k_{zz}$   & 0.216       & $k_{\psi\psi}$     & 10.861       \\ \hline
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res2/3d1.png}}
+	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res2/view.png}}
 	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using STO based controller\label{Fig:3dSTO}}}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
@@ -1784,12 +1784,12 @@ The Kernel Disturbance Observer described in Chapter \ref{Chap:KDO} is implement
 \begin{tabular}{|c|c|c|c|}
 \hline
 {\bf Gain} & {\bf Value} & {\bf Gain}         & {\bf Value}  \\ \hline
-$k_x$      & 2.0313      & $k_\theta$         & 15           \\ \hline
-$k_y$      & 2.0313      & $k_\phi$           & 15           \\ \hline
-$k_z$      & 2.216       & $k_\psi$           & 12.861       \\ \hline 
-$k_{xx}$   & 0.0313      & $k_{\theta\theta}$ & 12.861       \\ \hline
-$k_{yy}$   &  0.0313     & $k_{\phi\phi}$     & 12.861       \\ \hline
-$k_{zz}$   & 0.216       & $k_{\psi\psi}$     & 10.861       \\ \hline 
+$k_x$      & 2.2313      & $k_\theta$         & 15           \\ \hline
+$k_y$      & 2.2313      & $k_\phi$           & 15           \\ \hline
+$k_z$      & 2.116       & $k_\psi$           & 12.961       \\ \hline 
+$k_{xx}$   & 0.1313      & $k_{\theta\theta}$ & 12.961       \\ \hline
+$k_{yy}$   & 0.1313      & $k_{\phi\phi}$     & 12.961       \\ \hline
+$k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline 
 \end{tabular}
 \end{table}
 
@@ -1810,17 +1810,17 @@ Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. H
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res3/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using STO based controller\label{Fig:yawtracKDO}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using KDO based controller\label{Fig:yawtracKDO}}}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res3/3d1.png}}
+	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res3/view.png}}
 	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using KDO based controller\label{Fig:3dKDO}}}
 \end{figure}
 \FloatBarrier
 
 \section{Experimental Validation with External Disturbances}
-The three algorithms were tested on the quadcopter under external disturbances from an air blow dryer. The external disturbances are generated using a CONAIR 1600 air blower. The results for each algorithm are presented in different subsections.
+The three algorithms were tested on the quadcopter under external disturbances from an air blow dryer. The external disturbances are generated using a CONAIR 1600 air blower. The results for each algorithm are presented in different subsections. The observer and controller gains were kept the same as the gains used under the absence of external disturbances.
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/dryer.png}}
@@ -1831,24 +1831,24 @@ The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implem
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/xyztrac.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using NDO based controller\label{Fig:xyztracNDODist}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using NDO based controller under external disturbances\label{Fig:xyztracNDODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/xyzerr.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using NDO based controller\label{Fig:xyzerrNDODist}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using NDO based controller under external disturbances\label{Fig:xyzerrNDODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using NDO based controller\label{Fig:yawtracNDODist}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using NDO based controller under external disturbances\label{Fig:yawtracNDODist}}}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/3d1.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using NDO based controller\label{Fig:3dNDODist}}}
+	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/view.png}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using NDO based controller under external disturbances\label{Fig:3dNDODist}}}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. Due to problems with the battery life, the complete trajectory could not be tracked. \\
 The observer was initialized with the initial state of the observer as, $z_p(0)=[2,2,2]$ and $z_\Theta(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
@@ -1860,68 +1860,54 @@ The Super-Twisting Observer described in Section \ref{Sec:STO} is implemented on
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/xyztrac.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using STO based controller\label{Fig:xyztracSTODist}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using STO based controller under external disturbances\label{Fig:xyztracSTODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/xyzerr.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using STO based controller\label{Fig:xyzerrSTODist}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using STO based controller under external disturbances\label{Fig:xyzerrSTODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using STO based controller\label{Fig:yawtracSTODist}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using STO based controller under external disturbances\label{Fig:yawtracSTODist}}}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/3d1.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using STO based controller\label{Fig:3dSTODist}}}
+	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/view.png}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using STO based controller under external disturbances\label{Fig:3dSTODist}}}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
 
 \FloatBarrier
 \subsection{Kernel Disturbance Observer}
-The Kernel Disturbance Observer described in Chapter \ref{Chap:KDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. The KDO controller combination gives similar performance results for a variety of controller gains. The controller gains used to obtain the results presented here are compiled in Table \ref{Tab:realControllerGainsKDO}.
-
-\begin{table}
-\parbox{0.65\textwidth}{\caption{Controller gains for KDO}\label{Tab:realControllerGainsKDO}} 
-\begin{tabular}{|c|c|c|c|}
-\hline
-{\bf Gain} & {\bf Value} & {\bf Gain}         & {\bf Value}  \\ \hline
-$k_x$      & 2.0313      & $k_\theta$         & 15           \\ \hline
-$k_y$      & 2.0313      & $k_\phi$           & 15           \\ \hline
-$k_z$      & 2.216       & $k_\psi$           & 12.861       \\ \hline 
-$k_{xx}$   & 0.0313      & $k_{\theta\theta}$ & 12.861       \\ \hline
-$k_{yy}$   &  0.0313     & $k_{\phi\phi}$     & 12.861       \\ \hline
-$k_{zz}$   & 0.216       & $k_{\psi\psi}$     & 10.861       \\ \hline 
-\end{tabular}
-\end{table}
+The Kernel Disturbance Observer described in Chapter \ref{Chap:KDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. The KDO controller combination gives similar performance results for a variety of controller gains. The controller gains were the same ones that were used in the case of testing without external disturbances presented in Table  \ref{Tab:realControllerGainsKDO}.
 
 Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. However, the KDO has certain parameters that were kept constant such as the window length and latency in estimation. The window length was of 51 samples, and the latency in estimation was 0s, i.e. the full state was estimated at the time of the latest sample of position and angles. The practical implementation used real-time parameter estimation from kernel expressions by optimizing the least square errors, as shown in Section \ref{Sec:pseudo}. The KDO does not need initial conditions since it is a dead-beat observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in the next subsection.
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res3/xyztrac.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using KDO based controller\label{Fig:xyztracKDODist}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using KDO based controller under external disturbances\label{Fig:xyztracKDODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res3/xyzerr.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using KDO based controller\label{Fig:xyzerrKDODist}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using KDO based controller under external disturbances\label{Fig:xyzerrKDODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res3/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using STO based controller\label{Fig:yawtracKDODist}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using KDO based controller under external disturbances\label{Fig:yawtracKDODist}}}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res3/3d1.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using KDO based controller\label{Fig:3dKDODist}}}
+	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res3/view.png}}
+	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using KDO based controller under external disturbances\label{Fig:3dKDODist}}}
 \end{figure}
 \FloatBarrier
 
@@ -1974,6 +1960,8 @@ Chapter 2 discusses the observers between which the trajectory tracking performa
 Chapter 3 uses the presented observers in conjugation with sliding mode control and backstepping control to track the desired trajectory. The comparison in simulation is made under the presence of external aerodynamic disturbances. The NDO and STO were initialized without having the true knowledge of the initial conditions, and convergence rates were measured which wasn't done previously in the literature. The disturbances considered were chaotic, a big change from the smooth sinusoidal disturbances used in simulations previously. The simulations clearly indicate the KDO to have the most accurate estimates of external disturbances that enable better trajectory tracking. It was also noticed that the STO and KDO give similar results to a variety of initial controller gains, while the NDO is sensitive to controller gains and has to be tuned precisely to obtain the desired tracking. The three observers were tested on a quadcopter in real-time and obtained similar results. The KDO was modified to use the exact expressions developed in this thesis to adhere to the computation and time restraints, while the NDO and STO had similar implementations as they did in the simulations and literature. Similar to the simulation results, KDO performed with better tracking of the reference trajectory while STO had comparable performance. However, the NDO fared much worse and was susceptible to the improper tuning of the controller gains. 
 
 The KDO, even after modifications done in this thesis, remains a computationally expensive method. It is recommended that one work towards making the KDO a recursive estimator without having to continuously integrate the whole window but just incorporate the new information and update the state estimate accordingly. This would need the identification of deeper auto-regressive dependencies in the underlying trend of the tracked signal. Such an approach would unavoidably lead to using Bellman's Principle of Optimality in some well-devised Dynamic Programming setting, much resembling the Minimum Energy Estimation as done in \citep{fleming1997deterministic},  \citep{krener2015minimum}. 
+
+Although the MATLAB and Simulink is used for simulations, it is recommended that future simulations using kernel expressions be carried out in C++. Conducting simulations in C++ improves the computation time and makes it possible for rapid continuous development due to speed improvements. GSL provides alternative mathematical routines to the ones found in MATLAB which are used for kernel expression evaluation. ROS Gazebo provides visualization environments for simulations. Physical properties of airflow and dynamics can be imported in the Gazebo environment. This setup would make it efficient integration of algorithms to the firmware for hardware deployment. 
 
 \end{conclusion}
 
