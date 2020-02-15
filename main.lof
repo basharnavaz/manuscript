@@ -42,7 +42,7 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Quadcopter during a test flight while using Kinect for attitude estimation.\relax }}{69}{figure.caption.197}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Block diagram of components the distributed computing framework using MAVROS, MAVLink and Windows Xbox Kinect \relax }}{70}{figure.caption.198}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces {Rhino 2250 3S 25C battery with its charger }\relax }}{71}{figure.caption.199}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Diagram showing $\tau -a$ and $t-\tau $ remain constant with respect to the position in the sliding window as time progresses\relax }}{74}{figure.caption.209}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Diagram showing $\tau -a$ and $t-\tau $ remain constant with respect to the position in the sliding window as time progresses \relax }}{74}{figure.caption.209}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Real flight tracking of position coordinates using NDO based controller\relax }}{78}{figure.caption.219}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Position tracking errors using NDO based controller\relax }}{79}{figure.caption.220}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Real flight tracking of yaw using NDO based controller\relax }}{79}{figure.caption.221}

@@ -1570,36 +1570,9 @@ K_{F,\zeta}(t,\tau) &\triangleq \quad \frac{1}{[(t_k-a)^4+(b-t_k)^4]} \quad .\no
 The matrix $[A]$ depends on the parameters $a_0$, $a_1$, $a_2$, $a_3$. The matrices $[a] \textrm{ and } [t]$ are functions of $(\tau-a) \textrm{ and } (t-\tau)$. These values are then dependent on the relative position in the window. This allows us to calculate the value of the Forward Kernel at each relative point in the window. Once this is computed it need not be computed again. 
 
 \begin{figure}[H]
-\begin{centering}
-	{
-		\begin{tikzpicture}
-			\draw[|-|,semithick] (0,0) -- (10,0);
-			\draw[|-,semithick] (5.3,0) -- (3.4,0);
-			\draw[|-,semithick] (8.7,0) -- (8.8,0);
-			\draw (0,-0.5) node {$a$};
-			\draw (10,-0.5) node {$b$};
-			\draw (5.3,-0.5) node {$\tau$};
-			\draw (8.7,-0.5) node {$t$};
-				
-			\draw (-2, 0) node {Values};
-			\draw[-,dashed] (-1,0.5) -- (-1,-4);
-		
-			\draw (-2,-1.5) node {$(\tau-a)|^{a}_{t}$};	
-			\draw (0,-1.5) node {$0$};	
-			\draw (1,-1.5) node {$T$};
-			\draw (2,-1.5) node {$2T$};
-			\draw (3,-1.5) node {$3T$};
-			\draw (8.7,-1.5) node {$(t-a)$};
-	
-			\draw (-2,-2.5) node {$(t-\tau)|^{a}_{t}$};	
-			\draw (0,-2.5) node {$(t-a)$};	
-			\draw (3,-2.5) node {$(t-a)-3T$};
-			\draw (8.7,-3) node {$0$};	
-		\end{tikzpicture}
-		\caption{Diagram showing $\tau -a$ and $t-\tau$ remain constant with respect to the position in the sliding window as time progresses}
-		\label{sliding_array}
-	}
-\end{centering}
+	\centering
+	\resizebox{0.85\textwidth}{!}{\fbox{\input{Tikz/Window/Figure.tex}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Diagram showing $\tau -a$ and $t-\tau$ remain constant with respect to the position in the sliding window as time progresses \label{sliding_array}}}
 \end{figure}
 
 The Forward Kernel as a function of position in sliding window array can be written as:

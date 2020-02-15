@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.20)  14 FEB 2020 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.20)  14 FEB 2020 22:29
 entering extended mode
 **./main.tex
 (main.tex
@@ -3057,89 +3057,89 @@ Package pdftex.def Info: Figures/practical/battery.png  used on input line 1495
 .
 (pdftex.def)             Requested size: 338.76563pt x 254.04051pt.
  [69 <./Figures/practical/quad_flying.png>] [70] [71 <./Figures/practical/batte
-ry.png>] [72] [73] [74] [75]
+ry.png>] [72] [73]
+(Tikz/Window/Figure.tex) [74] [75]
 <Figures/results/practical/res1/xyztrac.png, id=1644, 361.35pt x 401.24907pt>
 File: Figures/results/practical/res1/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res1/xyztrac.png>
 Package pdftex.def Info: Figures/results/practical/res1/xyztrac.png  used on in
-put line 1692.
+put line 1665.
 (pdftex.def)             Requested size: 338.76563pt x 376.1762pt.
-
-[76]
+ [76]
 <Figures/results/practical/res1/xyzerr.png, id=1649, 481.8pt x 361.35pt>
 File: Figures/results/practical/res1/xyzerr.png Graphic file (type png)
 <use Figures/results/practical/res1/xyzerr.png>
 Package pdftex.def Info: Figures/results/practical/res1/xyzerr.png  used on inp
-ut line 1698.
+ut line 1671.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/results/practical/res1/yaw.png, id=1650, 481.8pt x 361.35pt>
 File: Figures/results/practical/res1/yaw.png Graphic file (type png)
 <use Figures/results/practical/res1/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res1/yaw.png  used on input 
-line 1704.
+line 1677.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/results/practical/res1/view.png, id=1651, 867.24pt x 594.72188pt>
 File: Figures/results/practical/res1/view.png Graphic file (type png)
 <use Figures/results/practical/res1/view.png>
 Package pdftex.def Info: Figures/results/practical/res1/view.png  used on input
- line 1709.
+ line 1682.
 (pdftex.def)             Requested size: 338.76563pt x 232.31265pt.
  [77] [78 <./Figures/results/practical/res1/xyztrac.png>] [79 <./Figures/result
-s/practical/res1/xyzerr.png> <./Figures/results/practical/res1/yaw.png>]
-[80 <./Figures/results/practical/res1/view.png>]
+s/practical/res1/xyzerr.png> <./Figures/results/practical/res1/yaw.png>] [80 <.
+/Figures/results/practical/res1/view.png>]
 <Figures/results/practical/res2/xyztrac.png, id=1677, 360.59718pt x 422.32782pt
 >
 File: Figures/results/practical/res2/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res2/xyztrac.png>
 Package pdftex.def Info: Figures/results/practical/res2/xyztrac.png  used on in
-put line 1746.
+put line 1719.
 (pdftex.def)             Requested size: 338.76563pt x 396.75621pt.
 <Figures/results/practical/res2/xyzerr.png, id=1678, 481.8pt x 361.35pt>
 File: Figures/results/practical/res2/xyzerr.png Graphic file (type png)
 <use Figures/results/practical/res2/xyzerr.png>
 Package pdftex.def Info: Figures/results/practical/res2/xyzerr.png  used on inp
-ut line 1752.
+ut line 1725.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/results/practical/res2/yaw.png, id=1679, 481.8pt x 361.35pt>
 File: Figures/results/practical/res2/yaw.png Graphic file (type png)
 <use Figures/results/practical/res2/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res2/yaw.png  used on input 
-line 1758.
+line 1731.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/results/practical/res2/view.png, id=1680, 532.99126pt x 505.13719pt>
 File: Figures/results/practical/res2/view.png Graphic file (type png)
 <use Figures/results/practical/res2/view.png>
 Package pdftex.def Info: Figures/results/practical/res2/view.png  used on input
- line 1763.
+ line 1736.
 (pdftex.def)             Requested size: 338.76563pt x 321.06686pt.
  [81
 
 ] [82 <./Figures/results/practical/res2/xyztrac.png>] [83 <./Figures/results/pr
-actical/res2/xyzerr.png> <./Figures/results/practical/res2/yaw.png>] [84 <./Fig
-ures/results/practical/res2/view.png>]
+actical/res2/xyzerr.png> <./Figures/results/practical/res2/yaw.png>]
+[84 <./Figures/results/practical/res2/view.png>]
 <Figures/results/practical/res3/xyztrac.png, id=1707, 361.35pt x 421.575pt>
 File: Figures/results/practical/res3/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res3/xyztrac.png>
 Package pdftex.def Info: Figures/results/practical/res3/xyztrac.png  used on in
-put line 1790.
+put line 1763.
 (pdftex.def)             Requested size: 338.76563pt x 395.23201pt.
 <Figures/results/practical/res3/xyzerr.png, id=1708, 481.8pt x 361.35pt>
 File: Figures/results/practical/res3/xyzerr.png Graphic file (type png)
 <use Figures/results/practical/res3/xyzerr.png>
 Package pdftex.def Info: Figures/results/practical/res3/xyzerr.png  used on inp
-ut line 1796.
+ut line 1769.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/results/practical/res3/yaw.png, id=1709, 481.8pt x 361.35pt>
 File: Figures/results/practical/res3/yaw.png Graphic file (type png)
 <use Figures/results/practical/res3/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res3/yaw.png  used on input 
-line 1802.
+line 1775.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/results/practical/res3/view.png, id=1710, 520.94624pt x 551.05875pt>
 File: Figures/results/practical/res3/view.png Graphic file (type png)
 <use Figures/results/practical/res3/view.png>
 Package pdftex.def Info: Figures/results/practical/res3/view.png  used on input
- line 1807.
+ line 1780.
 (pdftex.def)             Requested size: 338.76563pt x 358.3521pt.
  [85
 
@@ -3149,14 +3149,14 @@ ures/results/practical/res3/view.png>]
 <Figures/dist_pract/dryer.png, id=1732, 1284.8pt x 963.6pt>
 File: Figures/dist_pract/dryer.png Graphic file (type png)
 <use Figures/dist_pract/dryer.png>
-Package pdftex.def Info: Figures/dist_pract/dryer.png  used on input line 1816.
+Package pdftex.def Info: Figures/dist_pract/dryer.png  used on input line 1789.
 
 (pdftex.def)             Requested size: 338.76563pt x 254.0736pt.
 <Figures/dist_pract/res1/xyztrac.png, id=1738, 451.6875pt x 602.25pt>
 File: Figures/dist_pract/res1/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res1/xyztrac.png>
 Package pdftex.def Info: Figures/dist_pract/res1/xyztrac.png  used on input lin
-e 1823.
+e 1796.
 (pdftex.def)             Requested size: 338.76563pt x 451.71394pt.
  [89
 
@@ -3165,19 +3165,19 @@ e 1823.
 File: Figures/dist_pract/res1/xyzerr.png Graphic file (type png)
 <use Figures/dist_pract/res1/xyzerr.png>
 Package pdftex.def Info: Figures/dist_pract/res1/xyzerr.png  used on input line
- 1829.
+ 1802.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/dist_pract/res1/yaw.png, id=1745, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res1/yaw.png Graphic file (type png)
 <use Figures/dist_pract/res1/yaw.png>
 Package pdftex.def Info: Figures/dist_pract/res1/yaw.png  used on input line 18
-35.
+08.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/dist_pract/res1/view.png, id=1746, 764.10469pt x 603.75563pt>
 File: Figures/dist_pract/res1/view.png Graphic file (type png)
 <use Figures/dist_pract/res1/view.png>
 Package pdftex.def Info: Figures/dist_pract/res1/view.png  used on input line 1
-840.
+813.
 (pdftex.def)             Requested size: 338.76563pt x 267.67084pt.
  [90 <./Figures/dist_pract/res1/xyztrac.png>] [91 <./Figures/dist_pract/res1/xy
 zerr.png>] [92 <./Figures/dist_pract/res1/yaw.png>] [93 <./Figures/dist_pract/r
@@ -3186,56 +3186,57 @@ es1/view.png>]
 File: Figures/dist_pract/res2/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res2/xyztrac.png>
 Package pdftex.def Info: Figures/dist_pract/res2/xyztrac.png  used on input lin
-e 1852.
+e 1825.
 (pdftex.def)             Requested size: 338.76563pt x 451.71394pt.
 <Figures/dist_pract/res2/xyzerr.png, id=1774, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res2/xyzerr.png Graphic file (type png)
 <use Figures/dist_pract/res2/xyzerr.png>
 Package pdftex.def Info: Figures/dist_pract/res2/xyzerr.png  used on input line
- 1858.
+ 1831.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/dist_pract/res2/yaw.png, id=1775, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res2/yaw.png Graphic file (type png)
 <use Figures/dist_pract/res2/yaw.png>
 Package pdftex.def Info: Figures/dist_pract/res2/yaw.png  used on input line 18
-64.
+37.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/dist_pract/res2/view.png, id=1776, 782.17218pt x 600.74437pt>
 File: Figures/dist_pract/res2/view.png Graphic file (type png)
 <use Figures/dist_pract/res2/view.png>
 Package pdftex.def Info: Figures/dist_pract/res2/view.png  used on input line 1
-869.
+842.
 (pdftex.def)             Requested size: 338.76563pt x 260.18503pt.
  [94
 
-] [95 <./Figures/dist_pract/res2/xyztrac.png>]
-[96 <./Figures/dist_pract/res2/xyzerr.png> <./Figures/dist_pract/res2/yaw.png>]
-[97 <./Figures/dist_pract/res2/view.png>]
+] [95 <./Figures/dist_pract/res2/xyztrac.png>] [96 <./Figures/dist_pract/res2/x
+yzerr.png> <./Figures/dist_pract/res2/yaw.png>] [97 <./Figures/dist_pract/res2/
+view.png>]
 <Figures/dist_pract/res3/xyztrac.png, id=1802, 451.6875pt x 602.25pt>
 File: Figures/dist_pract/res3/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res3/xyztrac.png>
 Package pdftex.def Info: Figures/dist_pract/res3/xyztrac.png  used on input lin
-e 1882.
+e 1855.
 (pdftex.def)             Requested size: 338.76563pt x 451.71394pt.
 <Figures/dist_pract/res3/xyzerr.png, id=1803, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res3/xyzerr.png Graphic file (type png)
 <use Figures/dist_pract/res3/xyzerr.png>
 Package pdftex.def Info: Figures/dist_pract/res3/xyzerr.png  used on input line
- 1888.
+ 1861.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/dist_pract/res3/yaw.png, id=1804, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res3/yaw.png Graphic file (type png)
 <use Figures/dist_pract/res3/yaw.png>
 Package pdftex.def Info: Figures/dist_pract/res3/yaw.png  used on input line 18
-94.
+67.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 <Figures/dist_pract/res3/view.png, id=1805, 606.01407pt x 522.45187pt>
 File: Figures/dist_pract/res3/view.png Graphic file (type png)
 <use Figures/dist_pract/res3/view.png>
 Package pdftex.def Info: Figures/dist_pract/res3/view.png  used on input line 1
-899.
+872.
 (pdftex.def)             Requested size: 338.76563pt x 292.05287pt.
- [98
+
+[98
 
 ] [99 <./Figures/dist_pract/res3/xyztrac.png>] [100 <./Figures/dist_pract/res3/
 xyzerr.png> <./Figures/dist_pract/res3/yaw.png>] [101 <./Figures/dist_pract/res
@@ -3243,15 +3244,14 @@ xyzerr.png> <./Figures/dist_pract/res3/yaw.png>] [101 <./Figures/dist_pract/res
 
 ] [103] [104
 
-]
-[105] [106] [107] [108
+] [105] [106] [107] [108
 
 ]
 Appendix I
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1974.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1947.
 [109] [110] [111] [112]
-Overfull \hbox (24.34859pt too wide) detected at line 2135
+Overfull \hbox (24.34859pt too wide) detected at line 2108
 []
  []
 
@@ -3265,10 +3265,10 @@ n es-ti-ma-tion and
 
 [123] [124] [125] [126] [127]) [128]
 No file refs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2450.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2450.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2423.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2423.
 (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2450.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2423.
 
 
  *File List*
@@ -3493,6 +3493,7 @@ Figures/practical/quad_red_balls.png
 Figures/practical/quad_flying.png
 Tikz/Distributed/distributed.tex
 Figures/practical/battery.png
+Tikz/Window/Figure.tex
 Figures/results/practical/res1/xyztrac.png
 Figures/results/practical/res1/xyzerr.png
 Figures/results/practical/res1/yaw.png
@@ -3521,7 +3522,7 @@ Figures/dist_pract/res3/view.png
     main.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2450.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2423.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BFBE2D749E1F577DA12092C59410D824;4099.
@@ -3531,9 +3532,9 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 42090 strings out of 493305
- 835176 string characters out of 3129367
- 1002959 words of memory out of 3000000
+ 42095 strings out of 493305
+ 835322 string characters out of 3129367
+ 1003052 words of memory out of 3000000
  44314 multiletter control sequences out of 15000+200000
  650673 words of font info for 216 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3554,7 +3555,7 @@ X 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Bashar/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Bashar/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Bashar/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (150 pages, 53859561 bytes).
+Output written on main.pdf (150 pages, 53859622 bytes).
 PDF statistics:
  2209 PDF objects out of 2487 (max. 8388607)
  534 named destinations out of 1000 (max. 500000)

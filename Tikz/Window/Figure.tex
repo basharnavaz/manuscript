@@ -1,11 +1,10 @@
-\documentclass{article}
-\usepackage{tikz}
-\usetikzlibrary{calc}
+\documentclass{standalone}
+
+\usepackage{tikz, calc}
+\usetikzlibrary{shapes,arrows, decorations.markings}
 
 \begin{document}
 \begin{tikzpicture}
-	
-	
 	\draw[|-|,semithick] (0,0) -- (10,0);
 	\draw[|-,semithick] (5.3,0) -- (3.4,0);
 	\draw[|-,semithick] (8.7,0) -- (8.8,0);
@@ -28,9 +27,5 @@
 	\draw (0,-2.5) node {$(t-a)$};	
 	\draw (3,-2.5) node {$(t-a)-3T$};
 	\draw (8.7,-3) node {$0$};
-	
-	
-		
-	
 \end{tikzpicture}
 \end{document}
