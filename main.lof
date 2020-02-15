@@ -9,35 +9,35 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Measured, True and Estimated output trajectories in the window\relax }}{47}{figure.caption.137}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Complete measured and estimated trajectory\relax }}{47}{figure.caption.138}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Minimum variance facotr points in the window for first 20 iterations\relax }}{48}{figure.caption.139}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Block diagram of different quadcopter components in simulation\relax }}{50}{figure.caption.142}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Block diagram of different quadcopter components in simulation \relax }}{50}{figure.caption.142}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Chaotic Disturbances 1 in Position Subsystem\relax }}{52}{figure.caption.152}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Chaotic Disturbances 1 in Attitude Subsystem\relax }}{52}{figure.caption.153}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Chaotic Disturbances estimation of yaw component using NDO\relax }}{53}{figure.caption.155}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Chaotic Disturbances estimation of $y$ component using STO\relax }}{53}{figure.caption.156}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Chaotic Disturbances estimation of yaw component using KDO\relax }}{54}{figure.caption.157}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Tracking of $x$ coordinate using NDO\relax }}{54}{figure.caption.158}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Tracking of $x$ coordinate using STO\relax }}{54}{figure.caption.159}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Tracking of $x$ coordinate using STO\relax }}{55}{figure.caption.159}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Tracking of $x$ coordinate using KDO\relax }}{55}{figure.caption.160}
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Tracking of $y$ coordinate using NDO\relax }}{55}{figure.caption.161}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Tracking of $y$ coordinate using STO\relax }}{55}{figure.caption.162}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Tracking of $y$ coordinate using STO\relax }}{56}{figure.caption.162}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Tracking of $y$ coordinate using KDO\relax }}{56}{figure.caption.163}
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Tracking of $z$ coordinate using NDO\relax }}{56}{figure.caption.164}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Tracking of $z$ coordinate using STO\relax }}{56}{figure.caption.165}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Tracking of $z$ coordinate using STO\relax }}{57}{figure.caption.165}
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Tracking of $z$ coordinate using KDO\relax }}{57}{figure.caption.166}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Tracking of roll angle using NDO\relax }}{57}{figure.caption.167}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Tracking of roll angle using STO\relax }}{57}{figure.caption.168}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Tracking of roll angle using STO\relax }}{58}{figure.caption.168}
 \contentsline {figure}{\numberline {4.18}{\ignorespaces Tracking of roll angle using KDO\relax }}{58}{figure.caption.169}
 \contentsline {figure}{\numberline {4.19}{\ignorespaces Tracking of pitch angle using NDO\relax }}{58}{figure.caption.170}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Tracking of pitch angle using STO\relax }}{58}{figure.caption.171}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Tracking of pitch angle using STO\relax }}{59}{figure.caption.171}
 \contentsline {figure}{\numberline {4.21}{\ignorespaces Tracking of pitch angle using KDO\relax }}{59}{figure.caption.172}
 \contentsline {figure}{\numberline {4.22}{\ignorespaces Tracking of yaw angle using NDO\relax }}{59}{figure.caption.173}
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Tracking of yaw angle using STO\relax }}{59}{figure.caption.174}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Tracking of yaw angle using STO\relax }}{60}{figure.caption.174}
 \contentsline {figure}{\numberline {4.24}{\ignorespaces Tracking of yaw angle using KDO\relax }}{60}{figure.caption.175}
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Chaotic Disturbances 2 in Position Subsystem\relax }}{60}{figure.caption.182}
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Chaotic Disturbances 2 in Attitude Subsystem\relax }}{60}{figure.caption.183}
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Chaotic Disturbances estimation of $y$ component using NDO\relax }}{61}{figure.caption.185}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Chaotic Disturbances 2 in Position Subsystem\relax }}{61}{figure.caption.182}
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Chaotic Disturbances 2 in Attitude Subsystem\relax }}{61}{figure.caption.183}
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Chaotic Disturbances estimation of $y$ component using NDO\relax }}{62}{figure.caption.185}
 \contentsline {figure}{\numberline {4.28}{\ignorespaces Chaotic Disturbances estimation of $y$ component using STO\relax }}{62}{figure.caption.186}
-\contentsline {figure}{\numberline {4.29}{\ignorespaces Chaotic Disturbances estimation of $y$ component using KDO\relax }}{62}{figure.caption.187}
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Chaotic Disturbances estimation of $y$ component using KDO\relax }}{63}{figure.caption.187}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Quadcopter with the red balls for localization using image processing\relax }}{68}{figure.caption.196}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Quadcopter during a test flight while using Kinect for attitude estimation.\relax }}{69}{figure.caption.197}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Block diagram of components the distributed computing framework using MAVROS, MAVLink and Windows Xbox Kinect \relax }}{70}{figure.caption.198}
