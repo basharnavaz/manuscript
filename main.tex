@@ -87,20 +87,20 @@
 
 \title{Development of Output Signal Differentiator for Nonlinear Observer based Trajectory Tracking of a Quadcopter}
 
-\author{Basharnavaz KHAN}
-\authorcopyright{Basharnavaz Khan}
+\author{Mohammed Basharnavaz KHAN}
+\authorcopyright{Mohammed Basharnavaz Khan}
 
 \datesoutenance{"Defense date"}
 
-\datedepot{"Deposit Date"}
+\datedepot{"February 17, 2020"}
 
-\directeur{Prof. }{Maarouf Saad}{Département de Génie Électrique, ETS}
+\directeur{Mr. }{Maarouf Saad}{Département de Génie Électrique, École de technologie supérieure}
 
-\codirecteur{Prof. }{Hannah Michalska}{Electrical and Computer Engineering Department, McGill University}
+\codirecteur{Mrs. }{Hannah Michalska}{Department of Electrical and Computer Engineering, McGill University}
 
-\president{Prof. }{Guy Gauthier}{Département d'ingénierie des Systèmes, ETS}
+\president{Mr. }{Guy Gauthier}{Département d'ingénierie des Systèmes, École de technologie supérieure}
 
-\jury{Prof. }{Jean-Pierre Kenné}{Département de Génie Mécanique, ETS}
+\jury{Mr. }{Jean-Pierre Kenné}{Département de Génie Mécanique, École de technologie supérieure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -139,18 +139,16 @@ I would also like to thank Professor Maarouf Saad without whom this thesis would
 I convey my gratefulness to my peers namely Nuradeen, who guided me though the implementation of algorithms on the quadcopter and Shaunak, Debarshi and Abhishek who helped me understand their work on which the KDO is based. 
 
 Lastly I would like to thank Claire. 
-
-May the force be with you.
 \end{acknowledgements}
 
 %%- Summary -%%
-\begin{summary}{French title}{Quadrotor UAV; Backstepping control; Sliding mode control(SMC); Nonlinear
+\begin{summary}{Dévelopement d'un différentiateur de signal de sortie pour un observateur non linéaire pour la poursuite de trajectoire d’un quadricoptère }{Quadrotor UAV; Backstepping control; Sliding mode control(SMC); Nonlinear
 disturbance observer(NDO); Super-twisting Observer(STO); Kernal Differential Observer(KDO)}
 Une approche non asymptotique pour l'estimation de l'état complet pour la construction d'un observateur de perturbations externes non linéaire est présentée dans ce mémoire. L'observateur développé est nommé Kernel Differential Observer (KDO). Il est envisagé que le KDO fonctionnerait en conjugaison avec des algorithmes de contrôle pour obtenir un suivi robuste d'un quadrirotor sous des perturbations externes. Le quadrirotor est un système sous-actionné non linéaire à entrées multiples et sorties multiples avec un haut degré de couplage dynamique. Le contrôleur de suivi basé sur l'observateur vise à suivre une trajectoire de sortie de référence donnée en termes de position et de lacet du quadrirotor.
 
 Le KDO utilise une structure locale de modèle LTI de quatrième ordre sur la sortie de position et d'attitude du quadrirotor, dans une fenêtre mobile de longueur fixe qui avance à mesure que le temps avance. La structure du modèle s'adapte également au fil du temps pour s'adapter au mieux à la mesure de la position et de l'attitude tout en dérivant simultanément la position et l'attitude pour obtenir les vitesses et accélérations respectives, estimant ainsi l'état complet du quadrirotor. Pour ce faire, l'observateur, à chaque itération, estime les paramètres du noyau qui décriraient le mieux la dynamique sous-jacente des quadrirotors non linéaires. Il existe quelques approches présentées pour estimer les paramètres, l'algorithme de régression dynamique par crête (ridge) ou la méthode des moindres carrés d'erreur de sortie résiduelle de la reproduction de l'expression du noyau (Kernel). L'algorithme de régression par crête dynamique est coûteux en calcul car il utilise l'optimisation par recherche itérative, tandis que la méthode des moindres carrés donne une solution exacte au problème d'optimisation. Le choix de la méthode dépend des ressources de calcul et des contraintes de temps de l'application.
 
-Une fois que l'état complet du quadrirotor est disponible, le KDO estime les perturbations externes afin de poursuivre le suivi. Pour évaluer l'efficacité du suivi, l'observateur et le contrôleur sont testés en simulation et en temps réel sur un quadrirotor PIXHAWK S500. La simulation et les résultats en temps réel confirment que la méthodologie adaptative et l'estimation de l'état complet par différenciation du signal de la sortie présentée ici sont supérieures aux méthodes asymptotiques trouvées dans la littérature.
+Une fois que l'état complet du quadrirotor est disponible, le KDO estime les perturbations externes afin de poursuivre le suivi. Pour évaluer l'efficacité du suivi, l'observateur et le contrôleur sont testés en simulation et en temps réel sur un quadrirotor PIXHAWK S500. La simulation et les résultats en temps réel confirment que la méthodologie adaptative et l'estimation de l'état complet par différenciation du signal de la sortie présentée ici sont supérieures aux méthodes asymptotiques trouvées dans la litérature.
 
 \end{summary}
 
@@ -339,9 +337,9 @@ C_{\theta}S_{\psi} & S_{\phi}S_{\theta}S_{\psi}+C_{\phi}C_{\psi} & C_{\phi}S_{\t
 For the purpose of estimation and control, the quadcopter system is viewed as separate subsystems: translational, the linear motion of the center of mass of the quadcopter, and, rotational, the attitude of the quadcopter. The equations of motion in the inertial frame $\mathcal{I}$ are expressed as,
 \begin{subequations} \label{eq:dynamic_basic}
 \begin{align} 
-\ddot{p} &=\frac{1}{m}R(\Theta)F_{prop}-G+d_{p}(t) \label{eq:dynamic_basic_translation} \\
+\ddot{p} &=\frac{1}{m}R(\Theta)F_{prop}-G+d_{p}(t)\nonumber \\ \label{eq:dynamic_basic_translation} \\
 \ddot{\Theta} &=(IM(\Theta))^{-1}[T_{prop}-IN(\Theta,\dot{\Theta}) \nonumber \\
-& \ \ -\Omega\times I\Omega-T_g]+d_{\Theta}(t)\nonumber\\
+& \ \ -\Omega\times I\Omega-T_g]+d_{\Theta}(t)\nonumber\\ \nonumber \\
 &=\Phi(\Theta,\dot{\Theta})+\Psi(\Theta) T_{prop}+d_{\Theta}(t)
  \label{eq:dynamic_basic_rotation}
 \end{align}
@@ -637,7 +635,7 @@ where $U_\Theta=[U_2\ \ U_3\ \ U_4]^T$, and $\widehat{d}_\Theta$ is the estimate
 
 For brevity, only the main results are mentioned here without their proofs. \citep{RN114}] gives the proof to the proposition that with sufficiently high positive gains, $l_p>0$ and $l_\Theta>0$, any given accuracy can be achieved after a certain time such that the subsequent time instances have the disturbance estimation accuracy greater than the required accuracy, $\epsilon$. In other words, for a sufficiently large time $T^*$, the subsequent time instances will have an estimation error less than a given threshold.
 \begin{align} \label{eqn:NDO3}
-e_{d_p} &:=\hat{d_p} - d_p \\
+e_{d_p} &:=\hat{d_p} - d_p \\ \nonumber\\
 e_{d_\Theta} &:=\hat{d_\Theta}-d_\Theta
 \end{align}
 This proposition essentially highlights the asymptotic behaviour of the Nonlinear Disturbance Observer
@@ -678,8 +676,8 @@ To stabilize the observer error \citep{bash2019analysis} uses second order slidi
 \begin{split}\label{eqn:STO5}
 v_p&=-\lambda_p \vert e_p \vert ^{1/2}\text{sign}(e_p)+u_p \\
 \dot{u}_p&=-\alpha_p \text{sign}(e_p)
-\end{split}\\
-\begin{split}\label{eqn:STO6}
+\end{split}\\ \nonumber\\
+\begin{split}\label{eqn:STO6} 
 v_\Theta&=-\lambda_\Theta \vert e_\Theta \vert ^{1/2}\text{sign}(e_\Theta)+u_\Theta \\
 \dot{u}_\Theta&=-\alpha_\Theta \text{sign}(e_\Theta)
 \end{split}
@@ -1053,17 +1051,18 @@ The reconstruction for the window is done using the equations \eqref{eqn:y_estim
 	 \\ \parbox{0.75\textwidth}{\caption{Measured, True and Estimated output trajectories in the window\label{Fig:winEst}}}
 \end{figure}
 As time progresses, the window is slid ahead and using $t_i=b$, or in other words, using the latest time instant as the estimation point, the output trajectory is reconstructed. The complete reconstructed trajectory is shown in Figure \ref{Fig:recon}.\\
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/kdo/recon.png}}
 	 \\ \parbox{0.75\textwidth}{\caption{Complete measured and estimated trajectory\label{Fig:recon}}}
 \end{figure}
+
 \citep{RN120} uses the midpoint of the window for estimation under the assumption that it would have the minimum variance without providing the mathematical explanation for it. It can be verified that the minimum variance lies close to the midpoint and seen in simulations for varying kernel parameters. Figure \ref{Fig:minVarPts} shows the points with the minimum variance factor in the window for the first 20 iterations of the simulations. The rest of the simulation has similar values around the midpoint. 
 
 \begin{figure}
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/kdo/minvar.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Minimum variance facotr points in the window for first 20 iterations}\label{Fig:minVarPts}}
+	 \\ \parbox{0.75\textwidth}{\caption{Minimum variance factor points in the window for first 20 iterations}\label{Fig:minVarPts}}
 \end{figure}
 \FloatBarrier
 
@@ -1077,7 +1076,7 @@ The SIMULINK simulation used in this thesis builds upon the simulation environme
 \begin{figure}[H]
 	\centering
 	\resizebox{0.85\textwidth}{!}{\fbox{\input{Tikz/Block/block.tex}}}
-	 \\ \parbox{0.75\textwidth}{\caption{Block diagram of different quadcopter components in simulation \label{Fig:block_simulation}}}
+	 \\ \parbox{0.95\textwidth}{\caption{Block diagram of different quadcopter components in simulation \label{Fig:block_simulation}}}
 \end{figure}
 
 Figure \ref{Fig:block_simulation} gives a general idea of how the different components of the quadcopter are linked in simulation. The four different disturbances are given by the equations, \eqref{eq:dist_1}, \eqref{eq:dist_2}, \eqref{eq:dist_3} and \eqref{eq:dist_4}; while the quadcopter dynamics are modeled on based on the equations \eqref{eq:quad_dynamics}. The KDO is modeled based on the equations described in \eqref{eq:KDO} and similarly the NDO is modeled based on equations \eqref{eqn:NDO1}-\eqref{eqn:NDO2} and STO are modeled based on equations, \eqref{eqn:STO1}-\eqref{eqn:STO6}. The attitude controller and position controller compute the signals based on the equations \eqref{eqn:posCon}-\eqref{eqn:attCon}. The desired trajectory are given by equations, \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. 
@@ -1325,8 +1324,8 @@ d_i = k.a_i(t)sin(\omega t-\phi_i)
 where $a_i$ for $i=1...6$, are modeled based on two independent Lorenz chaotic systems $a_i$ for $i=1,2,3$ and the second system for $i=4,5,6$. The system in this case is defined by the set of ordinary equations, 
 \begin{subequations}
 \begin{align}
-a'_1(t) &= 0.1\big(\sigma(a_2-a_1)\big)\\
-a'_2(t) &= 0.1\big(\rho a_1 - a_1 a_3 - a_2\big)\\
+a'_1(t) &= 0.1\big(\sigma(a_2-a_1)\big)\\ \nonumber\\
+a'_2(t) &= 0.1\big(\rho a_1 - a_1 a_3 - a_2\big)\\ \nonumber \\
 a'_3(t) &= 0.1\big(a_1 a_2 - \beta a_3\big)
 \end{align}
 \end{subequations}
@@ -1475,7 +1474,7 @@ The estimation algorithm was developed and implemented by a former Graduate stud
 \begin{figure}
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/practical/quad_flying.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Quadcopter during a test flight while using Kinect for attitude estimation.\label{Fig:quad_flying}}}
+	 \\ \parbox{0.75\textwidth}{\caption{Quadcopter during a test flight while using Kinect for attitude estimation\label{Fig:quad_flying}}}
 \end{figure}
 
 \underline{The quadcopter hardware primarily contains the following components:}\\
@@ -1514,9 +1513,9 @@ Order of Reduction   & 7.381 & 1054.42 & 14.189     \\
 \end{table}
 The purpose of representing kernel equations in the form \eqref{eqn:kernVec1} and \eqref{eqn:kernVec2} is to represent the expressions in terms of constant matrices such that vectorized computations would lead to substantial reductions in processing times and thereby satisfy the time constraints posed by real-time systems. The numpy documentation \citep{oliphant2006guide} defines vectorization as, Vectorization describes the absence of any explicit looping, indexing, etc., in the code - these things are taking place, of course, just “behind the scenes” in optimized, pre-compiled C code. Vectorized code has many advantages, among which are:
 \begin{itemize}
-\item Vectorized code is more concise and easier to read
-\item Fewer lines of code generally means fewer bugs
-\item The code more closely resembles standard mathematical notation (making it easier, typically, to correctly code mathematical constructs)
+\item Vectorized code is more concise and easier to read.
+\item Fewer lines of code generally means fewer bugs.
+\item The code more closely resembles standard mathematical notation (making it easier, typically, to correctly code mathematical constructs).
 \item Without vectorization, our code would be littered with inefficient and difficult to read for loops.
 \end{itemize}
 
@@ -1543,7 +1542,6 @@ At the moment we focus on the Forward Kernel given by \eqref{eqn:forward} This e
 \item The relative position of the instant, $(t_k)$,  at which the estimate is to be obtained is fixed with respect to $a\textrm{ and }b \textrm{ i.e. }$ $$ (t_k-a)= a' \textrm{ constant, and } (b-t_k)=b'\textrm{ constant}$$  
 \end{enumerate}
 Equation \eqref{eqn:forward} is broken down as:
-
 \begin{align} \label{eqn:kernVec1}
 K_{F,\zeta}(t,\tau) &\triangleq \quad \frac{1}{[(t_k-a)^4+(b-t_k)^4]} \quad .\nonumber\\
 &\begin{bmatrix}
@@ -1572,7 +1570,7 @@ The matrix $[A]$ depends on the parameters $a_0$, $a_1$, $a_2$, $a_3$. The matri
 \begin{figure}[H]
 	\centering
 	\resizebox{0.85\textwidth}{!}{\fbox{\input{Tikz/Window/Figure.tex}}}
-	 \\ \parbox{0.75\textwidth}{\caption{Diagram showing $\tau -a$ and $t-\tau$ remain constant with respect to the position in the sliding window as time progresses \label{sliding_array}}}
+	 \\ \parbox{0.8\textwidth}{\caption{Diagram showing $\tau -a$ and $t-\tau$ remain constant with respect to the position in the sliding window as time progresses \label{sliding_array}}}
 \end{figure}
 
 The Forward Kernel as a function of position in sliding window array can be written as:
@@ -1675,7 +1673,7 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res1/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using NDO based controller\label{Fig:yawtracNDO}}}
+	 \\ \parbox{0.85\textwidth}{\caption{Real flight yaw tracking using NDO based controller\label{Fig:yawtracNDO}}}
 \end{figure}
 \begin{figure}[H]
 	\centering

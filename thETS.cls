@@ -483,7 +483,7 @@
 %% En Anglais
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\genTxtDirTh}{Thesis Supervisor}
-\newcommand{\genTxtDirM}{Memorandum Supervisor}
+\newcommand{\genTxtDirM}{Thesis Supervisor}
 
 \newcommand{\genTxtDirThF}{\genTxtDirTh}
 \newcommand{\genTxtDirMF}{\genTxtDirM}
@@ -736,7 +736,7 @@
    	\ifthenelse{\equal{\TypeDoc}{these}}{\newcommand{\lediplome}{\\DU DOCTORAT EN GÉNIE\\Ph. D.}}
    }
    {
-   	\ifthenelse{\equal{\TypeDoc}{memoire}}{\newcommand{\lediplome}{OF A MASTER’S DEGREE\\WITH THESIS\\M.A.Sc.}}{}
+   	\ifthenelse{\equal{\TypeDoc}{memoire}}{\newcommand{\lediplome}{OF A MASTER’S DEGREE\\WITH THESIS IN ELECTRICAL ENGINEERING\\M.A.Sc.}}{}
    	\ifthenelse{\equal{\TypeDoc}{memoireprojet}}{\newcommand{\lediplome}{OF A MASTER’S DEGREE\\WITH PROJECT\\M.Eng.}}{}
    	\ifthenelse{\equal{\TypeDoc}{these}}{\newcommand{\lediplome}{FOR THE DEGREE OF\\DOCTOR OF PHILOSOPHY\\Ph. D.}}
 }
@@ -1134,7 +1134,7 @@
   \renewcommand{\baselinestretch}{1}\small\normalsize % Interligne simple
   \begin{center}
     \normalfont%
-    \MakeUppercase{\bfseries#1}%
+    {\bfseries#1}% \MakeUppercase
     \\ \vspace{1\baselineskip}
     %\vskip 5.5\p@%
     \@author%
@@ -1150,7 +1150,7 @@
   %% tabulation Nicolas Lussier-Clément 2012
   \newdimen\stringwidth
   \setbox0=\hbox{\KeyWordsName}
-  %\stringwidth=\wd0
+  %\stringwidth=\wd0 
   %\hspace{-\stringwidth} \hspace{0.75in}
   %\begin{minipage}[t]{5.3in} %
     {\KeyWords}
@@ -1164,11 +1164,11 @@
 \ifthenelse{\equal{\DocLang}{francais}}
 {
 	\newenvironment{sommaire}[1]{\abstractTemplate{\@title}{RÉSUMÉ}{#1}{\bf Mots clés:}}{\endabstractTemplate}
-	\newenvironment{abstract}[2]{\abstractTemplate{#1}{ABSTRACT}{#2}{\bf Keywords:}}{\endabstractTemplate}
+	\newenvironment{abstract}[2]{\abstractTemplate{#1}{ABSTRAT}{#2}{\bf Keywords:}}{\endabstractTemplate}
 
 }
 {
-	\newenvironment{abstract}[1]{\abstractTemplate{\@title}{ABSTRACT}{#1}{\bf Keywords:}}{\endabstractTemplate}
+	\newenvironment{abstract}[1]{\abstractTemplate{\@title}{ABSTRAT}{#1}{\bf Keywords:}}{\endabstractTemplate}
 	\newenvironment{summary}[2]{\abstractTemplate{#1}{RÉSUMÉ}{#2}{\bf Mots clés:}}{\endabstractTemplate}
 }
 
