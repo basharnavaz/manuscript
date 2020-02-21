@@ -917,8 +917,9 @@
 
     % JuryB optionnel
     \ifdef{\NomJuryB}{
-      \PrefJuryB~\NomJuryB\ifthenelse{\equal{\PlusTxtJuryB}{}}{,~}{,~\PlusTxtJuryB}%
-      \TxtJuryB\\%
+      %\PrefJuryB~\NomJuryB\ifthenelse{\equal{\PlusTxtJuryB}{}}{,~}{,~\PlusTxtJuryB}%
+      \PrefJuryB~\NomJuryB,~\TxtJuryB\\
+      %\TxtJuryB\\%
       \AffilJuryB\par%
       \vspace{1em}
     }{}
