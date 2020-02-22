@@ -13,35 +13,35 @@
 \contentsline {section}{\numberline {2.3}Supertwisting Observer}{29}{section.69}%
 \contentsline {section}{\numberline {2.4}Position and Attitude Control}{31}{section.77}%
 \contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Chapter\ 3}\hfil }\uppercase {Kernel Disturbance Observer }}}{33}{chapter.83}%
-\contentsline {section}{\numberline {3.1}Moving Window Regime and Local Surrogate Model}{33}{section.95}%
-\contentsline {section}{\numberline {3.2}Parameter Estimation of Local Surrogate Model}{35}{section.97}%
-\contentsline {subsection}{\numberline {3.2.1}Dynamic Ridge Regression}{35}{subsection.98}%
-\contentsline {subsection}{\numberline {3.2.2}Practical identifiability and parameter estimation using double-sided kernel}{36}{subsection.100}%
-\contentsline {section}{\numberline {3.3}Full State Estimation and Disturbance Observer}{38}{section.107}%
-\contentsline {subsection}{\numberline {3.3.1}Double Sided Kernel \citep {RN120}}{38}{subsection.108}%
-\contentsline {subsection}{\numberline {3.3.2}Observing the Disturbances}{39}{subsection.113}%
-\contentsline {section}{\numberline {3.4}Stochastic properties of white noise under Kernel Transformation}{41}{section.115}%
-\contentsline {section}{\numberline {3.5}Example}{45}{section.133}%
-\contentsline {subsection}{\numberline {3.5.1}Parameter Estimation}{45}{subsection.138}%
-\contentsline {subsection}{\numberline {3.5.2}State Estimation}{47}{subsection.141}%
-\contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Chapter\ 4}\hfil }\uppercase {Simulation Testing of Observer Based Tracking Control }}}{51}{chapter.147}%
-\contentsline {section}{\numberline {4.1}Simulation Results}{51}{section.148}%
-\contentsline {subsection}{\numberline {4.1.1}Disturbance Model: Chaotic 1}{53}{subsection.153}%
-\contentsline {subsection}{\numberline {4.1.2}Disturbance Model: Chaotic 2}{56}{subsection.183}%
-\contentsline {subsection}{\numberline {4.1.3}Disturbance Model: Linear}{64}{subsection.195}%
-\contentsline {subsection}{\numberline {4.1.4}Disturbance Model: Constant}{65}{subsection.198}%
-\contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Chapter\ 5}\hfil }\uppercase {Experimental Validation of Observer Based Tracking Control }}}{67}{chapter.201}%
-\contentsline {section}{\numberline {5.1}Custom Quadcopter setup with Kinect based localization}{67}{section.202}%
-\contentsline {section}{\numberline {5.2}Computational Implementation}{74}{section.207}%
-\contentsline {section}{\numberline {5.3}Experimental Validation without Disturbances}{78}{section.222}%
-\contentsline {subsection}{\numberline {5.3.1}Non-Linear Disturbance Observer Results}{78}{subsection.223}%
-\contentsline {subsection}{\numberline {5.3.2}Super-Twisting Observer}{83}{subsection.232}%
-\contentsline {subsection}{\numberline {5.3.3}Kernel Disturbance Observer}{87}{subsection.241}%
-\contentsline {section}{\numberline {5.4}Experimental Validation with External Disturbances}{91}{section.249}%
-\contentsline {subsection}{\numberline {5.4.1}Non-Linear Disturbance Observer Results}{91}{subsection.251}%
-\contentsline {subsection}{\numberline {5.4.2}Super-Twisting Observer}{95}{subsection.256}%
-\contentsline {subsection}{\numberline {5.4.3}Kernel Disturbance Observer}{99}{subsection.263}%
-\contentsline {section}{\numberline {5.5}Summary}{103}{section.270}%
-\contentsline {chapter}{CONCLUSION AND RECOMMENDATIONS}{105}{chapter*.274}%
-\contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Appendix\ I}\hfil }\uppercase {Appendix example }}}{109}{chapter.275}%
-\contentsline {chapter}{BIBLIOGRAPHY}{122}{equation.327}%
+\contentsline {section}{\numberline {3.1}Moving Window Regime and Local Surrogate Model}{35}{section.93}%
+\contentsline {section}{\numberline {3.2}Parameter Estimation of Local Surrogate Model}{35}{section.95}%
+\contentsline {subsection}{\numberline {3.2.1}Dynamic Ridge Regression}{36}{subsection.96}%
+\contentsline {subsection}{\numberline {3.2.2}Practical identifiability and parameter estimation using double-sided kernel}{37}{subsection.98}%
+\contentsline {section}{\numberline {3.3}Full State Estimation and Disturbance Observer}{39}{section.105}%
+\contentsline {subsection}{\numberline {3.3.1}Double Sided Kernel \citep {RN120}}{39}{subsection.106}%
+\contentsline {subsection}{\numberline {3.3.2}Observing the Disturbances}{40}{subsection.111}%
+\contentsline {section}{\numberline {3.4}Stochastic properties of white noise under Kernel Transformation}{41}{section.113}%
+\contentsline {section}{\numberline {3.5}Example}{45}{section.131}%
+\contentsline {subsection}{\numberline {3.5.1}Parameter Estimation}{46}{subsection.136}%
+\contentsline {subsection}{\numberline {3.5.2}State Estimation}{48}{subsection.139}%
+\contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Chapter\ 4}\hfil }\uppercase {Simulation Testing of Observer Based Tracking Control }}}{53}{chapter.145}%
+\contentsline {section}{\numberline {4.1}Simulation Results}{53}{section.146}%
+\contentsline {subsection}{\numberline {4.1.1}Disturbance Model: Chaotic 1}{55}{subsection.151}%
+\contentsline {subsection}{\numberline {4.1.2}Disturbance Model: Chaotic 2}{58}{subsection.181}%
+\contentsline {subsection}{\numberline {4.1.3}Disturbance Model: Linear}{66}{subsection.193}%
+\contentsline {subsection}{\numberline {4.1.4}Disturbance Model: Constant}{67}{subsection.196}%
+\contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Chapter\ 5}\hfil }\uppercase {Experimental Validation of Observer Based Tracking Control }}}{69}{chapter.199}%
+\contentsline {section}{\numberline {5.1}Custom Quadcopter setup with Kinect based localization}{69}{section.200}%
+\contentsline {section}{\numberline {5.2}Computational Implementation}{76}{section.205}%
+\contentsline {section}{\numberline {5.3}Experimental Validation without Disturbances}{80}{section.220}%
+\contentsline {subsection}{\numberline {5.3.1}Non-Linear Disturbance Observer Results}{80}{subsection.221}%
+\contentsline {subsection}{\numberline {5.3.2}Super-Twisting Observer}{85}{subsection.230}%
+\contentsline {subsection}{\numberline {5.3.3}Kernel Disturbance Observer}{89}{subsection.239}%
+\contentsline {section}{\numberline {5.4}Experimental Validation with External Disturbances}{93}{section.247}%
+\contentsline {subsection}{\numberline {5.4.1}Non-Linear Disturbance Observer Results}{93}{subsection.249}%
+\contentsline {subsection}{\numberline {5.4.2}Super-Twisting Observer}{97}{subsection.254}%
+\contentsline {subsection}{\numberline {5.4.3}Kernel Disturbance Observer}{101}{subsection.261}%
+\contentsline {section}{\numberline {5.5}Summary}{105}{section.268}%
+\contentsline {chapter}{CONCLUSION AND RECOMMENDATIONS}{107}{chapter*.272}%
+\contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Appendix\ I}\hfil }\uppercase {Appendix example }}}{111}{chapter.273}%
+\contentsline {chapter}{BIBLIOGRAPHY}{124}{equation.325}%

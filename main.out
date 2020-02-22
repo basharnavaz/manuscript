@@ -12,35 +12,35 @@
 \BOOKMARK [1][]{section.69}{Supertwisting Observer}{chapter.61}% 12
 \BOOKMARK [1][]{section.77}{Position and Attitude Control}{chapter.61}% 13
 \BOOKMARK [0][]{chapter.83}{Chapter 3 Kernel Disturbance Observer}{}% 14
-\BOOKMARK [1][]{section.95}{Moving Window Regime and Local Surrogate Model}{chapter.83}% 15
-\BOOKMARK [1][]{section.97}{Parameter Estimation of Local Surrogate Model}{chapter.83}% 16
-\BOOKMARK [2][-]{subsection.98}{Dynamic Ridge Regression}{section.97}% 17
-\BOOKMARK [2][-]{subsection.100}{Practical identifiability and parameter estimation using double-sided kernel}{section.97}% 18
-\BOOKMARK [1][]{section.107}{Full State Estimation and Disturbance Observer}{chapter.83}% 19
-\BOOKMARK [2][-]{subsection.108}{Double Sided Kernel RN120}{section.107}% 20
-\BOOKMARK [2][-]{subsection.113}{Observing the Disturbances}{section.107}% 21
-\BOOKMARK [1][]{section.115}{Stochastic properties of white noise under Kernel Transformation}{chapter.83}% 22
-\BOOKMARK [1][]{section.133}{Example}{chapter.83}% 23
-\BOOKMARK [2][-]{subsection.138}{Parameter Estimation}{section.133}% 24
-\BOOKMARK [2][-]{subsection.141}{State Estimation}{section.133}% 25
-\BOOKMARK [0][]{chapter.147}{Chapter 4 Simulation Testing of Observer Based Tracking Control}{}% 26
-\BOOKMARK [1][]{section.148}{Simulation Results}{chapter.147}% 27
-\BOOKMARK [2][-]{subsection.153}{Disturbance Model: Chaotic 1}{section.148}% 28
-\BOOKMARK [2][-]{subsection.183}{Disturbance Model: Chaotic 2}{section.148}% 29
-\BOOKMARK [2][-]{subsection.195}{Disturbance Model: Linear}{section.148}% 30
-\BOOKMARK [2][-]{subsection.198}{Disturbance Model: Constant}{section.148}% 31
-\BOOKMARK [0][]{chapter.201}{Chapter 5 Experimental Validation of Observer Based Tracking Control}{}% 32
-\BOOKMARK [1][]{section.202}{Custom Quadcopter setup with Kinect based localization}{chapter.201}% 33
-\BOOKMARK [1][]{section.207}{Computational Implementation}{chapter.201}% 34
-\BOOKMARK [1][]{section.222}{Experimental Validation without Disturbances}{chapter.201}% 35
-\BOOKMARK [2][-]{subsection.223}{Non-Linear Disturbance Observer Results}{section.222}% 36
-\BOOKMARK [2][-]{subsection.232}{Super-Twisting Observer}{section.222}% 37
-\BOOKMARK [2][-]{subsection.241}{Kernel Disturbance Observer}{section.222}% 38
-\BOOKMARK [1][]{section.249}{Experimental Validation with External Disturbances}{chapter.201}% 39
-\BOOKMARK [2][-]{subsection.251}{Non-Linear Disturbance Observer Results}{section.249}% 40
-\BOOKMARK [2][-]{subsection.256}{Super-Twisting Observer}{section.249}% 41
-\BOOKMARK [2][-]{subsection.263}{Kernel Disturbance Observer}{section.249}% 42
-\BOOKMARK [1][]{section.270}{Summary}{chapter.201}% 43
-\BOOKMARK [0][]{chapter*.274}{CONCLUSION AND RECOMMENDATIONS}{}% 44
-\BOOKMARK [0][]{chapter.275}{Appendix I Appendix example}{}% 45
-\BOOKMARK [0][]{equation.327}{BIBLIOGRAPHY}{}% 46
+\BOOKMARK [1][]{section.93}{Moving Window Regime and Local Surrogate Model}{chapter.83}% 15
+\BOOKMARK [1][]{section.95}{Parameter Estimation of Local Surrogate Model}{chapter.83}% 16
+\BOOKMARK [2][-]{subsection.96}{Dynamic Ridge Regression}{section.95}% 17
+\BOOKMARK [2][-]{subsection.98}{Practical identifiability and parameter estimation using double-sided kernel}{section.95}% 18
+\BOOKMARK [1][]{section.105}{Full State Estimation and Disturbance Observer}{chapter.83}% 19
+\BOOKMARK [2][-]{subsection.106}{Double Sided Kernel RN120}{section.105}% 20
+\BOOKMARK [2][-]{subsection.111}{Observing the Disturbances}{section.105}% 21
+\BOOKMARK [1][]{section.113}{Stochastic properties of white noise under Kernel Transformation}{chapter.83}% 22
+\BOOKMARK [1][]{section.131}{Example}{chapter.83}% 23
+\BOOKMARK [2][-]{subsection.136}{Parameter Estimation}{section.131}% 24
+\BOOKMARK [2][-]{subsection.139}{State Estimation}{section.131}% 25
+\BOOKMARK [0][]{chapter.145}{Chapter 4 Simulation Testing of Observer Based Tracking Control}{}% 26
+\BOOKMARK [1][]{section.146}{Simulation Results}{chapter.145}% 27
+\BOOKMARK [2][-]{subsection.151}{Disturbance Model: Chaotic 1}{section.146}% 28
+\BOOKMARK [2][-]{subsection.181}{Disturbance Model: Chaotic 2}{section.146}% 29
+\BOOKMARK [2][-]{subsection.193}{Disturbance Model: Linear}{section.146}% 30
+\BOOKMARK [2][-]{subsection.196}{Disturbance Model: Constant}{section.146}% 31
+\BOOKMARK [0][]{chapter.199}{Chapter 5 Experimental Validation of Observer Based Tracking Control}{}% 32
+\BOOKMARK [1][]{section.200}{Custom Quadcopter setup with Kinect based localization}{chapter.199}% 33
+\BOOKMARK [1][]{section.205}{Computational Implementation}{chapter.199}% 34
+\BOOKMARK [1][]{section.220}{Experimental Validation without Disturbances}{chapter.199}% 35
+\BOOKMARK [2][-]{subsection.221}{Non-Linear Disturbance Observer Results}{section.220}% 36
+\BOOKMARK [2][-]{subsection.230}{Super-Twisting Observer}{section.220}% 37
+\BOOKMARK [2][-]{subsection.239}{Kernel Disturbance Observer}{section.220}% 38
+\BOOKMARK [1][]{section.247}{Experimental Validation with External Disturbances}{chapter.199}% 39
+\BOOKMARK [2][-]{subsection.249}{Non-Linear Disturbance Observer Results}{section.247}% 40
+\BOOKMARK [2][-]{subsection.254}{Super-Twisting Observer}{section.247}% 41
+\BOOKMARK [2][-]{subsection.261}{Kernel Disturbance Observer}{section.247}% 42
+\BOOKMARK [1][]{section.268}{Summary}{chapter.199}% 43
+\BOOKMARK [0][]{chapter*.272}{CONCLUSION AND RECOMMENDATIONS}{}% 44
+\BOOKMARK [0][]{chapter.273}{Appendix I Appendix example}{}% 45
+\BOOKMARK [0][]{equation.325}{BIBLIOGRAPHY}{}% 46

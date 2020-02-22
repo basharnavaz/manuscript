@@ -28,7 +28,9 @@
 \usepackage{tikz, standalone, calc}
 \usetikzlibrary{shapes,arrows, decorations.markings}
 \usepackage{placeins, multirow}
-\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage[linesnumbered,plain,vlined]{algorithm2e}
+%\usepackage{parskip}
+\usepackage{framed}
 %%%%%%%%%%%%%%%%% For code listings %%%%%%%%%%%%%%%%
 \usepackage{listings}
 \usepackage{xcolor}
@@ -748,10 +750,23 @@ U_\Theta=[e_3+K_3\dot{e}_3-\Phi(\Theta,\dot{\Theta})+\ddot{\Theta}_{r}+K_4e_4+A 
 where $e_3$ and $e_4$ are the attitude and angular velocity tracking error vectors respectively. $\Theta_r$ is the reference trajectory. The roll and pitch are coupled with the position subsystem in such a way that they can be found out though kinematic equations. More details on this can be found out in \citep{RN114}. $K_3$, $K_4$ and $A$ are 3x3 positive definite controller gain matrices given by, $K_3=\mbox{diag}[k_{\phi},k_{\theta},k_{\psi}]$, $K_4=\mbox{diag}[k_{\phi \phi},k_{\theta \theta},k_{\psi \psi}]$, and $A=\mbox{diag}[A_\phi,A_\theta,A_\psi]$, and sign(.) is the signum function. The vector $U_\Theta$ has three components $U_1$, $U_2$ and $U_3$ that are in \eqref{eq:quad_dynamics}.
 
 \chapter{Kernel Disturbance Observer} \label{Chap:KDO}
-The Kernel Disturbance Observer (KDO) is a multi-step algorithm, as outlined in Algorithm \ref{algo:1} and uses the double-sided kernel estimation approach. The Double-sided Kernel approach was developed in \citep{RN119} and \citep{RN76}, and further developed for fourth-order kernel representation in \citep{RN83} and \citep{RN120} and will be produced here for completeness. We start by presenting the details of the different steps in Algorithm \ref{algo:1}. 
+The Kernel Disturbance Observer (KDO) is a multi-step algorithm, as outlined in Algorithm 3.1 and uses the double-sided kernel estimation approach. The Double-sided Kernel approach was developed in \citep{RN119} and \citep{RN76}, and further developed for fourth-order kernel representation in \citep{RN83} and \citep{RN120} and will be produced here for completeness. We start by presenting the details of the different steps in Algorithm 3.1. 
 
 The steps 2-7 present the procedure in obtaining the disturbance estimates, $\hat{d_p}(t_k)$ and $\hat{d_\Theta}(t_k)$, at the time instant $t_k$, for the positional and rotational systems respectively. The input is the complete attitude between the time instants $t_k-\delta$ and $t_k$. This is represented by the vectors $[p_M(t_k-\delta) : p_{M}(t_k-\delta)]$ and $[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$. The variable $\zeta_M$ refers to the flat measured output from a system that is being observed, $\hat{\zeta}$ refers to the estimated output. ${\zeta}^{(2)}$ is the higher order derivative. The algorithm uses a sliding window approach to take input for the algorithm; this is explained in Section \ref{Sec:MovWin}. Step 3 of the algorithm is parameter estimation; the different approaches are explained in Section \ref{Sec:ParEst}. Steps 4-7 estimate the full state of the quadcopter and thereby observe the disturbances using methods explained in Section \ref{Sec:FullStateEst}.
-\begin{algorithm}  %add [H] for Here
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Algorithm %%%%%%%%%%%%%%%
+\begin{tabular}{c}
+\parbox{0.9\textwidth}{
+	\begin{center}
+	\textbf{Algorithm 3.1} Kernel Disturbance Observer algorithm using dynamic regression for parameter estimation
+	\end{center}
+	} 
+\\
+\setlength\fboxsep{0.4cm}
+\fbox{
+\parbox[t][][t]{\textwidth}{ 
+\begin{algorithm} [H] %add [H] for Here
 \SetAlgoLined
 \KwIn{$\mathbf{p_M}=[p_M(t_k-\delta) : p_{M}(t_k-\delta)]$, $\Theta_\mathbf{M}=[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$}
 \KwOut{$\hat{d_p}(t_k)$, $\hat{d_\Theta}(t_k)$}
@@ -781,8 +796,11 @@ Compute External Disturbances $\hat{d_p}(t_k)=[\hat{d_x},\hat{d_y},\hat{d_z}]$ a
 	\]
 
 Set $k \gets k+1$ and go to Step 2.
-\caption{Kernel Disturbance Observer algorithm using dynamic regression for parameter estimation \label{algo:1}}
-\end{algorithm}
+%\caption{Kernel Disturbance Observer algorithm using dynamic regression for parameter estimation \label{algo:1}}
+\end{algorithm} 
+} }
+\end{tabular}
+%%%%%%%%%%%%%%%% END ALGORITHM %%%%%%%%%%%%%%%%
 
 \section{Moving Window Regime and Local Surrogate Model} \label{Sec:MovWin}
 The Kernel Disturbance Observer employs the moving window regime to estimate the complete state of the quadcopter while using only the translational positions and the rotational angles of the quadcopter from the inertial frame and estimating the velocities and the accelerations. To obtain the estimate at the time instant $t_k$, the measurements of the translational positions and rotational angles in a window before $t_k$, known as the observation window, say $[t_k-\delta, t_k]$ are considered. These measurements are used to compute the parameters of a local surrogate fourth-order LTI model for each position and angle.  The local surrogate model is of the form,
@@ -1707,7 +1725,7 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 \end{figure}
 %%%%%Blank image inserted
 \begin{figure}[H]
-	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+	\includegraphics[width=0.2\textwidth]{Figures/blank.png}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -1768,7 +1786,7 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 \end{figure}
 %%%%%Blank image inserted
 \begin{figure}[H]
-	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+	\includegraphics[width=0.2\textwidth]{Figures/blank.png}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -1924,7 +1942,7 @@ Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. H
 \end{figure}
 %%%%%Blank image inserted
 \begin{figure}[H]
-	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+	\includegraphics[width=0.2\textwidth]{Figures/blank.png}
 \end{figure}
 \begin{figure}[H]
 	\centering
