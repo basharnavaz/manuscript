@@ -6,41 +6,41 @@
 \BOOKMARK [2][-]{subsection.33}{Example}{section.28}% 6
 \BOOKMARK [2][-]{subsection.41}{In the context of the quadcopter system}{section.28}% 7
 \BOOKMARK [1][]{section.51}{Parameter Identification}{chapter.14}% 8
-\BOOKMARK [0][]{chapter.61}{Chapter 2 Observer based Controller Tracking}{}% 9
-\BOOKMARK [1][]{section.62}{Estimation Objective}{chapter.61}% 10
-\BOOKMARK [1][]{section.64}{Nonlinear Disturbance Observer}{chapter.61}% 11
-\BOOKMARK [1][]{section.69}{Supertwisting Observer}{chapter.61}% 12
-\BOOKMARK [1][]{section.77}{Position and Attitude Control}{chapter.61}% 13
-\BOOKMARK [0][]{chapter.83}{Chapter 3 Kernel Disturbance Observer}{}% 14
-\BOOKMARK [1][]{section.95}{Moving Window Regime and Local Surrogate Model}{chapter.83}% 15
-\BOOKMARK [1][]{section.97}{Parameter Estimation of Local Surrogate Model}{chapter.83}% 16
-\BOOKMARK [2][-]{subsection.98}{Dynamic Ridge Regression}{section.97}% 17
-\BOOKMARK [2][-]{subsection.100}{Practical identifiability and parameter estimation using double-sided kernel}{section.97}% 18
-\BOOKMARK [1][]{section.107}{Full State Estimation and Disturbance Observer}{chapter.83}% 19
-\BOOKMARK [2][-]{subsection.108}{Double Sided Kernel RN120}{section.107}% 20
-\BOOKMARK [2][-]{subsection.113}{Observing the Disturbances}{section.107}% 21
-\BOOKMARK [1][]{section.115}{Stochastic properties of white noise under Kernel Transformation}{chapter.83}% 22
-\BOOKMARK [1][]{section.133}{Example}{chapter.83}% 23
-\BOOKMARK [2][-]{subsection.138}{Parameter Estimation}{section.133}% 24
-\BOOKMARK [2][-]{subsection.141}{State Estimation}{section.133}% 25
-\BOOKMARK [0][]{chapter.146}{Chapter 4 Simulation Testing of Observer Based Tracking Control}{}% 26
-\BOOKMARK [1][]{section.147}{Simulation Results}{chapter.146}% 27
-\BOOKMARK [2][-]{subsection.152}{Disturbance Model: Chaotic 1}{section.147}% 28
-\BOOKMARK [2][-]{subsection.182}{Disturbance Model: Chaotic 2}{section.147}% 29
-\BOOKMARK [2][-]{subsection.194}{Disturbance Model: Linear}{section.147}% 30
-\BOOKMARK [2][-]{subsection.197}{Disturbance Model: Constant}{section.147}% 31
-\BOOKMARK [0][]{chapter.200}{Chapter 5 Experimental Validation of Observer Based Tracking Control}{}% 32
-\BOOKMARK [1][]{section.201}{Custom Quadcopter setup with Kinect based localization}{chapter.200}% 33
-\BOOKMARK [1][]{section.206}{Computational Implementation}{chapter.200}% 34
-\BOOKMARK [1][]{section.221}{Experimental Validation without Disturbances}{chapter.200}% 35
-\BOOKMARK [2][-]{subsection.222}{Non-Linear Disturbance Observer Results}{section.221}% 36
-\BOOKMARK [2][-]{subsection.229}{Super-Twisting Observer}{section.221}% 37
-\BOOKMARK [2][-]{subsection.236}{Kernel Disturbance Observer}{section.221}% 38
-\BOOKMARK [1][]{section.242}{Experimental Validation with External Disturbances}{chapter.200}% 39
-\BOOKMARK [2][-]{subsection.244}{Non-Linear Disturbance Observer Results}{section.242}% 40
-\BOOKMARK [2][-]{subsection.249}{Super-Twisting Observer}{section.242}% 41
-\BOOKMARK [2][-]{subsection.254}{Kernel Disturbance Observer}{section.242}% 42
-\BOOKMARK [1][]{section.259}{Summary}{chapter.200}% 43
-\BOOKMARK [0][]{chapter*.263}{CONCLUSION AND RECOMMENDATIONS}{}% 44
-\BOOKMARK [0][]{chapter.264}{Appendix I Appendix example}{}% 45
-\BOOKMARK [0][]{equation.316}{BIBLIOGRAPHY}{}% 46
+\BOOKMARK [0][]{chapter.62}{Chapter 2 Observer based Controller Tracking}{}% 9
+\BOOKMARK [1][]{section.63}{Estimation Objective}{chapter.62}% 10
+\BOOKMARK [1][]{section.65}{Nonlinear Disturbance Observer}{chapter.62}% 11
+\BOOKMARK [1][]{section.70}{Supertwisting Observer}{chapter.62}% 12
+\BOOKMARK [1][]{section.78}{Position and Attitude Control}{chapter.62}% 13
+\BOOKMARK [0][]{chapter.84}{Chapter 3 Kernel Disturbance Observer}{}% 14
+\BOOKMARK [1][]{section.96}{Moving Window Regime and Local Surrogate Model}{chapter.84}% 15
+\BOOKMARK [1][]{section.98}{Parameter Estimation of Local Surrogate Model}{chapter.84}% 16
+\BOOKMARK [2][-]{subsection.99}{Dynamic Ridge Regression}{section.98}% 17
+\BOOKMARK [2][-]{subsection.101}{Practical identifiability and parameter estimation using double-sided kernel}{section.98}% 18
+\BOOKMARK [1][]{section.108}{Full State Estimation and Disturbance Observer}{chapter.84}% 19
+\BOOKMARK [2][-]{subsection.109}{Double Sided Kernel RN120}{section.108}% 20
+\BOOKMARK [2][-]{subsection.114}{Observing the Disturbances}{section.108}% 21
+\BOOKMARK [1][]{section.116}{Stochastic properties of white noise under Kernel Transformation}{chapter.84}% 22
+\BOOKMARK [1][]{section.134}{Example}{chapter.84}% 23
+\BOOKMARK [2][-]{subsection.139}{Parameter Estimation}{section.134}% 24
+\BOOKMARK [2][-]{subsection.142}{State Estimation}{section.134}% 25
+\BOOKMARK [0][]{chapter.147}{Chapter 4 Simulation Testing of Observer Based Tracking Control}{}% 26
+\BOOKMARK [1][]{section.148}{Simulation Results}{chapter.147}% 27
+\BOOKMARK [2][-]{subsection.153}{Disturbance Model: Chaotic 1}{section.148}% 28
+\BOOKMARK [2][-]{subsection.183}{Disturbance Model: Chaotic 2}{section.148}% 29
+\BOOKMARK [2][-]{subsection.195}{Disturbance Model: Linear}{section.148}% 30
+\BOOKMARK [2][-]{subsection.198}{Disturbance Model: Constant}{section.148}% 31
+\BOOKMARK [0][]{chapter.201}{Chapter 5 Experimental Validation of Observer Based Tracking Control}{}% 32
+\BOOKMARK [1][]{section.202}{Custom Quadcopter setup with Kinect based localization}{chapter.201}% 33
+\BOOKMARK [1][]{section.207}{Computational Implementation}{chapter.201}% 34
+\BOOKMARK [1][]{section.222}{Experimental Validation without Disturbances}{chapter.201}% 35
+\BOOKMARK [2][-]{subsection.223}{Non-Linear Disturbance Observer Results}{section.222}% 36
+\BOOKMARK [2][-]{subsection.230}{Super-Twisting Observer}{section.222}% 37
+\BOOKMARK [2][-]{subsection.237}{Kernel Disturbance Observer}{section.222}% 38
+\BOOKMARK [1][]{section.243}{Experimental Validation with External Disturbances}{chapter.201}% 39
+\BOOKMARK [2][-]{subsection.245}{Non-Linear Disturbance Observer Results}{section.243}% 40
+\BOOKMARK [2][-]{subsection.250}{Super-Twisting Observer}{section.243}% 41
+\BOOKMARK [2][-]{subsection.255}{Kernel Disturbance Observer}{section.243}% 42
+\BOOKMARK [1][]{section.260}{Summary}{chapter.201}% 43
+\BOOKMARK [0][]{chapter*.264}{CONCLUSION AND RECOMMENDATIONS}{}% 44
+\BOOKMARK [0][]{chapter.265}{Appendix I Appendix example}{}% 45
+\BOOKMARK [0][]{equation.317}{BIBLIOGRAPHY}{}% 46

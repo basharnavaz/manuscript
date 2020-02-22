@@ -453,7 +453,11 @@ To provide better clarity on the concept of differential flatness, we take the e
 	\fbox{
 		\includegraphics[width=0.60\textwidth]{Figures/quad/linearmotor.png} 
 	}
-	\parbox{0.75\textwidth}{\caption{Mass Spring system \citep{levine2009differential}}\label{difflin}} 
+	\parbox{0.75\textwidth}{
+		\begin{center}
+		\caption{Mass Spring system\label{difflin}}Taken from \citep{levine2009differential}
+		\end{center}	
+	} 
 \end{figure}
 
 The system can be described by the system differential equations, 
@@ -532,29 +536,51 @@ Thus parameter identification of the quadcopter essentially boils down to identi
 	\fbox{
 		\includegraphics[width=0.60\textwidth,height=0.50\textwidth]{Figures/quad/sss_c2.png} 
 	}
-	 \\ \parbox{0.75\textwidth}{\caption{Wired Triangle Pendulum Method \citep{RN121}}\label{swm_c2}} 
+	 \parbox{0.75\textwidth}{
+		\begin{center}
+		\caption{Wired Triangle Pendulum Method\label{swm_c2}}Taken from \citep{RN121}
+		\end{center}	
+	} 
 \end{figure}
+
 Finding the mass of the quadcopter is straightforward, which can be done by placing the quadcopter on a weighing scale. The moment of inertia is calculated by the trifilar suspension method \citep{harris2002harris}. The method is based on measuring the period of natural oscillations of the quadcopter about a particular axis to slight external perturbations. The moment of inertia along an axis is given by, 
 \begin{equation}\label{ixyz}
 I_{xx,yy,zz}=\frac{Mr^2_{disc}T_{x,y,z}}{4\pi^2l_\textrm{w}}
 \end{equation}
 where the moment of inertia along the $x$ axis is given by the computation done with the value $T_x$ and similarly for $y$ and $z$. $T_x$ corresponds to one period of oscillation in seconds. $M$ is the quadcopter mass, and $r_{disc}$ is the disc radius and $l_w$ is the wire length from the point where it attaches to the disc to the point of suspension on the ceiling. All parameters are measured in SI units. To eliminate measurement errors, the quadcopter is allowed to swing for 10 oscillations, and the average is used. The quadcopter is suspended through strings attached to a ring that firmly holds the quadcopter in place during these oscillations. The results of the above experimental method are summarized in Table \ref{tim}. 
-\begin{table} 
-		\parbox{0.65\textwidth}{\caption{Inertia moments of quadcopter S500 using experimental method \citep{RN121}}\label{tim}}
 
-		\begin{tabular}{|c|c|c|c|c|c|}
+
+\begin{figure}
+	\centering
+	\fbox{\includegraphics[width=0.75\textwidth,height=0.50\textwidth]{Figures/quad/rcd_c2.png}}
+	\parbox{0.65\textwidth}{
+		\begin{center}
+		\caption{Inertia moments of quadcopter S500 using experimental method\label{tim}}Taken from \citep{RN121}
+		\end{center}	
+	}
+\end{figure}
+
+
+
+\begin{table}
+	\parbox{0.65\textwidth}{
+		\begin{center}
+		\caption{Inertia moments of quadcopter S500 using experimental method\label{tim}}Taken from \citep{RN121}
+		\end{center}	
+	}
+	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
-			{\bf } & {\bf Reference} & {\bf Disc} & \multicolumn{3}{|c|}{\bf Qudrotor} \\
-			\cline{4-6}
-			& & & \bf I$_{xx}$ & \bf I$_{yy}$ & \bf I$_{zz}$\\
-	  \hline
+		{\bf } & {\bf Reference} & {\bf Disc} & \multicolumn{3}{|c|}{\bf Qudrotor} \\
+		\cline{4-6}
+		& & & \bf I$_{xx}$ & \bf I$_{yy}$ & \bf I$_{zz}$\\
+		\hline
 		\bf Mass (Kg) & 0,2408 & 0,0908 & 1,354 & 1,354 & 1,354\\
-	  \hline
-			\bf Period,T (s)& 2,708 & 2,68 & 1,856 & 1,85 & 2,452\\
-	  \hline
-			\bf Inertia (Kg.m$^2$)& 0,0052 & unknown & 0,0126 & 0,0125 & 0,0235 \\
-	  \hline
-		\end{tabular}
+		\hline
+		\bf Period,T (s)& 2,708 & 2,68 & 1,856 & 1,85 & 2,452\\
+	    \hline
+		\bf Inertia (Kg.m$^2$)& 0,0052 & unknown & 0,0126 & 0,0125 & 0,0235 \\
+		\hline
+	\end{tabular}
 \end{table}
 The physical parameters obtained in Table \ref{tim} can be used to obtain the physical constants mentioned in equation \eqref{eq:quad_dynamics_2} as
 \begin{align}
@@ -574,8 +600,13 @@ At the same time the controller needs to know the precise Pulse Width Modulating
 \begin{figure}
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth,height=0.50\textwidth]{Figures/quad/rcd_c2.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Motor force measuring device \citep{RN121}}\label{rcd_c2}} 
+	\parbox{0.75\textwidth}{
+		\begin{center}
+		\caption{Motor force measuring device\label{rcd_c2}}Taken from \citep{RN121}
+		\end{center}	
+	}
 \end{figure}
+
 The PWM signal is as a quadratic polynomial of the lift force $f_i$. For example the relation of one motor is of the form, 
 \begin{equation} \label{eqn:pwmforce}
 \texttt{PWM} (\mu s)= -13.0701f_i^2+227.6249f_i +1036.3
