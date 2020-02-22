@@ -65,6 +65,10 @@
 % For Algorithm
 \let\oldnl\nl% Store \nl in \oldnl
 \newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}% Remove line number for one line
+% New command to remove a certain section from the Table of Contents. 
+% Add "\tocless" before "\section{•}" to take it out from the Table of Contents.
+\newcommand{\nocontentsline}[3]{}
+\newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % IMPORTANT: PRINTING WITH THE PROPER MARGINS
@@ -222,31 +226,32 @@ Once the full state of the quadcopter is available the KDO estimates the externa
 % Marginpar to the left of the document
 \reversemarginpar
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% THESIS EXAMPLE
+% THESIS 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{introduction} \label{Chap:Intro}
 Engineers are often interested in controlling the behaviour of their surroundings or a part of it, often referred to as a "system" in order to provide desirable results in domains such as transportation, manufacturing etc. In order to do so, engineers develop control systems which are interconnected components forming a system configuration that will provide a desired system response  \citep{bishop1996modern}. These components are usually actuators, micro-controllers and power electronics that drive the actuators and software, which contains the logic or algorithms which determine the actuation signals.\\As time progressed, the systems have become increasingly complicated, with multiple interrelated variables that are needed to exhibit the behaviour. To control these systems,  maybe more than one actuator used in an attempt to make the system or plant have the desired behaviour. These types of control, such systems are called Multiple-input control systems. Most advanced control systems use the output of the plant or the system to be controlled as an essential criterion to compute the subsequent control signals to the system. These types of control systems are called Closed Loop Control systems. Usually, there is an error in the measurement of the plant output, known as measurement noise, which is attempted to minimize by using filtering algorithms that aid the control systems by providing more accurate information compute the intended control signal. In some cases, control systems employ the use of observers, which estimate the state of the system or external disturbances that affect it. This thesis aims at developing an observer based on an algebraic estimator to observe external aerodynamic disturbances and compare it with a couple of other observers in the literature. 
 
-\section{Literature Review}
+\tocless \section{Literature Review}
 For a long time now, quadcopters have been of interest to control engineers as they present interesting challenges in several domains of control theory. It is a Multiple Input Multiple Output system with six degrees of freedom and twelve components that describe its complete state. Since it is an unmanned aerial vehicle with just four inputs in the form of rotor speeds to the four individual rotors (that act as actuators to this system), it is also classified as an under-actuated system \citep{wang2016dynamics}. These complexities have led to substantial research in different control strategies for quadcopters. 
 
-\subsection{Quadcopter Modeling and Control}
+\tocless \subsection{Quadcopter Modeling and Control}
 The mechanical construction of a quadcopter is quite simple and inexpensive. It consists of placing two sets of rotating propellers on opposite ends of beams placed rigidly at right angles to each other. The mechanical system is considered as a rigid body in 3-dimensional space with six degrees of freedom, three rotational and three translational. The orientation of the quadcopter is usually expressed as a set of Euler angles or quaternions. Euler angle representation poses the problem of gimble lock \citep{RN85}, \citep{RN84}. The gimble lock phenomenon presents singularities where one degree of freedom is lost, resulting in singularities, which restricts trajectory tracking capabilities of the quadcopter. 
 The dynamics of the quadcopter has been described in detail in multiple sources in literature, \citep{RN86}, \citep{RN87} and \citep{RN88}. Considering the dynamical model as two subsystems, angular and positional subsystem, it can be seen that the angular kinematics is independent of the linear motions, although the linear kinematics are dependent on the orientation of the quadcopter, \citep{RN89}. Therefore most souces of literature consider the quadcopter to have two subsystems, position and attitude subsystems and a control loop to control these individual subsystems. The outer loop controls the position \citep{RN90}, \citep{RN91} and the inner loop controls the attitude \citep{RN92}, \citep{RN93}. Most of the times, having accurate dynamic models is not enough to have robust control of a quadcopter as the dynamics are affected by factors such as model uncertainties, measurement inaccuracies and external disturbances. Model uncertainties arise due to model linearizations, inaccurate system parameters and assumptions in motor dynamics. One way of addressing model inaccuracies is through experimental identification of system parameters such as moments of inertia, mass, motor dynamics etc., suggested through  \citep{RN94}, \citep{RN95}, \citep{alexis2011model}. Another approach towards model uncertainties is to consider them as external disturbances and try to mitigate them with appropriate observer-controller strategies. External disturbances can be in the form of wind gusts \citep{RN97}, unstable payloads \citep{RN98}, actuator failure or irregular battery voltages.\\
 There has been extensive research conducted in various control methods for quadcopters. Linear controllers are efficient in maintaining the quadcopter in the hovering position due to linearization around the setpoint (desired hover position). The classical approaches of proportional-integral-derivative (PID) control and linear quadratic regulator and their combination were presented in \citep{RN99}. \citep{RN100} uses the backstepping controller with an Extended Kalman Filter (EKF) to control a quadcopter for indoor flights. \citep{RN102} uses sliding mode control for robust tracking control of a quadcopter subjected to wind disturbances. \citep{RN103} uses both backstepping and SMC to control the rotation and the position subsystems of the quadcopter and concludes that the backstepping controller provides controllability of the orientation angles under relatively high perturbations. Model predictive control methods \citep{RN104}, \citep{RN105}, \citep{RN106} are suitable for control of multivariate systems, such as quadcopters, that are governed by constrained dynamics as compared to the classical methods such as the PID or LQR mentioned earlier. \\
 To improve the controllability under external disturbances, robust controllers such as the nonlinear H$_\infty$ control algorithm \citep{RN108} are used for path tracking where the MPC controller tracks the path and the H$\infty$ stabilizes the rotational subsystem. This method is susceptible to additional disturbances through the linearization of the nonlinear dynamics. \citep{RN109} proposes a similar solution but is still susceptible to additional disturbances. To overcome this problem, observer-based control algorithms  have been proposed in \citep{RN110}, \citep{RN111}, \citep{RN112}, \citep{RN113}. Recent advancements in this approach have been done by \citep{RN114}, \citep{RN116}, \citep{RN117}. \citep{RN114} proposes backstepping and sliding mode controller in conjugation with the nonlinear disturbance observer (NDO) for trajectory tracking. The NDO is an asymptotic observer which requires an initial estimate to initialize the observer. \citep{RN117} proposes an alternate observer, super-twisting observer (STO), with a faster convergence rate than the NDO, but again requires an initial estimate to initialize the state of the observer. Both \citep{RN114} and \citep{RN117} conduct simulations with smooth sinusoidal external disturbances with information about the initial conditions known to the observers. 
 Algebraic estimators provide an estimate of systems without requiring the need for initializers. The literature on this will be discussed later in this section.\\ 
-\subsection{Differentially Flat Systems} \label{subsec:diffflatnessquad}
+\tocless \subsection{Differentially Flat Systems} \label{subsec:diffflatnessquad}
 Differential flatness was introduced in a series of papers by Fliess in the context of differential algebra and Lie-Backland transformations \citep{RN78}, \citep{RN79}, \citep{RN80}. It is a structural property of a system that allows an engineer to parameterize every system variable in terms of set "free" variables of the system \citep{RN77}. 
 The differential flatness property of a system provides the possibility of differentially parameterizing system variables in terms of "free variables." In other words, the system variables are functions of the "free variables" and a finite number of derivatives of some or all of them.
 Differentially flat systems are systems where the full state of the system and the input to the system can be determined from a set of outputs, which is equal to the number elements in the set of inputs to the system \citep{RN73}. 
 \citep{RN81} mentions the quadcopter system to be a differentially flat system.  The relations between thrust, $T$ and torques along  $x$, $y$ and $z$ axes are given as functions of the states of the system but omits the derivation of these relationships. \citep{mellinger2011minimum} can be considered to be the first paper that proves the differential flatness of the quadcopter system without considering the rotor drag. \citep{faessler2017differential} extends upon this work but points out a couple of incorrectness found out in \citep{mellinger2011minimum}. It provides the correct approach to prove the differential flatness property, while also assuming rotor drag in the derivation. It is recommended that for the exhaustive proof, one refer to the corrected and extended version in \citep{faessler2017differential}. Having established the property of flatness of a quadcopter system allows us to implement algebraic estimation techniques on the output of the quadcopter. 
 
-\subsection{Algebraic Differentiation and the Double Sided Kernel}
+\tocless \subsection{Algebraic Differentiation and the Double Sided Kernel}
 The Double-Sided Kernel method was developed for state estimation of differentially flat second order systems in \citep{RN76}. The double-sided kernel does not exhibit any singularities, as did the previous algebraic estimators in \citep{RN75}. The method expresses the system states as a function of output and/or its time derivatives using the properties of differentially flat systems. The method simultaneously computes the parameters and uses them to find higher derivatives of the system.\\
 Although the algebraic estimators prove to be superior to their asymptotic counterparts, they have not yet been implemented on a real-time application that is subjected to several constraints of time, computational power and available memory. 
 
-\section{In This Thesis}
+\tocless \section{In This Thesis}
 Autonomous control systems rely on observers to estimate external disturbances in the system being controlled. Signal differentiation plays a crucial role in the construction of nonlinear disturbance observers. In the light of the introduction of algebraic estimation of SISO differentially flat systems, the general objective of this thesis is to develop an algebraic observer for the purpose of constructing nonlinear controllers for dynamical systems. Specifically, the nonlinear disturbance observers (Non-linear Disturbance Observer, Supertwisting Observer and Kernel Differential Observer) will be employed to estimate aerodynamic forces during quadcopter flights, in simulation and practice.
 
 The kernel-based algebraic differentiators will employ a fourth-order LTI structure over a moving window in conjunction with dynamic ridge regression. 
@@ -277,7 +282,7 @@ To achieve the above objectives the following tools will be used:
 
 
 	 
-\section{Thesis Organization}
+\tocless \section{Thesis Organization}
 \begin{itemize}
 \item Chapter 0: This chapter introduces control systems while giving a brief background into the different types of techniques in control available in the literature. It presents the literature reviewed on quadcopter modelling and control, while also presenting the concept of differential flatness. The supporting literature on algebraic differentiation is presented, which is used to develop the Kernel Disturbance Observer. 
 \item Chapter \ref{Chap:Quad}: This chapter focuses entirely on presenting the dynamical model of the quadcopter and its differential flatness property. Mathematical definitions of differential flatness is provided along with an example to illustrate this property. The chapter concludes by presenting the simulation and practical methods used at GREPCI Robotics Lab to identify the parameters of the quadcopter.
@@ -293,7 +298,7 @@ To achieve the above objectives the following tools will be used:
 
 \end{introduction}
 
-%%- First demo chapter -%%
+%%- First demo chapter -%% 
 \chapter{Quadcopter Model} \label{Chap:Quad}
 The flight principles of a quadcopter have been described in \citep{RN71} and many other works.
 A quadcopter has four rotors positioned on its arms of equal lengths. The motors are numbered as No. 1 to No. 4, with opposite motors rotating in the same direction, i.e. No. 1 and No.3 rotate counter-clockwise direction, and No. 2 and No.4 rotate in a clockwise direction. The rotation of the motors provides the upward thrust against the gravity to keep the quadcopter in air. Rotation around an axis is obtained by the rotational speed difference between the motors that are placed perpendicular to it. For instance, rotation around the X-axis is caused by the moment around the X-axis generated by the difference of rotational speed between motors No. 2 and No. 4. which are placed perpendicular to the X-axis. A similar action causes rotation around the Y-axis. The rotation of the rotors exerts a torque on the quadcopter frame due to setting the airflow in rotation. The opposing direction of rotation of the motors maintain yaw stability, and a difference in rotation of motor causes yaw or rotation around the Z-axis.
@@ -448,7 +453,7 @@ To provide better clarity on the concept of differential flatness, we take the e
 	\fbox{
 		\includegraphics[width=0.60\textwidth]{Figures/quad/linearmotor.png} 
 	}
-	 \\ \parbox{0.75\textwidth}{\caption{Mass Spring system \citep{levine2009differential}}\label{difflin}} 
+	\parbox{0.75\textwidth}{\caption{Mass Spring system \citep{levine2009differential}}\label{difflin}} 
 \end{figure}
 
 The system can be described by the system differential equations, 

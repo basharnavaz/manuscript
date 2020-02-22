@@ -1,11 +1,5 @@
 \babel@toc {english}{}
 \contentsline {chapter}{INTRODUCTION}{1}{chapter*.7}%
-\contentsline {section}{\numberline {0.1}Literature Review}{1}{section.8}%
-\contentsline {subsection}{\numberline {0.1.1}Quadcopter Modeling and Control}{2}{subsection.9}%
-\contentsline {subsection}{\numberline {0.1.2}Differentially Flat Systems}{4}{subsection.10}%
-\contentsline {subsection}{\numberline {0.1.3}Algebraic Differentiation and the Double Sided Kernel}{5}{subsection.11}%
-\contentsline {section}{\numberline {0.2}In This Thesis}{5}{section.12}%
-\contentsline {section}{\numberline {0.3}Thesis Organization}{7}{section.13}%
 \contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Chapter\ 1}\hfil }\uppercase {Quadcopter Model }}}{11}{chapter.14}%
 \contentsline {section}{\numberline {1.1}Dynamic Model}{12}{section.16}%
 \contentsline {section}{\numberline {1.2}Differential Flatness of the quadcopter system}{15}{section.27}%
