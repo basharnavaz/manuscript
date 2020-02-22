@@ -1502,11 +1502,11 @@ The estimation algorithm was developed and implemented by a former Graduate stud
 \parbox{0.65\textwidth}{\caption{Time reductions using vectorization in differenct programming environments}\label{Tab:vect}}
 \begin{tabular}{|c|c|c|c|}
 \hline
-         & \multicolumn{3}{c|}{Component Reference Trajectory}\\\cline{2-4} 
-Time in milliseconds &   MATLAB   &  Python &   C++ \\ \hline
-Conventional Method  & 4.082 & 63.3709 & 0.02469    \\
-Vectorization Method & 0.553 & 0.0601  & 0.00174    \\
-Order of Reduction   & 7.381 & 1054.42 & 14.189     \\
+         & \multicolumn{3}{c|}{\textbf{Programming Language}}\\\cline{2-4} 
+\textbf{Time in milliseconds} &   \textbf{MATLAB}   &  \textbf{Python} &   \textbf{C++} \\ \hline
+\textbf{Conventional Method}  & 4.082 & 63.3709 & 0.02469    \\
+\textbf{Vectorization Method} & 0.553 & 0.0601  & 0.00174    \\
+\textbf{Order of Reduction}   & 7.381 & 1054.42 & 14.189     \\
 \hline
 \end{tabular}
 \end{table}
@@ -1883,8 +1883,8 @@ From the experimental results shown above, it can be seen that the quadcopter is
 \parbox{0.65\textwidth}{\caption{Root Mean Square (RMS) error in each component of reference trajectory tracking by the three observers without external disturbances}\label{Tab:rmse}}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-         & \multicolumn{4}{c|}{Component Reference Trajectory}\\\cline{2-5} 
-Observer &   $x$   &  $y$     &   $z$    & $\psi$  \\ \hline
+         & \multicolumn{4}{c|}{\textbf{Component Reference Trajectory}}\\\cline{2-5} 
+\textbf{Observer} &   $x$   &  $y$     &   $z$    & $\psi$  \\ \hline
 NDO      & 0.01204 & 0.013824 & 0.02074  & 0.00349 \\
 STO      & 0.00471 & 0.00769  & 0.01139   & 0.00324 \\
 KDO      & 0.00400 & 0.00574  & 0.011312 & 0.02469 \\
@@ -1898,8 +1898,8 @@ It can be seen that the KDO performs better than NDO and STO in tracking the pos
 \parbox{0.65\textwidth}{\caption{Root Mean Square (RMS) error in each component of reference trajectory tracking by the three observers under external disturbances}\label{Tab:rmseDist}}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-         & \multicolumn{4}{c|}{Component Reference Trajectory}\\\cline{2-5} 
-Observer &   $x$   &  $y$     &   $z$    & $\psi$  \\ \hline
+         & \multicolumn{4}{c|}{\textbf{Component Reference Trajectory}}\\\cline{2-5} 
+\textbf{Observer} &   $x$   &  $y$     &   $z$    & $\psi$  \\ \hline
 NDO      & 0.02395 & 0.02045  & 0.04274  & 0.16843 \\
 STO      & 0.01048 & 0.01039  & 0.03196  & 0.08538 \\
 KDO      & 0.00969 & 0.01096  & 0.02846  & 0.11934 \\
