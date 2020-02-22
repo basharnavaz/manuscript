@@ -157,8 +157,7 @@ Lastly I would like to thank Claire.
 \end{acknowledgements}
 
 %%- Summary -%%
-\begin{summary}{Dévelopement d'un différentiateur de signal de sortie pour un observateur non linéaire pour la poursuite de trajectoire d’un quadricoptère }{Quadrotor UAV; Backstepping control; Sliding mode control(SMC); Nonlinear
-disturbance observer(NDO); Super-twisting Observer(STO); Kernal Differential Observer(KDO)}
+\begin{summary}{Dévelopement d'un différentiateur de signal de sortie pour un observateur non linéaire pour la poursuite de trajectoire d’un quadricoptère }{Quadrotor UAV; Backstepping control; Sliding mode control(SMC); Nonlinear disturbance observer(NDO); Super-twisting Observer(STO); Kernal Differential Observer(KDO)}
 Une approche non asymptotique pour l'estimation de l'état complet pour la construction d'un observateur de perturbations externes non linéaire est présentée dans ce mémoire. L'observateur développé est nommé Kernel Differential Observer (KDO). Il est envisagé que le KDO fonctionnerait en conjugaison avec des algorithmes de contrôle pour obtenir un suivi robuste d'un quadrirotor sous des perturbations externes. Le quadrirotor est un système sous-actionné non linéaire à entrées multiples et sorties multiples avec un haut degré de couplage dynamique. Le contrôleur de suivi basé sur l'observateur vise à suivre une trajectoire de sortie de référence donnée en termes de position et de lacet du quadrirotor.
 
 Le KDO utilise une structure locale de modèle LTI de quatrième ordre sur la sortie de position et d'attitude du quadrirotor, dans une fenêtre mobile de longueur fixe qui avance à mesure que le temps avance. La structure du modèle s'adapte également au fil du temps pour s'adapter au mieux à la mesure de la position et de l'attitude tout en dérivant simultanément la position et l'attitude pour obtenir les vitesses et accélérations respectives, estimant ainsi l'état complet du quadrirotor. Pour ce faire, l'observateur, à chaque itération, estime les paramètres du noyau qui décriraient le mieux la dynamique sous-jacente des quadrirotors non linéaires. Il existe quelques approches présentées pour estimer les paramètres, l'algorithme de régression dynamique par crête (ridge) ou la méthode des moindres carrés d'erreur de sortie résiduelle de la reproduction de l'expression du noyau (Kernel). L'algorithme de régression par crête dynamique est coûteux en calcul car il utilise l'optimisation par recherche itérative, tandis que la méthode des moindres carrés donne une solution exacte au problème d'optimisation. Le choix de la méthode dépend des ressources de calcul et des contraintes de temps de l'application.
@@ -174,7 +173,9 @@ A non-asymptotic approach for full state estimation for the construction of a no
 
 The KDO employs a local fourth-order LTI model structure on the position and attitude output of the quadcopter, within a fixed-length sliding window which moves ahead as time progresses. The model structure also adapts over time to best fit the measurement of the position and attitude while simultaneously also differentiating the position and attitude to obtain the respective velocities and accelerations, thereby estimating the full state of the quadcopter. In order to do this, the observer, in each iteration, estimates the parameters of the kernel that would best describe the underlying nonlinear quadcopter dynamics. There are a couple of approaches presented to estimate the parameters, dynamic ridge regression algorithm or least square method of residual output error from reproducing kernel expression. The dynamic ridge regression algorithm is computationally expensive as it employs optimization by iterative search, while the least square method gives an exact solution to the optimization problem. The choice of method depends on the computational resources and time constraints of the application.
 
-Once the full state of the quadcopter is available the KDO estimates the external disturbances in order to achieve continued tracking. To evaluate the effectiveness of tracking the observer and controller are tested out in simulation and in real-time on a PIXHAWK S500 quadcopter. The simulation and real-time results confirm that the adaptive methodology and full state estimation by signal differentiation of the output presented here are superior to the asymptotic methods found in the literature.\\
+Once the full state of the quadcopter is available the KDO estimates the external disturbances in order to achieve continued tracking. To evaluate the effectiveness of tracking the observer and controller are tested out in simulation and in real-time on a PIXHAWK S500 quadcopter. The simulation and real-time results confirm that the adaptive methodology and full state estimation by signal differentiation of the output presented here are superior to the asymptotic methods found in the literature.
+
+
 \end{abstract}
 
 %%- Table of contents -%%
@@ -560,20 +561,6 @@ Finding the mass of the quadcopter is straightforward, which can be done by plac
 I_{xx,yy,zz}=\frac{Mr^2_{disc}T_{x,y,z}}{4\pi^2l_\textrm{w}}
 \end{equation}
 where the moment of inertia along the $x$ axis is given by the computation done with the value $T_x$ and similarly for $y$ and $z$. $T_x$ corresponds to one period of oscillation in seconds. $M$ is the quadcopter mass, and $r_{disc}$ is the disc radius and $l_w$ is the wire length from the point where it attaches to the disc to the point of suspension on the ceiling. All parameters are measured in SI units. To eliminate measurement errors, the quadcopter is allowed to swing for 10 oscillations, and the average is used. The quadcopter is suspended through strings attached to a ring that firmly holds the quadcopter in place during these oscillations. The results of the above experimental method are summarized in Table \ref{tim}. 
-
-
-\begin{figure}
-	\centering
-	\fbox{\includegraphics[width=0.75\textwidth,height=0.50\textwidth]{Figures/quad/rcd_c2.png}}
-	\parbox{0.65\textwidth}{
-		\begin{center}
-		\caption{Inertia moments of quadcopter S500 using experimental method\label{tim}}Taken from \citep{RN121}
-		\end{center}	
-	}
-\end{figure}
-
-
-
 \begin{table}
 	\parbox{0.65\textwidth}{
 		\begin{center}
@@ -594,6 +581,7 @@ where the moment of inertia along the $x$ axis is given by the computation done 
 		\hline
 	\end{tabular}
 \end{table}
+
 The physical parameters obtained in Table \ref{tim} can be used to obtain the physical constants mentioned in equation \eqref{eq:quad_dynamics_2} as
 \begin{align}
 \begin{aligned}

@@ -1169,7 +1169,7 @@
 
 }
 {
-	\newenvironment{abstract}[1]{\abstractTemplate{\@title}{ABSTRAT}{#1}{\bf Keywords:}}{\endabstractTemplate}
+	\newenvironment{abstract}[1]{\abstractTemplate{\@title}{ABSTRACT}{#1}{\bf Keywords:}}{\endabstractTemplate}
 	\newenvironment{summary}[2]{\abstractTemplate{#1}{RÉSUMÉ}{#2}{\bf Mots clés:}}{\endabstractTemplate}
 }
 
