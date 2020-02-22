@@ -318,7 +318,7 @@ A quadcopter has four rotors positioned on its arms of equal lengths. The motors
 \begin{figure}[H]
 	\centering
 	\resizebox{0.75\textwidth}{!}{\fbox{\input{Tikz/Quad_Dynamics/quad.tex}}}
-	 \\ \parbox{0.75\textwidth}{\caption{Quadcopter model\label{Fig:quadSchematic}}}
+	\parbox{0.75\textwidth}{\caption{Quadcopter model\label{Fig:quadSchematic}}}
 \end{figure}
 
 
@@ -1064,7 +1064,7 @@ The objective is to estimate the full state of the system with higher derivative
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/kdo/outputs.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Measured and True output of the system described by Equation \eqref{eqn:example1}\label{Fig:outputs}}}
+	\parbox{0.75\textwidth}{\caption{Measured and True output of the system described by Equation \eqref{eqn:example1}\label{Fig:outputs}}}
 \end{figure}
 
 \subsection{Parameter Estimation}
@@ -1082,7 +1082,7 @@ The optimization tuning parameters were, $\lambda=0.5$ and $\gamma=0.25$. The va
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/kdo/varFacWin.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Variance Factor at different time instances in window\label{Fig:varFacWin}}}
+	\parbox{0.75\textwidth}{\caption{Variance Factor at different time instances in window\label{Fig:varFacWin}}}
 \end{figure}
 
 \FloatBarrier
@@ -1090,18 +1090,18 @@ The optimization tuning parameters were, $\lambda=0.5$ and $\gamma=0.25$. The va
 The estimated parameters, $\hat{\textbf{w}}_{\texttt{current}}$, are now used to construct the estimated trajectory within the window. The double sided kernel, $K_{DS}(t_i,\tau)$ depends on the point of estimation($t$) in the window. Figure \ref{Fig:kernels} shows how the double sided kernel varies according to the point of estimation. $K_{DS}$ is a discontinuous function of $t_i\in[a,b]$ except at $t_i\in \{a, \frac{1}{2}(a+b), b\}$. 
 \begin{figure} [H]
 	\centering	\fbox{\includegraphics[width=0.75\textwidth]{Figures/kdo/kernels.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Double Sided Kernels depending on the estimation point in the window\label{Fig:kernels}}}
+	\parbox{0.75\textwidth}{\caption{Double Sided Kernels depending on the estimation point in the window\label{Fig:kernels}}}
 \end{figure}
 The reconstruction for the window is done using the equations \eqref{eqn:y_estimate}-\eqref{eqn:backward}. The measured, true and estimated outputs for this window are shown in Figure \ref{Fig:winEst}
 \begin{figure}
 	\centering	\fbox{\includegraphics[width=0.75\textwidth]{Figures/kdo/winEst.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Measured, True and Estimated output trajectories in the window\label{Fig:winEst}}}
+	\parbox{0.75\textwidth}{\caption{Measured, True and Estimated output trajectories in the window\label{Fig:winEst}}}
 \end{figure}
 As time progresses, the window is slid ahead and using $t_i=b$, or in other words, using the latest time instant as the estimation point, the output trajectory is reconstructed. The complete reconstructed trajectory is shown in Figure \ref{Fig:recon}.\\
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/kdo/recon.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Complete measured and estimated trajectory\label{Fig:recon}}}
+	\parbox{0.75\textwidth}{\caption{Complete measured and estimated trajectory\label{Fig:recon}}}
 \end{figure}
 
 \citep{RN120} uses the midpoint of the window for estimation under the assumption that it would have the minimum variance without providing the mathematical explanation for it. It can be verified that the minimum variance lies close to the midpoint and seen in simulations for varying kernel parameters. Figure \ref{Fig:minVarPts} shows the points with the minimum variance factor in the window for the first 20 iterations of the simulations. The rest of the simulation has similar values around the midpoint. 
@@ -1109,8 +1109,15 @@ As time progresses, the window is slid ahead and using $t_i=b$, or in other word
 \begin{figure}
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/kdo/minvar.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Minimum variance factor points in the window for first 20 iterations}\label{Fig:minVarPts}}
+	\parbox{0.75\textwidth}{\caption{Minimum variance factor points in the window for first 20 iterations}\label{Fig:minVarPts}}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% There is a blank image here to push the image on top %%%%%%%%
+%%%% of the page for layout concerns %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+	\includegraphics[width=0.85\textwidth]{Figures/blank.png}
+\end{figure}
+
 \FloatBarrier
 
 \chapter{Simulation Testing of Observer Based Tracking Control} \label{Chap:ResultsSim}
@@ -1123,7 +1130,7 @@ The SIMULINK simulation used in this thesis builds upon the simulation environme
 \begin{figure}[H]
 	\centering
 	\resizebox{0.85\textwidth}{!}{\fbox{\input{Tikz/Block/block.tex}}}
-	 \\ \parbox{0.95\textwidth}{\caption{Block diagram of different quadcopter components in simulation \label{Fig:block_simulation}}}
+	\parbox{0.95\textwidth}{\caption{Block diagram of different quadcopter components in simulation \label{Fig:block_simulation}}}
 \end{figure}
 
 Figure \ref{Fig:block_simulation} gives a general idea of how the different components of the quadcopter are linked in simulation. The four different disturbances are given by the equations, \eqref{eq:dist_1}, \eqref{eq:dist_2}, \eqref{eq:dist_3} and \eqref{eq:dist_4}; while the quadcopter dynamics are modeled on based on the equations \eqref{eq:quad_dynamics}. The KDO is modeled based on the equations described in \eqref{eq:KDO} and similarly the NDO is modeled based on equations \eqref{eqn:NDO1}-\eqref{eqn:NDO2} and STO are modeled based on equations, \eqref{eqn:STO1}-\eqref{eqn:STO6}. The attitude controller and position controller compute the signals based on the equations \eqref{eqn:posCon}-\eqref{eqn:attCon}. The desired trajectory are given by equations, \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. 
@@ -1515,13 +1522,13 @@ The estimation algorithm was developed and implemented by a former Graduate stud
 \begin{figure}
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/practical/quad_red_balls.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Quadcopter with the red balls for localization using image processing\label{Fig:quad_red_balls}}}
+	\parbox{0.75\textwidth}{\caption{Quadcopter with the red balls for localization using image processing\label{Fig:quad_red_balls}}}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/practical/quad_flying.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Quadcopter during a test flight while using Kinect for attitude estimation\label{Fig:quad_flying}}}
+	\parbox{0.75\textwidth}{\caption{Quadcopter during a test flight while using Kinect for attitude estimation\label{Fig:quad_flying}}}
 \end{figure}
 
 \underline{The quadcopter hardware primarily contains the following components:}\\
@@ -1531,7 +1538,7 @@ The estimation algorithm was developed and implemented by a former Graduate stud
 \begin{figure}[H]
 	\centering
 	\resizebox{0.75\textwidth}{!}{\fbox{\input{Tikz/Distributed/distributed.tex}}}
-	 \\ \parbox{0.75\textwidth}{\caption{Block diagram of components the distributed computing framework using MAVROS, MAVLink and Windows Xbox Kinect \label{Fig:distributed}}}
+	\parbox{0.75\textwidth}{\caption{Block diagram of components the distributed computing framework using MAVROS, MAVLink and Windows Xbox Kinect \label{Fig:distributed}}}
 \end{figure}
 
 \textbf{Battery:} Quadcopters typically use Lithium Polymer(LiPo), Lithium Polymer High Voltage (LiHV) and Nickel Metal Hydride(NiMH) batteries. This quadcopter uses LiPo batteries. The nominal battery voltage is dependent on the number of cells in the battery. The number of cells and its arrangement is denoted by its 'cell count'. A cell count is a number followed by a letter, where the number indicates the number of cells and the letter indicates the type of arrangement. For example, 3S means there are three cells in series with each other; hence the effective voltage adds up by 3.7V per cell to have an effective voltage of 11.1V. The capacity of the battery is the amount of charge it can hold when fully charged up to its capacity. This usually decreases as the battery is being used. The capacity is indicated in the unit of milliamp-hour (mAh). The capacity of the battery being used is 2250 mAh. Discharge rating is another important rating when choosing the battery. The discharge rating is the rate at which the battery can supply charge safely without adversely affecting the battery. The safe limit current is the product of the discharge rating with the capacity in amperes. For example, the battery used for the quadcopter in testing has the discharge rating 25C and capacity 2250 mAh. The discharge rate is then 25x2.25 = 56.25 A. The battery used for this project is Rhino 2250 3S 25C. 
@@ -1539,7 +1546,7 @@ The estimation algorithm was developed and implemented by a former Graduate stud
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/practical/battery.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{{Rhino 2250 3S 25C battery with its charger \label{Fig:battery}}}}
+	\parbox{0.75\textwidth}{\caption{{Rhino 2250 3S 25C battery with its charger \label{Fig:battery}}}}
 \end{figure}
 \textbf{Motor Drivers:}Motor drivers act as current and voltage amplifiers. The computer operates in the range of 0-3.3V and voltage of 0-20 mA, where as the motors run on a voltage range of 11.1V and current of 0-60 A. The motor driver used in this project is, Turnigy Multistar 20A V2 ESC With BLHeli and 4A LBEC 2-6S. The motors used are, Multistar Elite 2216 920KV Multirotor Motor (CW).
 
@@ -1617,7 +1624,7 @@ The matrix $[A]$ depends on the parameters $a_0$, $a_1$, $a_2$, $a_3$. The matri
 \begin{figure}[H]
 	\centering
 	\resizebox{0.85\textwidth}{!}{\fbox{\input{Tikz/Window/Figure.tex}}}
-	 \\ \parbox{0.8\textwidth}{\caption{Diagram showing $\tau -a$ and $t-\tau$ remain constant with respect to the position in the sliding window as time progresses \label{sliding_array}}}
+	\parbox{0.8\textwidth}{\caption{Diagram showing $\tau -a$ and $t-\tau$ remain constant with respect to the position in the sliding window as time progresses \label{sliding_array}}}
 \end{figure}
 
 The Forward Kernel as a function of position in sliding window array can be written as:
@@ -1707,28 +1714,35 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res1/xyztrac.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using NDO based controller\label{Fig:xyztracNDO}}}
+	\fbox{\includegraphics[width=0.85\textwidth]{Figures/results/practical/res1/xyztrac.png}}
+	\parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using NDO based controller\label{Fig:xyztracNDO}}}
 \end{figure}
-
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+\end{figure}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res1/xyzerr.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using NDO based controller\label{Fig:xyzerrNDO}}}
+	\parbox{0.75\textwidth}{\caption{Position tracking errors using NDO based controller\label{Fig:xyzerrNDO}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res1/yaw.png}}
-	 \\ \parbox{0.85\textwidth}{\caption{Real flight yaw tracking using NDO based controller\label{Fig:yawtracNDO}}}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res1/view.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using NDO based controller\label{Fig:3dNDO}}}
+	\parbox{0.85\textwidth}{\caption{Real flight yaw tracking using NDO based controller\label{Fig:yawtracNDO}}}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. Due to problems with the battery life, the complete trajectory could not be tracked. Although it should be noted that the part of the trajectory that could not be tracked does not change values and similar results can be expected for the subsequent duration of the flight. \\
 The observer was initialized with the initial state of the observer as, $z_p(0)=[2,2,2]$ and $z_\Theta(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res1/view.png}}
+	\parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using NDO based controller\label{Fig:3dNDO}}}
+\end{figure}
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.6\textwidth]{Figures/blank.png}
+\end{figure}
 \FloatBarrier
 
 \subsection{Super-Twisting Observer}
@@ -1761,25 +1775,32 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res2/xyztrac.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using STO based controller\label{Fig:xyztracSTO}}}
+	\fbox{\includegraphics[width=0.85\textwidth]{Figures/results/practical/res2/xyztrac.png}}
+	\parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using STO based controller\label{Fig:xyztracSTO}}}
 \end{figure}
-
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+\end{figure}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res2/xyzerr.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using STO based controller\label{Fig:xyzerrSTO}}}
+	\parbox{0.75\textwidth}{\caption{Position tracking errors using STO based controller\label{Fig:xyzerrSTO}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res2/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using STO based controller\label{Fig:yawtracSTO}}}
+	\parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using STO based controller\label{Fig:yawtracSTO}}}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res2/view.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using STO based controller\label{Fig:3dSTO}}}
+	\parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using STO based controller\label{Fig:3dSTO}}}
+\end{figure}
+%%%% Blank Figure inserted
+\begin{figure}[H]
+	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
 
@@ -1805,25 +1826,32 @@ Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. H
 
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res3/xyztrac.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using KDO based controller\label{Fig:xyztracKDO}}}
+	\fbox{\includegraphics[width=0.85\textwidth]{Figures/results/practical/res3/xyztrac.png}}
+	\parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using KDO based controller\label{Fig:xyztracKDO}}}
 \end{figure}
-
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+\end{figure}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res3/xyzerr.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using KDO based controller\label{Fig:xyzerrKDO}}}
+	\parbox{0.75\textwidth}{\caption{Position tracking errors using KDO based controller\label{Fig:xyzerrKDO}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res3/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using KDO based controller\label{Fig:yawtracKDO}}}
+	\parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using KDO based controller\label{Fig:yawtracKDO}}}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res3/view.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using KDO based controller\label{Fig:3dKDO}}}
+	\parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using KDO based controller\label{Fig:3dKDO}}}
+\end{figure}
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.3\textwidth]{Figures/blank.png}
 \end{figure}
 \FloatBarrier
 
@@ -1832,31 +1860,31 @@ The three algorithms were tested on the quadcopter under external disturbances f
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/dryer.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{{Quadcopter with the applied disturbances \label{Fig:dryer}}}}
+	\parbox{0.75\textwidth}{\caption{{Quadcopter with the applied disturbances \label{Fig:dryer}}}}
 \end{figure}
 \subsection{Non-Linear Disturbance Observer Results}
 The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. The control gains were same ones that were used without external disturbances  presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. The figures sbelow show the real flight tracking of the reference trajectory variables, which are the position($x$, $y$, $z$) and yaw ($\psi$). 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/xyztrac.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using NDO based controller under external disturbances\label{Fig:xyztracNDODist}}}
+	\parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using NDO based controller under external disturbances\label{Fig:xyztracNDODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/xyzerr.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using NDO based controller under external disturbances\label{Fig:xyzerrNDODist}}}
+	\parbox{0.75\textwidth}{\caption{Position tracking errors using NDO based controller under external disturbances\label{Fig:xyzerrNDODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using NDO based controller under external disturbances\label{Fig:yawtracNDODist}}}
+	\fbox{\includegraphics[width=0.7\textwidth]{Figures/dist_pract/res1/yaw.png}}
+	\parbox{0.7\textwidth}{\caption{Real flight tracking of yaw using NDO based controller under external disturbances\label{Fig:yawtracNDODist}}}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/view.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using NDO based controller under external disturbances\label{Fig:3dNDODist}}}
+	\fbox{\includegraphics[width=0.7\textwidth]{Figures/dist_pract/res1/view.png}}
+	\parbox{0.7\textwidth}{\caption{Real flight 3D tracking of position using NDO based controller under external disturbances\label{Fig:3dNDODist}}}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. Due to problems with the battery life, the complete trajectory could not be tracked. \\
 The observer was initialized with the initial state of the observer as, $z_p(0)=[2,2,2]$ and $z_\Theta(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
@@ -1867,28 +1895,34 @@ The Super-Twisting Observer described in Section \ref{Sec:STO} is implemented on
 
 \begin{figure}[H]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/xyztrac.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using STO based controller under external disturbances\label{Fig:xyztracSTODist}}}
+	\fbox{\includegraphics[width=0.85\textwidth]{Figures/dist_pract/res2/xyztrac.png}}
+	\parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using STO based controller under external disturbances\label{Fig:xyztracSTODist}}}
 \end{figure}
-
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+\end{figure}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/xyzerr.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using STO based controller under external disturbances\label{Fig:xyzerrSTODist}}}
+	\parbox{0.75\textwidth}{\caption{Position tracking errors using STO based controller under external disturbances\label{Fig:xyzerrSTODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using STO based controller under external disturbances\label{Fig:yawtracSTODist}}}
+	\parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using STO based controller under external disturbances\label{Fig:yawtracSTODist}}}
 \end{figure}
+The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/view.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using STO based controller under external disturbances\label{Fig:3dSTODist}}}
+	\parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using STO based controller under external disturbances\label{Fig:3dSTODist}}}
 \end{figure}
-The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
-
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{Figures/blank.png}
+\end{figure}
 \FloatBarrier
 \subsection{Kernel Disturbance Observer}
 The Kernel Disturbance Observer described in Chapter \ref{Chap:KDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. The KDO controller combination gives similar performance results for a variety of controller gains. The controller gains were the same ones that were used in the case of testing without external disturbances presented in Table  \ref{Tab:realControllerGainsKDO}.
@@ -1898,24 +1932,31 @@ Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. H
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res3/xyztrac.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of position coordinates using KDO based controller under external disturbances\label{Fig:xyztracKDODist}}}
+	\parbox{0.85\textwidth}{\caption{Real flight tracking of position coordinates using KDO based controller under external disturbances\label{Fig:xyztracKDODist}}}
 \end{figure}
-
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+\end{figure}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res3/xyzerr.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Position tracking errors using KDO based controller under external disturbances\label{Fig:xyzerrKDODist}}}
+	\parbox{0.75\textwidth}{\caption{Position tracking errors using KDO based controller under external disturbances\label{Fig:xyzerrKDODist}}}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res3/yaw.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using KDO based controller under external disturbances\label{Fig:yawtracKDODist}}}
+	\parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using KDO based controller under external disturbances\label{Fig:yawtracKDODist}}}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res3/view.png}}
-	 \\ \parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using KDO based controller under external disturbances\label{Fig:3dKDODist}}}
+	\parbox{0.75\textwidth}{\caption{Real flight 3D tracking of position using KDO based controller under external disturbances\label{Fig:3dKDODist}}}
+\end{figure}
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{Figures/blank.png}
 \end{figure}
 \FloatBarrier
 
