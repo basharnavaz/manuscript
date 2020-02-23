@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.21)  22 FEB 2020 18:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.21)  22 FEB 2020 19:46
 entering extended mode
 **./main.tex
 (main.tex
@@ -2571,7 +2571,7 @@ File: Figures/results/practical/res2/yaw.png Graphic file (type png)
 <use Figures/results/practical/res2/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res2/yaw.png  used on input 
 line 1799.
-(pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
+(pdftex.def)             Requested size: 293.59412pt x 220.20262pt.
 <Figures/results/practical/res2/view.png, id=1662, 532.99126pt x 505.13719pt>
 File: Figures/results/practical/res2/view.png Graphic file (type png)
 <use Figures/results/practical/res2/view.png>
@@ -2588,9 +2588,12 @@ Package pdftex.def Info: Figures/blank.png  used on input line 1809.
 
 LaTeX Warning: Text page 86 contains only floats.
 
-[86 <./Figures/results/practical/res2/xyztrac.png>] [87 <./Figures/results/prac
-tical/res2/xyzerr.png> <./Figures/results/practical/res2/yaw.png>] [88 <./Figur
-es/results/practical/res2/view.png>]
+[86 <./Figures/results/practical/res2/xyztrac.png>]
+
+LaTeX Warning: Text page 87 contains only floats.
+
+[87 <./Figures/results/practical/res2/xyzerr.png> <./Figures/results/practical/
+res2/yaw.png>] [88 <./Figures/results/practical/res2/view.png>]
 <Figures/results/practical/res3/xyztrac.png, id=1691, 361.35pt x 421.575pt>
 File: Figures/results/practical/res3/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res3/xyztrac.png>
@@ -2623,11 +2626,9 @@ File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
 Package pdftex.def Info: Figures/blank.png  used on input line 1860.
 (pdftex.def)             Requested size: 135.50761pt x 101.63295pt.
- [89
-
-] [90 <./Figures/results/practical/res3/xyztrac.png>] [91 <./Figures/results/pr
-actical/res3/xyzerr.png> <./Figures/results/practical/res3/yaw.png>] [92 <./Fig
-ures/results/practical/res3/view.png>]
+ [89] [90 <./Figures/results/practical/res3/xyztrac.png>] [91 <./Figures/result
+s/practical/res3/xyzerr.png> <./Figures/results/practical/res3/yaw.png>] [92 <.
+/Figures/results/practical/res3/view.png>]
 <Figures/dist_pract/dryer.png, id=1717, 1284.8pt x 963.6pt>
 File: Figures/dist_pract/dryer.png Graphic file (type png)
 <use Figures/dist_pract/dryer.png>
@@ -2640,8 +2641,7 @@ File: Figures/dist_pract/res1/xyztrac.png Graphic file (type png)
 Package pdftex.def Info: Figures/dist_pract/res1/xyztrac.png  used on input lin
 e 1875.
 (pdftex.def)             Requested size: 338.76563pt x 451.71394pt.
-
-[93
+ [93
 
  <./Figures/dist_pract/dryer.png>]
 <Figures/dist_pract/res1/xyzerr.png, id=1730, 481.8pt x 361.35pt>
@@ -2663,8 +2663,8 @@ Package pdftex.def Info: Figures/dist_pract/res1/view.png  used on input line 1
 892.
 (pdftex.def)             Requested size: 316.17987pt x 249.82613pt.
  [94 <./Figures/dist_pract/res1/xyztrac.png>] [95 <./Figures/dist_pract/res1/xy
-zerr.png>] [96 <./Figures/dist_pract/res1/yaw.png> <./Figures/dist_pract/res1/v
-iew.png>]
+zerr.png>]
+[96 <./Figures/dist_pract/res1/yaw.png> <./Figures/dist_pract/res1/view.png>]
 <Figures/dist_pract/res2/xyztrac.png, id=1754, 451.6875pt x 602.25pt>
 File: Figures/dist_pract/res2/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res2/xyztrac.png>
@@ -2697,7 +2697,8 @@ File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
 Package pdftex.def Info: Figures/blank.png  used on input line 1930.
 (pdftex.def)             Requested size: 225.84375pt x 169.38591pt.
- [97
+
+[97
 
 ] [98 <./Figures/dist_pract/res2/xyztrac.png>] [99 <./Figures/dist_pract/res2/x
 yzerr.png> <./Figures/dist_pract/res2/yaw.png>] [100 <./Figures/dist_pract/res2
@@ -3026,14 +3027,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.05998pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  33362 strings out of 481553
  677978 string characters out of 2911953
- 1047882 words of memory out of 3000000
+ 1047881 words of memory out of 3000000
  47224 multiletter control sequences out of 15000+200000
  646485 words of font info for 213 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3055,7 +3053,7 @@ s/Bashar/AppData/Local/Programs/MiKTeXNew 2.9/fonts/type1/urw/times/utmb8a.pfb>
 <C:/Users/Bashar/AppData/Local/Programs/MiKTeXNew 2.9/fonts/type1/urw/times/utm
 r8a.pfb><C:/Users/Bashar/AppData/Local/Programs/MiKTeXNew 2.9/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on main.pdf (152 pages, 53859837 bytes).
+Output written on main.pdf (152 pages, 53859941 bytes).
 PDF statistics:
  2195 PDF objects out of 2487 (max. 8388607)
  551 named destinations out of 1000 (max. 500000)
