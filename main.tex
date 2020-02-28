@@ -30,7 +30,7 @@
 \usepackage{placeins, multirow}
 \usepackage[linesnumbered,plain,vlined]{algorithm2e}
 %\usepackage{parskip}
-\usepackage{framed, pbox}
+\usepackage{framed, pbox, makecell, caption}
 %%%%%%%%%%%%%%%%% For code listings %%%%%%%%%%%%%%%%
 \usepackage{listings}
 \usepackage{xcolor}
@@ -110,7 +110,7 @@
 
 \datesoutenance{Defense date}
 
-\datedepot{February 17, 2020}
+\datedepot{March 2, 2020}
 
 \directeur{Mr. }{Maarouf Saad}{Departement of Electrical Engineering, École de technologie supérieure}
 
@@ -296,25 +296,25 @@ The following steps are made towards achieving the general objective of this pro
 The thesis will focus on the development of kernel-based algebraic differentiators of signals for estimation of disturbances from observation of the system inputs and outputs. A comparison of existing methods for
 disturbance estimation will be carried out by way of simulations.
 The project will focus on the development and implementation of algebraic observers on quadcopters with limited processing abilities. To achieve the above objectives the following tools will be used:
-\begin{itemize}
-\item MATLAB/Simulink: Primarily intended for simulations. The quadcopter models will be developed in Simulink, while Simulink offers multiple solvers depending on the specific constraints of the problem
-\item ROS, PX4: This would be the practical framework on which estimation algorithms would be evaluated
-\item C++: Implementation of algorithms will be done as ROS nodes coded in C++ \\Editors for the above languages are: Eclipse, Atom
+\begin{itemize} [label={}]
+\item {\bf MATLAB/Simulink:} Primarily intended for simulations. The quadcopter models will be developed in Simulink, while Simulink offers multiple solvers depending on the specific constraints of the problem
+\item {\bf ROS, PX4:} This would be the practical framework on which estimation algorithms would be evaluated
+\item {\bf C++:} Implementation of algorithms will be done as ROS nodes coded in C++ \\Editors for the above languages are: Eclipse, Atom
 \end{itemize}
 
 
 	 
 \tocless \section{Thesis Organization}
-\begin{itemize}
-\item Chapter 0: This chapter introduces control systems while giving a brief background into the different types of techniques in control available in the literature. It presents the literature reviewed on quadcopter modelling and control, while also presenting the concept of differential flatness. The supporting literature on algebraic differentiation is presented, which is used to develop the Kernel Disturbance Observer. 
-\item Chapter \ref{Chap:Quad}: This chapter focuses entirely on presenting the dynamical model of the quadcopter and its differential flatness property. Mathematical definitions of differential flatness is provided along with an example to illustrate this property. The chapter concludes by presenting the simulation and practical methods used at GREPCI Robotics Lab to identify the parameters of the quadcopter.
-\item Chapter \ref{Chap:Observers}: This chapter presents the two observers, Nonlinear Disturbance Observer and Super-Twisting Observer, from the literature that will be compared against the Kernel Disturbance Observer. The chapter also presents the observer based control tracking scheme that is used. 
-\item Chapter \ref{Chap:KDO}: This chapter presents the Kernel Disturbance Observer that is developed in this thesis. The KDO is developed using the algebraic differentiators presented previously in Chapter 0. Section \ref{Sec:ThmKdo} develops closed-form expressions for parameter estimation using repeated integration and kernel reproducing property. The chapter concludes by presenting an example of using Kernel Estimation techniques on a non-linear system with white Gaussian noise. 
-\item Chapter \ref{Chap:ResultsSim}: This chapter presents the results of simulation of the observer based controller on the quadcopter. The simulations are conducted in SIMULINK and the disturbances are chaotic unlike the sinusoidal disturbances used in the simulations in literature. 
+\begin{itemize} [label={}]
+\item {\bf Chapter 0:} This chapter introduces control systems while giving a brief background into the different types of techniques in control available in the literature. It presents the literature reviewed on quadcopter modelling and control, while also presenting the concept of differential flatness. The supporting literature on algebraic differentiation is presented, which is used to develop the Kernel Disturbance Observer. 
+\item {\bf Chapter \ref{Chap:Quad}:} This chapter focuses entirely on presenting the dynamical model of the quadcopter and its differential flatness property. Mathematical definitions of differential flatness is provided along with an example to illustrate this property. The chapter concludes by presenting the simulation and practical methods used at GREPCI Robotics Lab to identify the parameters of the quadcopter.
+\item {\bf Chapter \ref{Chap:Observers}:} This chapter presents the two observers, Nonlinear Disturbance Observer and Super-Twisting Observer, from the literature that will be compared against the Kernel Disturbance Observer. The chapter also presents the observer based control tracking scheme that is used. 
+\item {\bf Chapter \ref{Chap:KDO}:} This chapter presents the Kernel Disturbance Observer that is developed in this thesis. The KDO is developed using the algebraic differentiators presented previously in Chapter 0. Section \ref{Sec:ThmKdo} develops closed-form expressions for parameter estimation using repeated integration and kernel reproducing property. The chapter concludes by presenting an example of using Kernel Estimation techniques on a non-linear system with white Gaussian noise. 
+\item {\bf Chapter \ref{Chap:ResultsSim}:} This chapter presents the results of simulation of the observer based controller on the quadcopter. The simulations are conducted in SIMULINK and the disturbances are chaotic unlike the sinusoidal disturbances used in the simulations in literature. 
 
-\item Chapter \ref{Chap:ResultsPrac}: The algorithms are validated on an the Pixhawk S500 experimental setup. The chapter details the different components in setting up the distributed computing setup using ROS. The external disturbances are generated using a CONAIR 1600 air blower. The chapter concludes by presenting the root mean square error in tracking in both cases. 
+\item {\bf Chapter \ref{Chap:ResultsPrac}:} The algorithms are validated on an the Pixhawk S500 experimental setup. The chapter details the different components in setting up the distributed computing setup using ROS. The external disturbances are generated using a CONAIR 1600 air blower. The chapter concludes by presenting the root mean square error in tracking in both cases. 
 
-\item Chapter 6: This chapter provides a conclusion of the work presented in the previous chapters, reiterates the results and suggests future work.
+\item {\bf Chapter 6:} This chapter provides a conclusion of the work presented in the previous chapters, reiterates the results and suggests future work.
 \end{itemize}
 
 
@@ -562,7 +562,7 @@ Thus parameter identification of the quadcopter essentially boils down to identi
 	 \parbox{0.75\textwidth}{
 		\begin{center}
 		\setlength{\belowcaptionskip}{0pt}
-		\caption{Wired Triangle Pendulum Method\label{swm_c2}}Taken from \citep{RN121}
+		\caption{Wired Triangle Pendulum Method\label{swm_c2}}Taken from Fethalla et al. (2019) %\citep{RN121}
 		\end{center}	
 	} 
 \end{figure}
@@ -575,7 +575,8 @@ where the moment of inertia along the $x$ axis is given by the computation done 
 \begin{table}
 	\parbox{0.65\textwidth}{
 		\begin{center}
-		\caption{Inertia moments of quadcopter S500 using experimental method\label{tim}}Taken from \citep{RN121}
+		\captionsetup{belowskip=12pt,aboveskip=4pt}
+		\caption{Inertia moments of quadcopter S500 using experimental method\label{tim}}Taken from Fethalla et al. (2019) %\citep{RN121}
 		\end{center}	
 	}
 	\begin{tabular}{|c|c|c|c|c|c|}
@@ -614,7 +615,7 @@ At the same time the controller needs to know the precise Pulse Width Modulating
 	\parbox{0.75\textwidth}{
 		\begin{center}
 		\setlength{\belowcaptionskip}{0pt}
-		\caption{Motor force measuring device\label{rcd_c2}}Taken from \citep{RN121}
+		\caption{Motor force measuring device\label{rcd_c2}}Taken from Fethalla et al. (2019) %\citep{RN121}
 		\end{center}	
 	}
 \end{figure}
@@ -764,18 +765,12 @@ where $e_3$ and $e_4$ are the attitude and angular velocity tracking error vecto
 The Kernel Disturbance Observer (KDO) is a multi-step algorithm, as outlined in Algorithm 3.1 and uses the double-sided kernel estimation approach. The Double-sided Kernel approach was developed in \citep{RN119} and \citep{RN76}, and further developed for fourth-order kernel representation in \citep{RN83} and \citep{RN120} and will be produced here for completeness. We start by presenting the details of the different steps in Algorithm 3.1. 
 
 The steps 2-7 present the procedure in obtaining the disturbance estimates, $\hat{d_p}(t_k)$ and $\hat{d_\Theta}(t_k)$, at the time instant $t_k$, for the positional and rotational systems respectively. The input is the complete attitude between the time instants $t_k-\delta$ and $t_k$. This is represented by the vectors $[p_M(t_k-\delta) : p_{M}(t_k-\delta)]$ and $[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$. The variable $\zeta_M$ refers to the flat measured output from a system that is being observed, $\hat{\zeta}$ refers to the estimated output. ${\zeta}^{(2)}$ is the higher order derivative. The algorithm uses a sliding window approach to take input for the algorithm; this is explained in Section \ref{Sec:MovWin}. Step 3 of the algorithm is parameter estimation; the different approaches are explained in Section \ref{Sec:ParEst}. Steps 4-7 estimate the full state of the quadcopter and thereby observe the disturbances using methods explained in Section \ref{Sec:FullStateEst}.
-
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%% Algorithm %%%%%%%%%%%%%%%
 \begin{tabular}{c}
-\fbox{\parbox{0.9\textwidth}{
-	\begin{center}
-	\begin{spacing}{1.0}
-	\textbf{Algorithm 3.1} Kernel Disturbance Observer algorithm using dynamic regression for parameter estimation
-	\end{spacing}
-	\end{center}
-	} }
-	\\
+\textbf{Algorithm 3.1} Kernel Disturbance Observer using dynamic regression for parameter estimation  \vspace{0.1 in}
+\\
 \setlength\fboxsep{0.4cm}
 \fbox{
 \parbox[c][][t]{\textwidth}{ 
