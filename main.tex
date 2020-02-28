@@ -1695,9 +1695,7 @@ and $K_F(i)$ is given by Equation (\ref{Kfi})
 It can be seen that, compared to the previous scheme where the complete Kernel was calculated and derived in each iteration, we just have to compute the Forward Kernel matrix once and then linearly multiply with the incoming measurement vector $\vec{y}_M$ to give the vector $\vec{y}_{KFM}$.
 It is hoped that this significant reduction in computation should enable the algorithm to be implemented in real-time. 
 
-The above method can be applied to the Backward Kernel and result in a Double-Sided Kernel Matrix, which is a constant matrix.
-
-For the quadcopter, the latency is set to zero to estimate the attitude and orientation of the quadcopter in real-time. While this is not the optimal $t_k$ to minimize estimation variance, setting the latency to a minimum is needed for effective control rather than minimizing the variance. 
+The above method can be applied to the Backward Kernel and result in a Double-Sided Kernel Matrix, which is a constant matrix. For the quadcopter, the latency is set to zero to estimate the attitude and orientation of the quadcopter in real-time. While this is not the optimal $t_k$ to minimize estimation variance, setting the latency to a minimum is needed for effective control rather than minimizing the variance. 
 
 \section{Experimental Validation without Disturbances}
 The three algorithms were first tested on the quadcopter without any external disturbances. The results for each algorithm are presented in different subsections. The controller gains were tuned by trial and error. The controller gains presented in \citep{RN117} were used as a starting point for tuning. The gains were adjusted in either increments or decrements of 0.1. The gains obtained are presented in individual subsections. 
@@ -1866,9 +1864,9 @@ Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. H
 	\parbox{0.65\textwidth}{\caption{Real flight 3D tracking of position using KDO based controller\label{Fig:3dKDO}}}
 \end{figure}
 %%%%%Blank image inserted
-\begin{figure}[H]
-	\includegraphics[width=0.3\textwidth]{Figures/blank.png}
-\end{figure}
+%\begin{figure}[H]
+%	\includegraphics[width=0.3\textwidth]{Figures/blank.png}
+%\end{figure}
 \FloatBarrier
 
 \section{Experimental Validation with External Disturbances}
@@ -1901,6 +1899,10 @@ The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implem
 	\centering
 	\fbox{\includegraphics[width=0.7\textwidth]{Figures/dist_pract/res1/view.png}}
 	\parbox{0.7\textwidth}{\caption{Real flight 3D tracking of position using NDO based controller under external disturbances\label{Fig:3dNDODist}}}
+\end{figure}
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=0.9\textwidth]{Figures/blank.png}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. Due to problems with the battery life, the complete trajectory could not be tracked. \\
 The observer was initialized with the initial state of the observer as, $z_p(0)=[2,2,2]$ and $z_\Theta(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
@@ -1937,7 +1939,7 @@ The roll and pitch angles are not considered since those values are dynamically 
 \end{figure}
 %%%%%Blank image inserted
 \begin{figure}[H]
-	\includegraphics[width=0.5\textwidth]{Figures/blank.png}
+	\includegraphics[width=0.9\textwidth]{Figures/blank.png}
 \end{figure}
 \FloatBarrier
 \subsection{Kernel Disturbance Observer}
@@ -1972,7 +1974,7 @@ Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. H
 \end{figure}
 %%%%%Blank image inserted
 \begin{figure}[H]
-	\includegraphics[width=0.5\textwidth]{Figures/blank.png}
+	\includegraphics[width=0.8\textwidth]{Figures/blank.png}
 \end{figure}
 \FloatBarrier
 

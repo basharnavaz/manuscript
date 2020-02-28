@@ -55,11 +55,11 @@
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Position tracking errors using KDO based controller\relax }}{89}{figure.caption.243}%
 \contentsline {figure}{\numberline {5.16}{\ignorespaces Real flight tracking of yaw using KDO based controller\relax }}{89}{figure.caption.244}%
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Real flight 3D tracking of position using KDO based controller\relax }}{90}{figure.caption.245}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces {Quadcopter with the applied disturbances }\relax }}{91}{figure.caption.248}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Real flight tracking of position coordinates using NDO based controller under external disturbances\relax }}{92}{figure.caption.250}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Position tracking errors using NDO based controller under external disturbances\relax }}{93}{figure.caption.251}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Real flight tracking of yaw using NDO based controller under external disturbances\relax }}{93}{figure.caption.252}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Real flight 3D tracking of position using NDO based controller under external disturbances\relax }}{94}{figure.caption.253}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces {Quadcopter with the applied disturbances }\relax }}{91}{figure.caption.247}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Real flight tracking of position coordinates using NDO based controller under external disturbances\relax }}{92}{figure.caption.249}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Position tracking errors using NDO based controller under external disturbances\relax }}{93}{figure.caption.250}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Real flight tracking of yaw using NDO based controller under external disturbances\relax }}{93}{figure.caption.251}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Real flight 3D tracking of position using NDO based controller under external disturbances\relax }}{94}{figure.caption.252}%
 \contentsline {figure}{\numberline {5.23}{\ignorespaces Real flight tracking of position coordinates using STO based controller under external disturbances\relax }}{96}{figure.caption.255}%
 \contentsline {figure}{\numberline {5.24}{\ignorespaces Position tracking errors using STO based controller under external disturbances\relax }}{97}{figure.caption.257}%
 \contentsline {figure}{\numberline {5.25}{\ignorespaces Real flight tracking of yaw using STO based controller under external disturbances\relax }}{97}{figure.caption.258}%
