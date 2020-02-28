@@ -30,7 +30,7 @@
 \usepackage{placeins, multirow}
 \usepackage[linesnumbered,plain,vlined]{algorithm2e}
 %\usepackage{parskip}
-\usepackage{framed}
+\usepackage{framed, pbox}
 %%%%%%%%%%%%%%%%% For code listings %%%%%%%%%%%%%%%%
 \usepackage{listings}
 \usepackage{xcolor}
@@ -108,15 +108,15 @@
 \author{Mohammed Basharnavaz KHAN}
 \authorcopyright{Mohammed Basharnavaz Khan}
 
-\datesoutenance{"Defense date"}
+\datesoutenance{Defense date}
 
-\datedepot{"February 17, 2020"}
+\datedepot{February 17, 2020}
 
-\directeur{Mr. }{Maarouf Saad}{Département de Génie Électrique, École de technologie supérieure}
+\directeur{Mr. }{Maarouf Saad}{Departement of Electrical Engineering, École de technologie supérieure}
 
-\president{Mr. }{Guy Gauthier}{Département d'ingénierie des Systèmes, École de technologie supérieure}
+\president{Mr. }{Guy Gauthier}{Departement of Electrical Engineering, École de technologie supérieure}
 
-\jury{Mr. }{Jean-Pierre Kenné}{Département de Génie Mécanique, École de technologie supérieure}
+\jury{Mr. }{Jean-Pierre Kenné}{Departement of Mechanical Engineering, École de technologie supérieure}
 
 \juryB{Mrs. }{Hannah Michalska}{Department of Electrical and Computer Engineering, McGill University}
 
@@ -245,15 +245,21 @@ Once the full state of the quadcopter is available the KDO estimates the externa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{introduction} \label{Chap:Intro}
-Engineers are often interested in controlling the behaviour of their surroundings or a part of it, often referred to as a "system" in order to provide desirable results in domains such as transportation, manufacturing etc. In order to do so, engineers develop control systems which are interconnected components forming a system configuration that will provide a desired system response  \citep{bishop1996modern}. These components are usually actuators, micro-controllers and power electronics that drive the actuators and software, which contains the logic or algorithms which determine the actuation signals.\\As time progressed, the systems have become increasingly complicated, with multiple interrelated variables that are needed to exhibit the behaviour. To control these systems,  maybe more than one actuator used in an attempt to make the system or plant have the desired behaviour. These types of control, such systems are called Multiple-input control systems. Most advanced control systems use the output of the plant or the system to be controlled as an essential criterion to compute the subsequent control signals to the system. These types of control systems are called Closed Loop Control systems. Usually, there is an error in the measurement of the plant output, known as measurement noise, which is attempted to minimize by using filtering algorithms that aid the control systems by providing more accurate information compute the intended control signal. In some cases, control systems employ the use of observers, which estimate the state of the system or external disturbances that affect it. This thesis aims at developing an observer based on an algebraic estimator to observe external aerodynamic disturbances and compare it with a couple of other observers in the literature. 
+Engineers are often interested in controlling the behaviour of their surroundings or a part of it, often referred to as a "system" in order to provide desirable results in domains such as transportation, manufacturing etc. In order to do so, engineers develop control systems which are interconnected components forming a system configuration that will provide a desired system response  \citep{bishop1996modern}. These components are usually actuators, micro-controllers and power electronics that drive the actuators and software, which contains the logic or algorithms which determine the actuation signals.
+
+As time progressed, the systems have become increasingly complicated, with multiple interrelated variables that are needed to exhibit the behaviour. To control these systems,  maybe more than one actuator used in an attempt to make the system or plant have the desired behaviour. These types of control, such systems are called Multiple-input control systems. Most advanced control systems use the output of the plant or the system to be controlled as an essential criterion to compute the subsequent control signals to the system. These types of control systems are called Closed Loop Control systems. Usually, there is an error in the measurement of the plant output, known as measurement noise, which is attempted to minimize by using filtering algorithms that aid the control systems by providing more accurate information compute the intended control signal. In some cases, control systems employ the use of observers, which estimate the state of the system or external disturbances that affect it. This thesis aims at developing an observer based on an algebraic estimator to observe external aerodynamic disturbances and compare it with a couple of other observers in the literature. 
 
 \tocless \section{Literature Review}
 For a long time now, quadcopters have been of interest to control engineers as they present interesting challenges in several domains of control theory. It is a Multiple Input Multiple Output system with six degrees of freedom and twelve components that describe its complete state. Since it is an unmanned aerial vehicle with just four inputs in the form of rotor speeds to the four individual rotors (that act as actuators to this system), it is also classified as an under-actuated system \citep{wang2016dynamics}. These complexities have led to substantial research in different control strategies for quadcopters. 
 
 \tocless \subsection{Quadcopter Modeling and Control}
 The mechanical construction of a quadcopter is quite simple and inexpensive. It consists of placing two sets of rotating propellers on opposite ends of beams placed rigidly at right angles to each other. The mechanical system is considered as a rigid body in 3-dimensional space with six degrees of freedom, three rotational and three translational. The orientation of the quadcopter is usually expressed as a set of Euler angles or quaternions. Euler angle representation poses the problem of gimble lock \citep{RN85}, \citep{RN84}. The gimble lock phenomenon presents singularities where one degree of freedom is lost, resulting in singularities, which restricts trajectory tracking capabilities of the quadcopter. 
-The dynamics of the quadcopter has been described in detail in multiple sources in literature, \citep{RN86}, \citep{RN87} and \citep{RN88}. Considering the dynamical model as two subsystems, angular and positional subsystem, it can be seen that the angular kinematics is independent of the linear motions, although the linear kinematics are dependent on the orientation of the quadcopter, \citep{RN89}. Therefore most souces of literature consider the quadcopter to have two subsystems, position and attitude subsystems and a control loop to control these individual subsystems. The outer loop controls the position \citep{RN90}, \citep{RN91} and the inner loop controls the attitude \citep{RN92}, \citep{RN93}. Most of the times, having accurate dynamic models is not enough to have robust control of a quadcopter as the dynamics are affected by factors such as model uncertainties, measurement inaccuracies and external disturbances. Model uncertainties arise due to model linearizations, inaccurate system parameters and assumptions in motor dynamics. One way of addressing model inaccuracies is through experimental identification of system parameters such as moments of inertia, mass, motor dynamics etc., suggested through  \citep{RN94}, \citep{RN95}, \citep{alexis2011model}. Another approach towards model uncertainties is to consider them as external disturbances and try to mitigate them with appropriate observer-controller strategies. External disturbances can be in the form of wind gusts \citep{RN97}, unstable payloads \citep{RN98}, actuator failure or irregular battery voltages.\\
-There has been extensive research conducted in various control methods for quadcopters. Linear controllers are efficient in maintaining the quadcopter in the hovering position due to linearization around the setpoint (desired hover position). The classical approaches of proportional-integral-derivative (PID) control and linear quadratic regulator and their combination were presented in \citep{RN99}. \citep{RN100} uses the backstepping controller with an Extended Kalman Filter (EKF) to control a quadcopter for indoor flights. \citep{RN102} uses sliding mode control for robust tracking control of a quadcopter subjected to wind disturbances. \citep{RN103} uses both backstepping and SMC to control the rotation and the position subsystems of the quadcopter and concludes that the backstepping controller provides controllability of the orientation angles under relatively high perturbations. Model predictive control methods \citep{RN104}, \citep{RN105}, \citep{RN106} are suitable for control of multivariate systems, such as quadcopters, that are governed by constrained dynamics as compared to the classical methods such as the PID or LQR mentioned earlier. \\
+The dynamics of the quadcopter has been described in detail in multiple sources in literature, \citep{RN86}, \citep{RN87} and \citep{RN88}. Considering the dynamical model as two subsystems, angular and positional subsystem, it can be seen that the angular kinematics is independent of the linear motions, although the linear kinematics are dependent on the orientation of the quadcopter, \citep{RN89}. Therefore most souces of literature consider the quadcopter to have two subsystems, position and attitude subsystems and a control loop to control these individual subsystems. The outer loop controls the position \citep{RN90}, \citep{RN91} and the inner loop controls the attitude \citep{RN92}, \citep{RN93}. Most of the times, having accurate dynamic models is not enough to have robust control of a quadcopter as the dynamics are affected by factors such as model uncertainties, measurement inaccuracies and external disturbances. Model uncertainties arise due to model linearizations, inaccurate system parameters and assumptions in motor dynamics. One way of addressing model inaccuracies is through experimental identification of system parameters such as moments of inertia, mass, motor dynamics etc., suggested through  \citep{RN94}, \citep{RN95}, \citep{alexis2011model}. Another approach towards model uncertainties is to consider them as external disturbances and try to mitigate them with appropriate observer-controller strategies. External disturbances can be in the form of wind gusts \citep{RN97}, unstable payloads \citep{RN98}, actuator failure or irregular battery voltages.
+
+
+There has been extensive research conducted in various control methods for quadcopters. Linear controllers are efficient in maintaining the quadcopter in the hovering position due to linearization around the setpoint (desired hover position). The classical approaches of proportional-integral-derivative (PID) control and linear quadratic regulator and their combination were presented in \citep{RN99}. \citep{RN100} uses the backstepping controller with an Extended Kalman Filter (EKF) to control a quadcopter for indoor flights. \citep{RN102} uses sliding mode control for robust tracking control of a quadcopter subjected to wind disturbances. \citep{RN103} uses both backstepping and SMC to control the rotation and the position subsystems of the quadcopter and concludes that the backstepping controller provides controllability of the orientation angles under relatively high perturbations. Model predictive control methods \citep{RN104}, \citep{RN105}, \citep{RN106} are suitable for control of multivariate systems, such as quadcopters, that are governed by constrained dynamics as compared to the classical methods such as the PID or LQR mentioned earlier.
+
+
 To improve the controllability under external disturbances, robust controllers such as the nonlinear H$_\infty$ control algorithm \citep{RN108} are used for path tracking where the MPC controller tracks the path and the H$\infty$ stabilizes the rotational subsystem. This method is susceptible to additional disturbances through the linearization of the nonlinear dynamics. \citep{RN109} proposes a similar solution but is still susceptible to additional disturbances. To overcome this problem, observer-based control algorithms  have been proposed in \citep{RN110}, \citep{RN111}, \citep{RN112}, \citep{RN113}. Recent advancements in this approach have been done by \citep{RN114}, \citep{RN116}, \citep{RN117}. \citep{RN114} proposes backstepping and sliding mode controller in conjugation with the nonlinear disturbance observer (NDO) for trajectory tracking. The NDO is an asymptotic observer which requires an initial estimate to initialize the observer. \citep{RN117} proposes an alternate observer, super-twisting observer (STO), with a faster convergence rate than the NDO, but again requires an initial estimate to initialize the state of the observer. Both \citep{RN114} and \citep{RN117} conduct simulations with smooth sinusoidal external disturbances with information about the initial conditions known to the observers. 
 Algebraic estimators provide an estimate of systems without requiring the need for initializers. The literature on this will be discussed later in this section.\\ 
 \tocless \subsection{Differentially Flat Systems} \label{subsec:diffflatnessquad}
@@ -263,7 +269,9 @@ Differentially flat systems are systems where the full state of the system and t
 \citep{RN81} mentions the quadcopter system to be a differentially flat system.  The relations between thrust, $T$ and torques along  $x$, $y$ and $z$ axes are given as functions of the states of the system but omits the derivation of these relationships. \citep{mellinger2011minimum} can be considered to be the first paper that proves the differential flatness of the quadcopter system without considering the rotor drag. \citep{faessler2017differential} extends upon this work but points out a couple of incorrectness found out in \citep{mellinger2011minimum}. It provides the correct approach to prove the differential flatness property, while also assuming rotor drag in the derivation. It is recommended that for the exhaustive proof, one refer to the corrected and extended version in \citep{faessler2017differential}. Having established the property of flatness of a quadcopter system allows us to implement algebraic estimation techniques on the output of the quadcopter. 
 
 \tocless \subsection{Algebraic Differentiation and the Double Sided Kernel}
-The Double-Sided Kernel method was developed for state estimation of differentially flat second order systems in \citep{RN76}. The double-sided kernel does not exhibit any singularities, as did the previous algebraic estimators in \citep{RN75}. The method expresses the system states as a function of output and/or its time derivatives using the properties of differentially flat systems. The method simultaneously computes the parameters and uses them to find higher derivatives of the system.\\
+The Double-Sided Kernel method was developed for state estimation of differentially flat second order systems in \citep{RN76}. The double-sided kernel does not exhibit any singularities, as did the previous algebraic estimators in \citep{RN75}. The method expresses the system states as a function of output and/or its time derivatives using the properties of differentially flat systems. The method simultaneously computes the parameters and uses them to find higher derivatives of the system.
+
+
 Although the algebraic estimators prove to be superior to their asymptotic counterparts, they have not yet been implemented on a real-time application that is subjected to several constraints of time, computational power and available memory. 
 
 \tocless \section{In This Thesis}
@@ -287,8 +295,7 @@ The following steps are made towards achieving the general objective of this pro
 
 The thesis will focus on the development of kernel-based algebraic differentiators of signals for estimation of disturbances from observation of the system inputs and outputs. A comparison of existing methods for
 disturbance estimation will be carried out by way of simulations.
-The project will focus on the development and implementation of algebraic observers on quadcopters with limited processing abilities.\\
-To achieve the above objectives the following tools will be used:
+The project will focus on the development and implementation of algebraic observers on quadcopters with limited processing abilities. To achieve the above objectives the following tools will be used:
 \begin{itemize}
 \item MATLAB/Simulink: Primarily intended for simulations. The quadcopter models will be developed in Simulink, while Simulink offers multiple solvers depending on the specific constraints of the problem
 \item ROS, PX4: This would be the practical framework on which estimation algorithms would be evaluated
@@ -470,7 +477,8 @@ To provide better clarity on the concept of differential flatness, we take the e
 	}
 	\parbox{0.75\textwidth}{
 		\begin{center}
-		\caption{Mass Spring system\label{difflin}}Taken from \citep{levine2009differential}
+		\setlength{\belowcaptionskip}{0pt}
+		\caption{Mass Spring system\label{difflin}}Taken from Levine (2009, p. 131)
 		\end{center}	
 	} 
 \end{figure}
@@ -553,6 +561,7 @@ Thus parameter identification of the quadcopter essentially boils down to identi
 	}
 	 \parbox{0.75\textwidth}{
 		\begin{center}
+		\setlength{\belowcaptionskip}{0pt}
 		\caption{Wired Triangle Pendulum Method\label{swm_c2}}Taken from \citep{RN121}
 		\end{center}	
 	} 
@@ -604,6 +613,7 @@ At the same time the controller needs to know the precise Pulse Width Modulating
 	\fbox{\includegraphics[width=0.75\textwidth,height=0.50\textwidth]{Figures/quad/rcd_c2.png}}
 	\parbox{0.75\textwidth}{
 		\begin{center}
+		\setlength{\belowcaptionskip}{0pt}
 		\caption{Motor force measuring device\label{rcd_c2}}Taken from \citep{RN121}
 		\end{center}	
 	}
@@ -632,7 +642,8 @@ The inertial parameters of the quadcopter can also be found out by modelling the
 
 %%- Second chapter -%%
 \chapter{Observer based Controller Tracking} \label{Chap:Observers}
-During a flight, a quadcopter goes through uncertainties not only due to modelling errors but also due to aerodynamic disturbances. To achieve the best flight performances, and improve the overall robustness and stability of the control system, observers are employed to estimate the matched and unmatched disturbances. This is done so that the control system, if aware of the magnitude and nature of these disturbances would be able to eliminate the effect of these disturbances on the quadcopter system.  \\
+During a flight, a quadcopter goes through uncertainties not only due to modelling errors but also due to aerodynamic disturbances. To achieve the best flight performances, and improve the overall robustness and stability of the control system, observers are employed to estimate the matched and unmatched disturbances. This is done so that the control system, if aware of the magnitude and nature of these disturbances would be able to eliminate the effect of these disturbances on the quadcopter system.
+
 The objective of this chapter is to design an observer for an observer-based control structure to track the center of mass and yaw angle of the quadcopter. It is aimed for the quadcopter to track the reference trajectory $p_r(t)$, $\psi_r(t)$; $t\geq 0$. The unknown force and torque disturbances on the system are denoted by $d_p$ and $d_\Theta$. The torque inputs match the torque disturbances, $d_\Theta$ that act on the quadcopter attitude subsystem. Whereas, the only one component of the force subsystem is matched by the control input. On the other hand, the disturbances $d_x$ and $d_y$ are unmatched by thrust control. The observer-based control techniques used in \citep{RN114} and \citep{RN117} that will also be used in this thesis rely on accurate estimation of these disturbances. 
 
 In this thesis, the author develops a novel observer based on the algebraic differentiation of signals and thereby implementing full state estimation and compares it with observers found in the literature. The observer developed is called, Kernel Differential Observer, and compared against Nonlinear Disturbance Observer (NDO) and Supertwisting Observer (STO).
@@ -757,15 +768,17 @@ The steps 2-7 present the procedure in obtaining the disturbance estimates, $\ha
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%% Algorithm %%%%%%%%%%%%%%%
 \begin{tabular}{c}
-\parbox{0.9\textwidth}{
+\fbox{\parbox{0.9\textwidth}{
 	\begin{center}
+	\begin{spacing}{1.0}
 	\textbf{Algorithm 3.1} Kernel Disturbance Observer algorithm using dynamic regression for parameter estimation
+	\end{spacing}
 	\end{center}
-	} 
-\\
+	} }
+	\\
 \setlength\fboxsep{0.4cm}
 \fbox{
-\parbox[t][][t]{\textwidth}{ 
+\parbox[c][][t]{\textwidth}{ 
 \begin{algorithm} [H] %add [H] for Here
 \SetAlgoLined
 \KwIn{$\mathbf{p_M}=[p_M(t_k-\delta) : p_{M}(t_k-\delta)]$, $\Theta_\mathbf{M}=[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$}
@@ -1130,7 +1143,8 @@ As time progresses, the window is slid ahead and using $t_i=b$, or in other word
 The three observers, KDO, NDO, and STO, are tested on quadcopter under similar conditions of external disturbances and the same control algorithms. This is tested in simulations and on a quadcopter. The simulation conditions with the results and the quadcopter setup with the results are presented in this section. 
 
 \section{Simulation Results} \label{section:SimulationResults}
-The the observer-based tracking algorithms presented in detail in Chapter \ref{Chap:Observers} are first validated in simulation, prior to testing them with actual quadcopter. This is done for a number of reasons: testing in simulation is vital to ensure the algorithms perform as expected especially considering that quadcopters are inherently unstable and a poor disturbance estimates can result in catastrophic failures. Another reason is, simulations give an idea of the computational complexity of the algorithms before implementing them on the embedded hardware that is subjected to computational time constraints. \\
+The the observer-based tracking algorithms presented in detail in Chapter \ref{Chap:Observers} are first validated in simulation, prior to testing them with actual quadcopter. This is done for a number of reasons: testing in simulation is vital to ensure the algorithms perform as expected especially considering that quadcopters are inherently unstable and a poor disturbance estimates can result in catastrophic failures. Another reason is, simulations give an idea of the computational complexity of the algorithms before implementing them on the embedded hardware that is subjected to computational time constraints. 
+
 The simulations were carried out in SIMULINK under four different kinds of disturbances, which were considered as a 'gust of wind.' To compare the effectiveness of the observers, disturbances of interest were chaotic in nature, while to compare the convergence rates of NDO and STO, disturbances which are constant and linear with respect to time were considered. 
 The SIMULINK simulation used in this thesis builds upon the simulation environment developed by \citep{nuradeen2019thesis} which was used in a paper co-authored by the author of this thesis. 
 \begin{figure}[H]
@@ -1523,6 +1537,7 @@ A brief explanation of the different components in the ROS Computation Graph lev
 
 
 \textbf{Kinect Setup:} Kinect is a Microsoft product primarily used to give motion sensing capabilities for their gaming consoles range of Xbox. It connects to computing hardware through a USB 3.0 adapter. The Kinect as of date has two versions, V1 and V2, while the project uses the V2 version. The Kinect is an ensemble of two sensors, each serving a different purpose. One is a colour sensor that gives an RGB image of the field of view, whereas the second one is a depth sensor that gives a depth map, which gives a pixel-wise sense of distance of the object from the sensor. OpenNI provides an API to connect to the Kinect and additional capabilities for image manipulation and processing. It gives routines to connect to the Kinect, acquire images and implement matrix manipulation techniques. The quadcopter is fitted with two red balls of different sizes, which help in processing the Kinect data to give the global estimates of the quadcopter position and yaw angle. The red colour of the balls provides a stark contrast to the background and aid in improving the accuracy of estimation.
+
 The estimation algorithm was developed and implemented by a former Graduate student of the lab as a part of his Master's thesis presented in \citep{brice2017thesis}. The estimation algorithm runs on the ground station computer and transmits the global position to the quadcopter via MAVLink, which uses WiFi. The estimate uses a predefined ROS message provided by the MAVROS-MAVLink interface. The nodes \texttt{/kinect2/sd/image\_color\_rect} and \texttt{/kinect2/sd/image\_depth\_rect} estimate the pose and send this estimate to the topic \texttt{/pose\_calculator}. The node \texttt{/mavros/serpoint\_position/local} calculates the local setpoint for the quadcopter for the subsequent iteration and \texttt{/mavros/vision\_pose/pose} calculates the position and the yaw angle of the quadcopter. The estimated pose from Kinect data is taken as the ground truth of the quadcopter state and is used in evaluating the effectiveness and performance of observer-controller tracking algorithms.
 
 \begin{figure}
@@ -1725,7 +1740,7 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 \end{figure}
 %%%%%Blank image inserted
 \begin{figure}[H]
-	\includegraphics[width=0.2\textwidth]{Figures/blank.png}
+	\includegraphics[width=0.4\textwidth]{Figures/blank.png}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -1747,7 +1762,7 @@ The observer was initialized with the initial state of the observer as, $z_p(0)=
 \end{figure}
 %%%%%Blank image inserted
 \begin{figure}[H]
-	\includegraphics[width=0.6\textwidth]{Figures/blank.png}
+	\includegraphics[width=1\textwidth]{Figures/blank.png}
 \end{figure}
 \FloatBarrier
 
@@ -1786,7 +1801,7 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 \end{figure}
 %%%%%Blank image inserted
 \begin{figure}[H]
-	\includegraphics[width=0.2\textwidth]{Figures/blank.png}
+	\includegraphics[width=0.35\textwidth]{Figures/blank.png}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -1806,7 +1821,7 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 \end{figure}
 %%%% Blank Figure inserted
 \begin{figure}[H]
-	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+	\includegraphics[width=0.5\textwidth]{Figures/blank.png}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
 
@@ -1837,7 +1852,7 @@ Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. H
 \end{figure}
 %%%%%Blank image inserted
 \begin{figure}[H]
-	\includegraphics[width=0.1\textwidth]{Figures/blank.png}
+	\includegraphics[width=0.35\textwidth]{Figures/blank.png}
 \end{figure}
 \begin{figure}[H]
 	\centering

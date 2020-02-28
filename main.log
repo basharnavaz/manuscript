@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.21)  22 FEB 2020 19:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.21)  28 FEB 2020 12:51
 entering extended mode
 **./main.tex
 (main.tex
@@ -1432,6 +1432,10 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen352
 \FrameSep=\dimen353
 )
+("C:\Users\Bashar\AppData\Local\Programs\MiKTeXNew 2.9\tex/latex/pbox\pbox.sty"
+Package: pbox 2011/12/07 v1.2 Dynamic parboxes
+\pb@xlen=\skip124
+)
 \c@assumption=\count367
 \c@lemma=\count368
 \c@theorem=\count369
@@ -1601,7 +1605,7 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 13
 ("C:\Users\Bashar\AppData\Local\Programs\MiKTeXNew 2.9\tex/latex/base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-<Figures/logocc.pdf, id=190, 121.45375pt x 43.16125pt>
+<Figures/logocc.pdf, id=58, 121.45375pt x 43.16125pt>
 File: Figures/logocc.pdf Graphic file (type pdf)
 <use Figures/logocc.pdf>
 Package pdftex.def Info: Figures/logocc.pdf  used on input line 139.
@@ -1634,211 +1638,810 @@ Package pdftex.def Info: Figures/logocc.pdf  used on input line 139.
 
 ] [10
 
-] (main.toc
-Underfull \hbox (badness 3323) in paragraph at lines 33--33
- [] [][][]\T1/ptm/m/n/12 EXPERIMENTAL VALIDATION OF OBSERVER BASED 
- []
-
-[11
-
-])
+] (main.toc)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [12] (main.lot
-Underfull \hbox (badness 4505) in paragraph at lines 13--13
- \T1/ptm/m/n/12 trajectory tracking by the three observers without external 
- []
+ [11
 
+] [12
 
-Underfull \hbox (badness 7963) in paragraph at lines 14--14
- \T1/ptm/m/n/12 trajectory tracking by the three observers under external 
- []
-
-)
+]
+(main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [13
+ [13] [14
 
-] [14
-
-] (main.lof
-Underfull \hbox (badness 1400) in paragraph at lines 11--11
-  \T1/ptm/m/n/12 Figure[][][]Minimum variance factor points in the window for f
-irst 20 
- []
-
-[15]
-Underfull \hbox (badness 2035) in paragraph at lines 41--41
-  \T1/ptm/m/n/12 Figure[][][]Quadcopter with the red balls for localization usi
-ng image 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-  \T1/ptm/m/n/12 Figure[][][]Block diagram of components the 
- []
-
-[16] [17])
+] (main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [18] [19
+ [15] [16
+
+] [17
+
+] [18
+
+] [19
+
+] [20]
+
+Package natbib Warning: Citation `bishop1996modern' on page 1 undefined on inpu
+t line 248.
 
 
-] [20
+Package natbib Warning: Citation `wang2016dynamics' on page 1 undefined on inpu
+t line 253.
 
-] [21
-
-] [22] [1
+[1
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 254--259
+
+Package natbib Warning: Citation `RN85' on page 2 undefined on input line 256.
+
+
+Package natbib Warning: Citation `RN84' on page 2 undefined on input line 256.
+
+
+Package natbib Warning: Citation `RN86' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN87' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN88' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN89' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN90' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN91' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN92' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN93' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN94' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN95' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `alexis2011model' on page 2 undefined on input
+ line 257.
+
+
+Package natbib Warning: Citation `RN97' on page 2 undefined on input line 257.
+
+
+Package natbib Warning: Citation `RN98' on page 2 undefined on input line 257.
+
+[2]
+
+Package natbib Warning: Citation `RN99' on page 3 undefined on input line 260.
+
+
+Package natbib Warning: Citation `RN100' on page 3 undefined on input line 260.
+
+
+
+Package natbib Warning: Citation `RN102' on page 3 undefined on input line 260.
+
+
+
+Package natbib Warning: Citation `RN103' on page 3 undefined on input line 260.
+
+
+
+Package natbib Warning: Citation `RN104' on page 3 undefined on input line 260.
+
+
+
+Package natbib Warning: Citation `RN105' on page 3 undefined on input line 260.
+
+
+
+Package natbib Warning: Citation `RN106' on page 3 undefined on input line 260.
+
+
+
+Package natbib Warning: Citation `RN108' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN109' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN110' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN111' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN112' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN113' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN114' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN116' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN117' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN114' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN117' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN114' on page 3 undefined on input line 263.
+
+
+
+Package natbib Warning: Citation `RN117' on page 3 undefined on input line 263.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--265
 
  []
 
-[2] [3] [4] [5] [6] [7] [8] [9] [10
+[3]
 
-]
+Package natbib Warning: Citation `RN78' on page 4 undefined on input line 266.
+
+
+Package natbib Warning: Citation `RN79' on page 4 undefined on input line 266.
+
+
+Package natbib Warning: Citation `RN80' on page 4 undefined on input line 266.
+
+
+Package natbib Warning: Citation `RN77' on page 4 undefined on input line 266.
+
+
+Package natbib Warning: Citation `RN73' on page 4 undefined on input line 268.
+
+
+Package natbib Warning: Citation `RN81' on page 4 undefined on input line 269.
+
+
+Package natbib Warning: Citation `mellinger2011minimum' on page 4 undefined on 
+input line 269.
+
+
+Package natbib Warning: Citation `faessler2017differential' on page 4 undefined
+ on input line 269.
+
+
+Package natbib Warning: Citation `mellinger2011minimum' on page 4 undefined on 
+input line 269.
+
+
+Package natbib Warning: Citation `faessler2017differential' on page 4 undefined
+ on input line 269.
+
+
+Package natbib Warning: Citation `RN76' on page 4 undefined on input line 272.
+
+
+Package natbib Warning: Citation `RN75' on page 4 undefined on input line 272.
+
+[4] [5]
+
+Package natbib Warning: Citation `RN114' on page 6 undefined on input line 283.
+
+
+
+Package natbib Warning: Citation `RN117' on page 6 undefined on input line 284.
+
+
+
+Package natbib Warning: Citation `RN83' on page 6 undefined on input line 290.
+
+[6] [7]
+
+LaTeX Warning: Reference `Chap:KDO' on page 8 undefined on input line 312.
+
+
+LaTeX Warning: Reference `Sec:ThmKdo' on page 8 undefined on input line 312.
+
+
+LaTeX Warning: Reference `Chap:ResultsSim' on page 8 undefined on input line 31
+3.
+
+
+LaTeX Warning: Reference `Chap:ResultsPrac' on page 8 undefined on input line 3
+15.
+
+[8]
 Chapter 1
-(Tikz/Quad_Dynamics/quad.tex) [11] [12] [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
+
+Package natbib Warning: Citation `RN71' on page 9 undefined on input line 325.
+
+(Tikz/Quad_Dynamics/quad.tex)
+
+Package natbib Warning: Citation `hoffmann2007quadrotor' on page 9 undefined on
+ input line 337.
+
+
+Package natbib Warning: Citation `zheng2014second' on page 9 undefined on input
+ line 337.
+
+
+Package natbib Warning: Citation `alexis2012model' on page 9 undefined on input
+ line 337.
+
+
+Package natbib Warning: Citation `RN114' on page 9 undefined on input line 337.
+
+
+[9
+
+] [10] [11] [12]
+
+LaTeX Warning: Reference `section:SimulationResults' on page 13 undefined on in
+put line 439.
+
+
+Package natbib Warning: Citation `teschl2012ordinary' on page 13 undefined on i
+nput line 452.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
+[13]
+
+Package natbib Warning: Citation `RN77' on page 14 undefined on input line 462.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 
  []
 
-<Figures/quad/linearmotor.png, id=823, 778.40813pt x 408.77719pt>
+
+Package natbib Warning: Citation `RN120' on page 14 undefined on input line 470
+.
+
+
+Package natbib Warning: Citation `levine2009differential' on page 14 undefined 
+on input line 472.
+
+<Figures/quad/linearmotor.png, id=247, 778.40813pt x 408.77719pt>
 File: Figures/quad/linearmotor.png Graphic file (type png)
 <use Figures/quad/linearmotor.png>
-Package pdftex.def Info: Figures/quad/linearmotor.png  used on input line 470.
+Package pdftex.def Info: Figures/quad/linearmotor.png  used on input line 477.
 (pdftex.def)             Requested size: 271.01524pt x 142.32565pt.
-[16] [17 <./Figures/quad/linearmotor.png>]
+[14] [15 <./Figures/quad/linearmotor.png>]
 
-Package hyperref Warning: Suppressing empty link on input line 512.
+Package hyperref Warning: Suppressing empty link on input line 520.
 
-[18]
+
+Package natbib Warning: Citation `RN81' on page 16 undefined on input line 520.
+
+
+
+Package natbib Warning: Citation `faessler2017differential' on page 16 undefine
+d on input line 520.
+
+[16]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 523.
+(amsmath)                 on input line 531.
 
-[19] [20]
-<Figures/quad/sss_c2.png, id=884, 383.4325pt x 234.8775pt>
+[17]
+
+Package natbib Warning: Citation `RN121' on page 18 undefined on input line 556
+.
+
+
+LaTeX Warning: Reference `Chap:ResultsSim' on page 18 undefined on input line 5
+56.
+
+
+LaTeX Warning: Reference `Chap:ResultsPrac' on page 18 undefined on input line 
+556.
+
+<Figures/quad/sss_c2.png, id=293, 383.4325pt x 234.8775pt>
 File: Figures/quad/sss_c2.png Graphic file (type png)
 <use Figures/quad/sss_c2.png>
-Package pdftex.def Info: Figures/quad/sss_c2.png  used on input line 553.
+Package pdftex.def Info: Figures/quad/sss_c2.png  used on input line 561.
 (pdftex.def)             Requested size: 271.02788pt x 225.8454pt.
- [21] [22 <./Figures/quad/sss_c2.png>]
-<Figures/quad/rcd_c2.png, id=907, 306.39468pt x 246.9225pt>
+
+Package natbib Warning: Citation `RN121' on page 18 undefined on input line 567
+.
+
+[18]
+
+Package natbib Warning: Citation `harris2002harris' on page 19 undefined on inp
+ut line 570.
+
+[19 <./Figures/quad/sss_c2.png>]
+
+Package natbib Warning: Citation `RN121' on page 20 undefined on input line 580
+.
+
+<Figures/quad/rcd_c2.png, id=309, 306.39468pt x 246.9225pt>
 File: Figures/quad/rcd_c2.png Graphic file (type png)
 <use Figures/quad/rcd_c2.png>
-Package pdftex.def Info: Figures/quad/rcd_c2.png  used on input line 604.
+Package pdftex.def Info: Figures/quad/rcd_c2.png  used on input line 613.
 (pdftex.def)             Requested size: 338.78372pt x 225.84143pt.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 61
+
+Package natbib Warning: Citation `RN121' on page 20 undefined on input line 619
+.
+
+[20]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 62
 4.
 
 ("C:\Users\Bashar\AppData\Local\Programs\MiKTeXNew 2.9\tex/latex/psnfss\t1pcr.f
 d"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [23 <./Figures/quad/rcd_c2.png>] [24] [25] [26
+) [21 <./Figures/quad/rcd_c2.png>]
+
+Package natbib Warning: Citation `RN114' on page 22 undefined on input line 641
+.
+
+[22]
+Chapter 2
+
+Package natbib Warning: Citation `RN114' on page 23 undefined on input line 647
+.
+
+
+Package natbib Warning: Citation `RN117' on page 23 undefined on input line 647
+.
+
+
+Package natbib Warning: Citation `RN114' on page 23 undefined on input line 652
+.
+
+
+Package natbib Warning: Citation `RN117' on page 23 undefined on input line 652
+.
+
+
+Package natbib Warning: Citation `RN83' on page 23 undefined on input line 652.
+
+
+[23
 
 ]
-Chapter 2
-[27] [28] [29] [30] [31] [32]
+
+Package natbib Warning: Citation `bash2019analysis' on page 24 undefined on inp
+ut line 665.
+
+[24]
+
+Package natbib Warning: Citation `RN114' on page 25 undefined on input line 684
+.
+
+[25]
+
+Package natbib Warning: Citation `bash2019analysis' on page 26 undefined on inp
+ut line 720.
+
+
+Package natbib Warning: Citation `levant1998robust' on page 26 undefined on inp
+ut line 720.
+
+[26]
+
+Package natbib Warning: Citation `levant1998robust' on page 27 undefined on inp
+ut line 734.
+
+
+Package natbib Warning: Citation `RN114' on page 27 undefined on input line 737
+.
+
+
+Package natbib Warning: Citation `RN117' on page 27 undefined on input line 737
+.
+
+[27]
+
+Package natbib Warning: Citation `RN114' on page 28 undefined on input line 761
+.
+
+[28]
 Chapter 3
 
-Overfull \hbox (44.56184pt too wide) in paragraph at lines 759--804
+Package natbib Warning: Citation `RN119' on page 29 undefined on input line 764
+.
+
+
+Package natbib Warning: Citation `RN76' on page 29 undefined on input line 764.
+
+
+
+Package natbib Warning: Citation `RN83' on page 29 undefined on input line 764.
+
+
+
+Package natbib Warning: Citation `RN120' on page 29 undefined on input line 764
+.
+
+
+LaTeX Warning: Reference `Sec:MovWin' on page 29 undefined on input line 766.
+
+
+LaTeX Warning: Reference `Sec:ParEst' on page 29 undefined on input line 766.
+
+
+LaTeX Warning: Reference `Sec:FullStateEst' on page 29 undefined on input line 
+766.
+
+
+LaTeX Warning: Reference `eqn:A1' on page 29 undefined on input line 814.
+
+
+LaTeX Warning: Reference `eqn:A6' on page 29 undefined on input line 814.
+
+
+LaTeX Warning: Reference `Sec:App1' on page 29 undefined on input line 814.
+
+
+Overfull \hbox (44.56184pt too wide) in paragraph at lines 770--817
 [][] 
  []
 
-[33
+[29
 
-] [34] [35] [36] [37]
+] [30]
+
+Package natbib Warning: Citation `pandey2018variational' on page 31 undefined o
+n input line 825.
+
+
+LaTeX Warning: Reference `eqn:local' on page 31 undefined on input line 831.
+
+
+LaTeX Warning: Reference `eqn:y_estimate' on page 31 undefined on input line 83
+1.
+
+
+LaTeX Warning: Reference `eqn:backward' on page 31 undefined on input line 831.
+
+
+
+Package natbib Warning: Citation `RN118' on page 31 undefined on input line 831
+.
+
+
+Package natbib Warning: Citation `RN83' on page 31 undefined on input line 831.
+
+
+[31]
+
+LaTeX Warning: Reference `eqn:y_estimate' on page 32 undefined on input line 83
+3.
+
+
+LaTeX Warning: Reference `eqn:backward' on page 32 undefined on input line 833.
+
+
+
+LaTeX Warning: Reference `eqn:y_estimate' on page 32 undefined on input line 83
+9.
+
+[32]
+
+Package natbib Warning: Citation `RN120' on page 33 undefined on input line 843
+.
+
+
+LaTeX Warning: Reference `Sec:ridge' on page 33 undefined on input line 843.
+
+
+Package natbib Warning: Citation `fliess2003algebraic' on page 33 undefined on 
+input line 846.
+
+
+Package natbib Warning: Citation `pandey2018variational' on page 33 undefined o
+n input line 858.
+
+
+Package natbib Warning: Citation `fliess2003algebraic' on page 33 undefined on 
+input line 858.
+
+
+LaTeX Warning: Reference `eqn:local' on page 33 undefined on input line 860.
+
+
+Package natbib Warning: Citation `fliess2003algebraic' on page 33 undefined on 
+input line 860.
+
+[33]
+
+Package natbib Warning: Citation `fliess2003algebraic' on page 34 undefined on 
+input line 862.
+
+
+Package natbib Warning: Citation `ghoshal2017using' on page 34 undefined on inp
+ut line 862.
+
+
+LaTeX Warning: Reference `eqn:pracliniden' on page 34 undefined on input line 8
+62.
+
+
+LaTeX Warning: Reference `Sec:App3' on page 34 undefined on input line 862.
+
+
+LaTeX Warning: Reference `eqn:pracliniden' on page 34 undefined on input line 8
+75.
+
+
+LaTeX Warning: Reference `Sec:App4' on page 34 undefined on input line 875.
+
+
+Package natbib Warning: Citation `RN120' on page 34 undefined on input line 879
+.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 866.
+(hyperref)                removing `\begingroup' on input line 879.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 866.
+(hyperref)                removing `\let' on input line 879.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 866.
+(hyperref)                removing `\<def>-command' on input line 879.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 866.
+(hyperref)                removing `\NAT@ctype' on input line 879.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 866.
+(hyperref)                removing `\let' on input line 879.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 866.
+(hyperref)                removing `\new@ifnextchar' on input line 879.
 
-[38] [39] [40] [41] [42] [43] [44] [45]
-<Figures/kdo/outputs.png, id=1197, 481.8pt x 361.35pt>
+
+LaTeX Warning: Reference `eqn:local' on page 34 undefined on input line 880.
+
+
+Package natbib Warning: Citation `RN83' on page 34 undefined on input line 880.
+
+
+
+Package natbib Warning: Citation `RN120' on page 34 undefined on input line 880
+.
+
+
+LaTeX Warning: Reference `eqn:local' on page 34 undefined on input line 880.
+
+
+Package natbib Warning: Citation `RN120' on page 34 undefined on input line 880
+.
+
+[34] [35]
+
+LaTeX Warning: Reference `eqn:A1' on page 36 undefined on input line 907.
+
+
+LaTeX Warning: Reference `eqn:A6' on page 36 undefined on input line 907.
+
+
+LaTeX Warning: Reference `Sec:App1' on page 36 undefined on input line 907.
+
+
+LaTeX Warning: Reference `eqn:local' on page 36 undefined on input line 911.
+
+
+LaTeX Warning: Reference `eqn:paramdynamic' on page 36 undefined on input line 
+913.
+
+
+LaTeX Warning: Reference `eqn:y_estimate' on page 36 undefined on input line 91
+3.
+
+[36] [37]
+
+LaTeX Warning: Reference `eq:stochastic_variance_1' on page 38 undefined on inp
+ut line 982.
+
+[38]
+
+LaTeX Warning: Reference `eqn:local' on page 39 undefined on input line 989.
+
+
+LaTeX Warning: Reference `eqn:y_estimate' on page 39 undefined on input line 98
+9.
+
+
+LaTeX Warning: Reference `eq:kernel_noise' on page 39 undefined on input line 1
+014.
+
+[39]
+
+LaTeX Warning: Reference `eqn:stoch1' on page 40 undefined on input line 1038.
+
+
+LaTeX Warning: Reference `eqn:stoch1' on page 40 undefined on input line 1041.
+
+[40]
+
+LaTeX Warning: Reference `eqn:stoch1' on page 41 undefined on input line 1052.
+
+
+LaTeX Warning: Reference `eqn:stoch1' on page 41 undefined on input line 1055.
+
+[41]
+
+LaTeX Warning: Reference `Fig:outputs' on page 42 undefined on input line 1082.
+
+
+<Figures/kdo/outputs.png, id=494, 481.8pt x 361.35pt>
 File: Figures/kdo/outputs.png Graphic file (type png)
 <use Figures/kdo/outputs.png>
-Package pdftex.def Info: Figures/kdo/outputs.png  used on input line 1072.
-(pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
- [46]
-<Figures/kdo/varFacWin.png, id=1210, 493.845pt x 420.82219pt>
-File: Figures/kdo/varFacWin.png Graphic file (type png)
-<use Figures/kdo/varFacWin.png>
-Package pdftex.def Info: Figures/kdo/varFacWin.png  used on input line 1090.
-(pdftex.def)             Requested size: 338.76563pt x 288.67241pt.
- [47 <./Figures/kdo/outputs.png>]
-<Figures/kdo/kernels.png, id=1218, 722.7pt x 542.025pt>
-File: Figures/kdo/kernels.png Graphic file (type png)
-<use Figures/kdo/kernels.png>
-Package pdftex.def Info: Figures/kdo/kernels.png  used on input line 1098.
-(pdftex.def)             Requested size: 338.76563pt x 254.0736pt.
-<Figures/kdo/winEst.png, id=1222, 481.8pt x 361.35pt>
-File: Figures/kdo/winEst.png Graphic file (type png)
-<use Figures/kdo/winEst.png>
-Package pdftex.def Info: Figures/kdo/winEst.png  used on input line 1103.
-(pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/kdo/recon.png, id=1224, 481.8pt x 361.35pt>
-File: Figures/kdo/recon.png Graphic file (type png)
-<use Figures/kdo/recon.png>
-Package pdftex.def Info: Figures/kdo/recon.png  used on input line 1109.
+Package pdftex.def Info: Figures/kdo/outputs.png  used on input line 1085.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
 
-[48 <./Figures/kdo/varFacWin.png>]
-<Figures/kdo/minvar.png, id=1233, 481.8pt x 361.35pt>
+LaTeX Warning: Reference `eqn:example1' on page 42 undefined on input line 1086
+.
+
+
+LaTeX Warning: Reference `eqn:example1' on page 42 undefined on input line 1086
+.
+
+
+LaTeX Warning: Reference `Sec:ridge' on page 42 undefined on input line 1090.
+
+
+LaTeX Warning: Reference `Sec:pseudo' on page 42 undefined on input line 1090.
+
+
+LaTeX Warning: Reference `eqn:paramdynamic' on page 42 undefined on input line 
+1091.
+
+[42]
+
+LaTeX Warning: Reference `Fig:varFacWin' on page 43 undefined on input line 110
+0.
+
+<Figures/kdo/varFacWin.png, id=503, 493.845pt x 420.82219pt>
+File: Figures/kdo/varFacWin.png Graphic file (type png)
+<use Figures/kdo/varFacWin.png>
+Package pdftex.def Info: Figures/kdo/varFacWin.png  used on input line 1103.
+(pdftex.def)             Requested size: 338.76563pt x 288.67241pt.
+[43 <./Figures/kdo/outputs.png>]
+
+LaTeX Warning: Reference `Fig:kernels' on page 44 undefined on input line 1109.
+
+
+<Figures/kdo/kernels.png, id=511, 722.7pt x 542.025pt>
+File: Figures/kdo/kernels.png Graphic file (type png)
+<use Figures/kdo/kernels.png>
+Package pdftex.def Info: Figures/kdo/kernels.png  used on input line 1111.
+(pdftex.def)             Requested size: 338.76563pt x 254.0736pt.
+
+LaTeX Warning: Reference `eqn:y_estimate' on page 44 undefined on input line 11
+14.
+
+
+LaTeX Warning: Reference `eqn:backward' on page 44 undefined on input line 1114
+.
+
+
+LaTeX Warning: Reference `Fig:winEst' on page 44 undefined on input line 1114.
+
+<Figures/kdo/winEst.png, id=512, 481.8pt x 361.35pt>
+File: Figures/kdo/winEst.png Graphic file (type png)
+<use Figures/kdo/winEst.png>
+Package pdftex.def Info: Figures/kdo/winEst.png  used on input line 1116.
+(pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
+
+LaTeX Warning: Reference `Fig:recon' on page 44 undefined on input line 1119.
+
+<Figures/kdo/recon.png, id=513, 481.8pt x 361.35pt>
+File: Figures/kdo/recon.png Graphic file (type png)
+<use Figures/kdo/recon.png>
+Package pdftex.def Info: Figures/kdo/recon.png  used on input line 1122.
+(pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
+
+Package natbib Warning: Citation `RN120' on page 44 undefined on input line 112
+6.
+
+
+LaTeX Warning: Reference `Fig:minVarPts' on page 44 undefined on input line 112
+6.
+
+[44 <./Figures/kdo/varFacWin.png>]
+<Figures/kdo/minvar.png, id=521, 481.8pt x 361.35pt>
 File: Figures/kdo/minvar.png Graphic file (type png)
 <use Figures/kdo/minvar.png>
-Package pdftex.def Info: Figures/kdo/minvar.png  used on input line 1117.
+Package pdftex.def Info: Figures/kdo/minvar.png  used on input line 1130.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/blank.png, id=1234, 154.176pt x 115.632pt>
+<Figures/blank.png, id=522, 154.176pt x 115.632pt>
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1124.
+Package pdftex.def Info: Figures/blank.png  used on input line 1137.
 (pdftex.def)             Requested size: 383.93712pt x 287.98888pt.
- [49 <./Figures/kdo/kernels.png>] [50 <./Figures/kdo/winEst.png> <./Figures/kdo
-/recon.png>] [51 <./Figures/kdo/minvar.png> <./Figures/blank.png>] [52
+ [45 <./Figures/kdo/kernels.png>] [46 <./Figures/kdo/winEst.png> <./Figures/kdo
+/recon.png>] [47 <./Figures/kdo/minvar.png> <./Figures/blank.png>] [48
 
 
 ]
 Chapter 4
-(Tikz/Block/block.tex) [53] [54]
-LaTeX Font Info:    Calculating math sizes for size <8.4> on input line 1191.
+
+Package natbib Warning: Citation `nuradeen2019thesis' on page 49 undefined on i
+nput line 1149.
+
+(Tikz/Block/block.tex)
+
+LaTeX Warning: Reference `Fig:block_simulation' on page 49 undefined on input l
+ine 1156.
+
+
+LaTeX Warning: Reference `eq:dist_1' on page 49 undefined on input line 1156.
+
+
+LaTeX Warning: Reference `eq:dist_2' on page 49 undefined on input line 1156.
+
+
+LaTeX Warning: Reference `eq:dist_3' on page 49 undefined on input line 1156.
+
+
+LaTeX Warning: Reference `eq:dist_4' on page 49 undefined on input line 1156.
+
+
+LaTeX Warning: Reference `eq:KDO' on page 49 undefined on input line 1156.
+
+
+LaTeX Warning: Reference `eqn:x_traj' on page 49 undefined on input line 1156.
+
+
+LaTeX Warning: Reference `eqn:z_traj' on page 49 undefined on input line 1156.
+
+[49] [50]
+LaTeX Font Info:    Calculating math sizes for size <8.4> on input line 1205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1191.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.21603> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1191.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.04004> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1191.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1205.
+
+
+LaTeX Warning: Reference `dis_m1_pos' on page 51 undefined on input line 1205.
+
+
+LaTeX Warning: Reference `dis_m1_att' on page 51 undefined on input line 1205.
+
 Package epstopdf Info: Source file: <Figures/results/chaotic_disturbances/dis_m
 1_pos.eps>
 (epstopdf)                    date: 2019-02-11 15:00:58
@@ -1850,17 +2453,17 @@ Package epstopdf Info: Source file: <Figures/results/chaotic_disturbances/dis_m
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_dis
 turbances/dis_m1_pos-eps-converted-to.pdf Figures/results/chaotic_disturbances/
 dis_m1_pos.eps>
-(epstopdf)             \includegraphics on input line 1195.
+(epstopdf)             \includegraphics on input line 1209.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/chaotic_disturbances/dis_m1_pos-eps-converted-to.pdf, id=1293,
- 497.86pt x 350.30875pt>
+<Figures/results/chaotic_disturbances/dis_m1_pos-eps-converted-to.pdf, id=570, 
+497.86pt x 350.30875pt>
 File: Figures/results/chaotic_disturbances/dis_m1_pos-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use Figures/results/chaotic_disturbances/dis_m1_pos-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/chaotic_disturbances/dis_m1_pos-eps-co
-nverted-to.pdf  used on input line 1195.
+nverted-to.pdf  used on input line 1209.
 (pdftex.def)             Requested size: 252.94804pt x 144.54155pt.
- [55]
+[51]
 Package epstopdf Info: Source file: <Figures/results/chaotic_disturbances/dis_m
 1_att.eps>
 (epstopdf)                    date: 2019-02-11 17:02:56
@@ -1872,15 +2475,15 @@ Package epstopdf Info: Source file: <Figures/results/chaotic_disturbances/dis_m
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_dis
 turbances/dis_m1_att-eps-converted-to.pdf Figures/results/chaotic_disturbances/
 dis_m1_att.eps>
-(epstopdf)             \includegraphics on input line 1201.
+(epstopdf)             \includegraphics on input line 1215.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/chaotic_disturbances/dis_m1_att-eps-converted-to.pdf, id=1303,
- 1396.21625pt x 733.74126pt>
+<Figures/results/chaotic_disturbances/dis_m1_att-eps-converted-to.pdf, id=583, 
+1396.21625pt x 733.74126pt>
 File: Figures/results/chaotic_disturbances/dis_m1_att-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use Figures/results/chaotic_disturbances/dis_m1_att-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/chaotic_disturbances/dis_m1_att-eps-co
-nverted-to.pdf  used on input line 1201.
+nverted-to.pdf  used on input line 1215.
 (pdftex.def)             Requested size: 252.92723pt x 144.54004pt.
 Package epstopdf Info: Source file: <Figures/results/chaotic_1_estimates/dis_m1
 _est_yaw_ndo.eps>
@@ -1893,16 +2496,16 @@ _est_yaw_ndo-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_1_e
 stimates/dis_m1_est_yaw_ndo-eps-converted-to.pdf Figures/results/chaotic_1_esti
 mates/dis_m1_est_yaw_ndo.eps>
-(epstopdf)             \includegraphics on input line 1240.
+(epstopdf)             \includegraphics on input line 1254.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_1_estimates/dis_m1_est_yaw_ndo-eps-converted-to.pdf, i
-d=1304, 421.575pt x 316.18124pt>
+d=584, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_1_estimates/dis_m1_est_yaw_ndo-eps-converted-to.p
 df Graphic file (type pdf)
 <use Figures/results/chaotic_1_estimates/dis_m1_est_yaw_ndo-eps-converted-to.pd
 f>
 Package pdftex.def Info: Figures/results/chaotic_1_estimates/dis_m1_est_yaw_ndo
--eps-converted-to.pdf  used on input line 1240.
+-eps-converted-to.pdf  used on input line 1254.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/chaotic_1_estimates/dis_m1
 _est_y_sto.eps>
@@ -1915,16 +2518,16 @@ _est_y_sto-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_1_e
 stimates/dis_m1_est_y_sto-eps-converted-to.pdf Figures/results/chaotic_1_estima
 tes/dis_m1_est_y_sto.eps>
-(epstopdf)             \includegraphics on input line 1246.
+(epstopdf)             \includegraphics on input line 1260.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_1_estimates/dis_m1_est_y_sto-eps-converted-to.pdf, id=
-1305, 421.575pt x 316.18124pt>
+585, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_1_estimates/dis_m1_est_y_sto-eps-converted-to.pdf
  Graphic file (type pdf)
 <use Figures/results/chaotic_1_estimates/dis_m1_est_y_sto-eps-converted-to.pdf>
 
 Package pdftex.def Info: Figures/results/chaotic_1_estimates/dis_m1_est_y_sto-e
-ps-converted-to.pdf  used on input line 1246.
+ps-converted-to.pdf  used on input line 1260.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/chaotic_1_estimates/dis_m1
 _est_yaw_kdo.eps>
@@ -1937,16 +2540,16 @@ _est_yaw_kdo-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_1_e
 stimates/dis_m1_est_yaw_kdo-eps-converted-to.pdf Figures/results/chaotic_1_esti
 mates/dis_m1_est_yaw_kdo.eps>
-(epstopdf)             \includegraphics on input line 1252.
+(epstopdf)             \includegraphics on input line 1266.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_1_estimates/dis_m1_est_yaw_kdo-eps-converted-to.pdf, i
-d=1306, 421.575pt x 316.18124pt>
+d=586, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_1_estimates/dis_m1_est_yaw_kdo-eps-converted-to.p
 df Graphic file (type pdf)
 <use Figures/results/chaotic_1_estimates/dis_m1_est_yaw_kdo-eps-converted-to.pd
 f>
 Package pdftex.def Info: Figures/results/chaotic_1_estimates/dis_m1_est_yaw_kdo
--eps-converted-to.pdf  used on input line 1252.
+-eps-converted-to.pdf  used on input line 1266.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/x_trac_dis_m1_ndo
 .eps>
@@ -1959,22 +2562,22 @@ Package epstopdf Info: Source file: <Figures/results/tracking/x_trac_dis_m1_ndo
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/x_
 trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/x_trac_dis_m1_ndo
 .eps>
-(epstopdf)             \includegraphics on input line 1260.
+(epstopdf)             \includegraphics on input line 1274.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/x_trac_dis_m1_ndo-eps-converted-to.pdf, id=1307, 421.
-575pt x 316.18124pt>
+<Figures/results/tracking/x_trac_dis_m1_ndo-eps-converted-to.pdf, id=587, 421.5
+75pt x 316.18124pt>
 File: Figures/results/tracking/x_trac_dis_m1_ndo-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Figures/results/tracking/x_trac_dis_m1_ndo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/x_trac_dis_m1_ndo-eps-convert
-ed-to.pdf  used on input line 1260.
+ed-to.pdf  used on input line 1274.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
- [56 <./Figures/results/chaotic_disturbances/dis_m1_pos-eps-converted-to.pdf> <
+ [52 <./Figures/results/chaotic_disturbances/dis_m1_pos-eps-converted-to.pdf> <
 ./Figures/results/chaotic_disturbances/dis_m1_att-eps-converted-to.pdf>]
 
-LaTeX Warning: Text page 57 contains only floats.
+LaTeX Warning: Text page 53 contains only floats.
 
-[57 <./Figures/results/chaotic_1_estimates/dis_m1_est_yaw_ndo-eps-converted-to.
+[53 <./Figures/results/chaotic_1_estimates/dis_m1_est_yaw_ndo-eps-converted-to.
 pdf> <./Figures/results/chaotic_1_estimates/dis_m1_est_y_sto-eps-converted-to.p
 df>]
 Package epstopdf Info: Source file: <Figures/results/tracking/x_trac_dis_m1_sto
@@ -1988,15 +2591,15 @@ Package epstopdf Info: Source file: <Figures/results/tracking/x_trac_dis_m1_sto
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/x_
 trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/x_trac_dis_m1_sto
 .eps>
-(epstopdf)             \includegraphics on input line 1266.
+(epstopdf)             \includegraphics on input line 1280.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/x_trac_dis_m1_sto-eps-converted-to.pdf, id=1339, 421.
-575pt x 316.18124pt>
+<Figures/results/tracking/x_trac_dis_m1_sto-eps-converted-to.pdf, id=624, 421.5
+75pt x 316.18124pt>
 File: Figures/results/tracking/x_trac_dis_m1_sto-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Figures/results/tracking/x_trac_dis_m1_sto-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/x_trac_dis_m1_sto-eps-convert
-ed-to.pdf  used on input line 1266.
+ed-to.pdf  used on input line 1280.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/x_trac_dis_m1_kdo
 .eps>
@@ -2009,15 +2612,15 @@ Package epstopdf Info: Source file: <Figures/results/tracking/x_trac_dis_m1_kdo
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/x_
 trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/x_trac_dis_m1_kdo
 .eps>
-(epstopdf)             \includegraphics on input line 1272.
+(epstopdf)             \includegraphics on input line 1286.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/x_trac_dis_m1_kdo-eps-converted-to.pdf, id=1340, 421.
-575pt x 316.18124pt>
+<Figures/results/tracking/x_trac_dis_m1_kdo-eps-converted-to.pdf, id=625, 421.5
+75pt x 316.18124pt>
 File: Figures/results/tracking/x_trac_dis_m1_kdo-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Figures/results/tracking/x_trac_dis_m1_kdo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/x_trac_dis_m1_kdo-eps-convert
-ed-to.pdf  used on input line 1272.
+ed-to.pdf  used on input line 1286.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/y_trac_dis_m1_ndo
 .eps>
@@ -2030,15 +2633,15 @@ Package epstopdf Info: Source file: <Figures/results/tracking/y_trac_dis_m1_ndo
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/y_
 trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/y_trac_dis_m1_ndo
 .eps>
-(epstopdf)             \includegraphics on input line 1278.
+(epstopdf)             \includegraphics on input line 1292.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/y_trac_dis_m1_ndo-eps-converted-to.pdf, id=1341, 421.
-575pt x 316.18124pt>
+<Figures/results/tracking/y_trac_dis_m1_ndo-eps-converted-to.pdf, id=626, 421.5
+75pt x 316.18124pt>
 File: Figures/results/tracking/y_trac_dis_m1_ndo-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Figures/results/tracking/y_trac_dis_m1_ndo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/y_trac_dis_m1_ndo-eps-convert
-ed-to.pdf  used on input line 1278.
+ed-to.pdf  used on input line 1292.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/y_trac_dis_m1_sto
 .eps>
@@ -2051,15 +2654,15 @@ Package epstopdf Info: Source file: <Figures/results/tracking/y_trac_dis_m1_sto
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/y_
 trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/y_trac_dis_m1_sto
 .eps>
-(epstopdf)             \includegraphics on input line 1284.
+(epstopdf)             \includegraphics on input line 1298.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/y_trac_dis_m1_sto-eps-converted-to.pdf, id=1342, 421.
-575pt x 316.18124pt>
+<Figures/results/tracking/y_trac_dis_m1_sto-eps-converted-to.pdf, id=627, 421.5
+75pt x 316.18124pt>
 File: Figures/results/tracking/y_trac_dis_m1_sto-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Figures/results/tracking/y_trac_dis_m1_sto-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/y_trac_dis_m1_sto-eps-convert
-ed-to.pdf  used on input line 1284.
+ed-to.pdf  used on input line 1298.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/y_trac_dis_m1_kdo
 .eps>
@@ -2072,15 +2675,15 @@ Package epstopdf Info: Source file: <Figures/results/tracking/y_trac_dis_m1_kdo
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/y_
 trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/y_trac_dis_m1_kdo
 .eps>
-(epstopdf)             \includegraphics on input line 1290.
+(epstopdf)             \includegraphics on input line 1304.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/y_trac_dis_m1_kdo-eps-converted-to.pdf, id=1343, 421.
-575pt x 316.18124pt>
+<Figures/results/tracking/y_trac_dis_m1_kdo-eps-converted-to.pdf, id=628, 421.5
+75pt x 316.18124pt>
 File: Figures/results/tracking/y_trac_dis_m1_kdo-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Figures/results/tracking/y_trac_dis_m1_kdo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/y_trac_dis_m1_kdo-eps-convert
-ed-to.pdf  used on input line 1290.
+ed-to.pdf  used on input line 1304.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/z_trac_dis_m1_ndo
 .eps>
@@ -2093,15 +2696,15 @@ Package epstopdf Info: Source file: <Figures/results/tracking/z_trac_dis_m1_ndo
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/z_
 trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/z_trac_dis_m1_ndo
 .eps>
-(epstopdf)             \includegraphics on input line 1296.
+(epstopdf)             \includegraphics on input line 1310.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/z_trac_dis_m1_ndo-eps-converted-to.pdf, id=1344, 421.
-575pt x 316.18124pt>
+<Figures/results/tracking/z_trac_dis_m1_ndo-eps-converted-to.pdf, id=629, 421.5
+75pt x 316.18124pt>
 File: Figures/results/tracking/z_trac_dis_m1_ndo-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Figures/results/tracking/z_trac_dis_m1_ndo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/z_trac_dis_m1_ndo-eps-convert
-ed-to.pdf  used on input line 1296.
+ed-to.pdf  used on input line 1310.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/z_trac_dis_m1_sto
 .eps>
@@ -2114,15 +2717,15 @@ Package epstopdf Info: Source file: <Figures/results/tracking/z_trac_dis_m1_sto
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/z_
 trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/z_trac_dis_m1_sto
 .eps>
-(epstopdf)             \includegraphics on input line 1303.
+(epstopdf)             \includegraphics on input line 1317.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/z_trac_dis_m1_sto-eps-converted-to.pdf, id=1345, 421.
-575pt x 316.18124pt>
+<Figures/results/tracking/z_trac_dis_m1_sto-eps-converted-to.pdf, id=630, 421.5
+75pt x 316.18124pt>
 File: Figures/results/tracking/z_trac_dis_m1_sto-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Figures/results/tracking/z_trac_dis_m1_sto-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/z_trac_dis_m1_sto-eps-convert
-ed-to.pdf  used on input line 1303.
+ed-to.pdf  used on input line 1317.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/z_trac_dis_m1_kdo
 .eps>
@@ -2135,15 +2738,15 @@ Package epstopdf Info: Source file: <Figures/results/tracking/z_trac_dis_m1_kdo
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/z_
 trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/z_trac_dis_m1_kdo
 .eps>
-(epstopdf)             \includegraphics on input line 1310.
+(epstopdf)             \includegraphics on input line 1324.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/z_trac_dis_m1_kdo-eps-converted-to.pdf, id=1346, 421.
-575pt x 316.18124pt>
+<Figures/results/tracking/z_trac_dis_m1_kdo-eps-converted-to.pdf, id=631, 421.5
+75pt x 316.18124pt>
 File: Figures/results/tracking/z_trac_dis_m1_kdo-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Figures/results/tracking/z_trac_dis_m1_kdo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/z_trac_dis_m1_kdo-eps-convert
-ed-to.pdf  used on input line 1310.
+ed-to.pdf  used on input line 1324.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/roll_trac_dis_m1_
 ndo.eps>
@@ -2156,15 +2759,15 @@ ndo-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/ro
 ll_trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/roll_trac_dis_
 m1_ndo.eps>
-(epstopdf)             \includegraphics on input line 1317.
+(epstopdf)             \includegraphics on input line 1331.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/roll_trac_dis_m1_ndo-eps-converted-to.pdf, id=1347, 4
-21.575pt x 316.18124pt>
+<Figures/results/tracking/roll_trac_dis_m1_ndo-eps-converted-to.pdf, id=632, 42
+1.575pt x 316.18124pt>
 File: Figures/results/tracking/roll_trac_dis_m1_ndo-eps-converted-to.pdf Graphi
 c file (type pdf)
 <use Figures/results/tracking/roll_trac_dis_m1_ndo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/roll_trac_dis_m1_ndo-eps-conv
-erted-to.pdf  used on input line 1317.
+erted-to.pdf  used on input line 1331.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/roll_trac_dis_m1_
 sto.eps>
@@ -2177,15 +2780,15 @@ sto-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/ro
 ll_trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/roll_trac_dis_
 m1_sto.eps>
-(epstopdf)             \includegraphics on input line 1324.
+(epstopdf)             \includegraphics on input line 1338.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/roll_trac_dis_m1_sto-eps-converted-to.pdf, id=1348, 4
-21.575pt x 316.18124pt>
+<Figures/results/tracking/roll_trac_dis_m1_sto-eps-converted-to.pdf, id=633, 42
+1.575pt x 316.18124pt>
 File: Figures/results/tracking/roll_trac_dis_m1_sto-eps-converted-to.pdf Graphi
 c file (type pdf)
 <use Figures/results/tracking/roll_trac_dis_m1_sto-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/roll_trac_dis_m1_sto-eps-conv
-erted-to.pdf  used on input line 1324.
+erted-to.pdf  used on input line 1338.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/roll_trac_dis_m1_
 kdo.eps>
@@ -2198,15 +2801,15 @@ kdo-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/ro
 ll_trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/roll_trac_dis_
 m1_kdo.eps>
-(epstopdf)             \includegraphics on input line 1331.
+(epstopdf)             \includegraphics on input line 1345.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/roll_trac_dis_m1_kdo-eps-converted-to.pdf, id=1349, 4
-21.575pt x 316.18124pt>
+<Figures/results/tracking/roll_trac_dis_m1_kdo-eps-converted-to.pdf, id=634, 42
+1.575pt x 316.18124pt>
 File: Figures/results/tracking/roll_trac_dis_m1_kdo-eps-converted-to.pdf Graphi
 c file (type pdf)
 <use Figures/results/tracking/roll_trac_dis_m1_kdo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/roll_trac_dis_m1_kdo-eps-conv
-erted-to.pdf  used on input line 1331.
+erted-to.pdf  used on input line 1345.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/pitch_trac_dis_m1
 _ndo.eps>
@@ -2219,15 +2822,15 @@ _ndo-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/pi
 tch_trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/pitch_trac_di
 s_m1_ndo.eps>
-(epstopdf)             \includegraphics on input line 1338.
+(epstopdf)             \includegraphics on input line 1352.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/pitch_trac_dis_m1_ndo-eps-converted-to.pdf, id=1350, 
-421.575pt x 316.18124pt>
+<Figures/results/tracking/pitch_trac_dis_m1_ndo-eps-converted-to.pdf, id=635, 4
+21.575pt x 316.18124pt>
 File: Figures/results/tracking/pitch_trac_dis_m1_ndo-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use Figures/results/tracking/pitch_trac_dis_m1_ndo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/pitch_trac_dis_m1_ndo-eps-con
-verted-to.pdf  used on input line 1338.
+verted-to.pdf  used on input line 1352.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/pitch_trac_dis_m1
 _sto.eps>
@@ -2240,15 +2843,15 @@ _sto-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/pi
 tch_trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/pitch_trac_di
 s_m1_sto.eps>
-(epstopdf)             \includegraphics on input line 1345.
+(epstopdf)             \includegraphics on input line 1359.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/pitch_trac_dis_m1_sto-eps-converted-to.pdf, id=1351, 
-421.575pt x 316.18124pt>
+<Figures/results/tracking/pitch_trac_dis_m1_sto-eps-converted-to.pdf, id=636, 4
+21.575pt x 316.18124pt>
 File: Figures/results/tracking/pitch_trac_dis_m1_sto-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use Figures/results/tracking/pitch_trac_dis_m1_sto-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/pitch_trac_dis_m1_sto-eps-con
-verted-to.pdf  used on input line 1345.
+verted-to.pdf  used on input line 1359.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/pitch_trac_dis_m1
 _kdo.eps>
@@ -2261,15 +2864,15 @@ _kdo-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/pi
 tch_trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/pitch_trac_di
 s_m1_kdo.eps>
-(epstopdf)             \includegraphics on input line 1352.
+(epstopdf)             \includegraphics on input line 1366.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/pitch_trac_dis_m1_kdo-eps-converted-to.pdf, id=1352, 
-421.575pt x 316.18124pt>
+<Figures/results/tracking/pitch_trac_dis_m1_kdo-eps-converted-to.pdf, id=637, 4
+21.575pt x 316.18124pt>
 File: Figures/results/tracking/pitch_trac_dis_m1_kdo-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use Figures/results/tracking/pitch_trac_dis_m1_kdo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/pitch_trac_dis_m1_kdo-eps-con
-verted-to.pdf  used on input line 1352.
+verted-to.pdf  used on input line 1366.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/yaw_trac_dis_m1_n
 do.eps>
@@ -2282,15 +2885,15 @@ do-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/ya
 w_trac_dis_m1_ndo-eps-converted-to.pdf Figures/results/tracking/yaw_trac_dis_m1
 _ndo.eps>
-(epstopdf)             \includegraphics on input line 1359.
+(epstopdf)             \includegraphics on input line 1373.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/yaw_trac_dis_m1_ndo-eps-converted-to.pdf, id=1353, 42
-1.575pt x 316.18124pt>
+<Figures/results/tracking/yaw_trac_dis_m1_ndo-eps-converted-to.pdf, id=638, 421
+.575pt x 316.18124pt>
 File: Figures/results/tracking/yaw_trac_dis_m1_ndo-eps-converted-to.pdf Graphic
  file (type pdf)
 <use Figures/results/tracking/yaw_trac_dis_m1_ndo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/yaw_trac_dis_m1_ndo-eps-conve
-rted-to.pdf  used on input line 1359.
+rted-to.pdf  used on input line 1373.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/yaw_trac_dis_m1_s
 to.eps>
@@ -2303,15 +2906,15 @@ to-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/ya
 w_trac_dis_m1_sto-eps-converted-to.pdf Figures/results/tracking/yaw_trac_dis_m1
 _sto.eps>
-(epstopdf)             \includegraphics on input line 1366.
+(epstopdf)             \includegraphics on input line 1380.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/yaw_trac_dis_m1_sto-eps-converted-to.pdf, id=1354, 42
-1.575pt x 316.18124pt>
+<Figures/results/tracking/yaw_trac_dis_m1_sto-eps-converted-to.pdf, id=639, 421
+.575pt x 316.18124pt>
 File: Figures/results/tracking/yaw_trac_dis_m1_sto-eps-converted-to.pdf Graphic
  file (type pdf)
 <use Figures/results/tracking/yaw_trac_dis_m1_sto-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/yaw_trac_dis_m1_sto-eps-conve
-rted-to.pdf  used on input line 1366.
+rted-to.pdf  used on input line 1380.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/tracking/yaw_trac_dis_m1_k
 do.eps>
@@ -2324,50 +2927,56 @@ do-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/tracking/ya
 w_trac_dis_m1_kdo-eps-converted-to.pdf Figures/results/tracking/yaw_trac_dis_m1
 _kdo.eps>
-(epstopdf)             \includegraphics on input line 1373.
+(epstopdf)             \includegraphics on input line 1387.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/tracking/yaw_trac_dis_m1_kdo-eps-converted-to.pdf, id=1355, 42
-1.575pt x 316.18124pt>
+<Figures/results/tracking/yaw_trac_dis_m1_kdo-eps-converted-to.pdf, id=640, 421
+.575pt x 316.18124pt>
 File: Figures/results/tracking/yaw_trac_dis_m1_kdo-eps-converted-to.pdf Graphic
  file (type pdf)
 <use Figures/results/tracking/yaw_trac_dis_m1_kdo-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/tracking/yaw_trac_dis_m1_kdo-eps-conve
-rted-to.pdf  used on input line 1373.
+rted-to.pdf  used on input line 1387.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
- [58 <./Figures/results/chaotic_1_estimates/dis_m1_est_yaw_kdo-eps-converted-to
+ [54 <./Figures/results/chaotic_1_estimates/dis_m1_est_yaw_kdo-eps-converted-to
 .pdf> <./Figures/results/tracking/x_trac_dis_m1_ndo-eps-converted-to.pdf>]
 
-LaTeX Warning: Text page 59 contains only floats.
+LaTeX Warning: Text page 55 contains only floats.
 
-[59 <./Figures/results/tracking/x_trac_dis_m1_sto-eps-converted-to.pdf> <./Figu
+[55 <./Figures/results/tracking/x_trac_dis_m1_sto-eps-converted-to.pdf> <./Figu
 res/results/tracking/x_trac_dis_m1_kdo-eps-converted-to.pdf> <./Figures/results
 /tracking/y_trac_dis_m1_ndo-eps-converted-to.pdf>]
 
-LaTeX Warning: Text page 60 contains only floats.
+LaTeX Warning: Text page 56 contains only floats.
 
-[60 <./Figures/results/tracking/y_trac_dis_m1_sto-eps-converted-to.pdf> <./Figu
+[56 <./Figures/results/tracking/y_trac_dis_m1_sto-eps-converted-to.pdf> <./Figu
 res/results/tracking/y_trac_dis_m1_kdo-eps-converted-to.pdf> <./Figures/results
 /tracking/z_trac_dis_m1_ndo-eps-converted-to.pdf>]
 
-LaTeX Warning: Text page 61 contains only floats.
+LaTeX Warning: Text page 57 contains only floats.
 
-[61 <./Figures/results/tracking/z_trac_dis_m1_sto-eps-converted-to.pdf> <./Figu
+[57 <./Figures/results/tracking/z_trac_dis_m1_sto-eps-converted-to.pdf> <./Figu
 res/results/tracking/z_trac_dis_m1_kdo-eps-converted-to.pdf> <./Figures/results
 /tracking/roll_trac_dis_m1_ndo-eps-converted-to.pdf>]
 
-LaTeX Warning: Text page 62 contains only floats.
+LaTeX Warning: Text page 58 contains only floats.
 
-[62 <./Figures/results/tracking/roll_trac_dis_m1_sto-eps-converted-to.pdf> <./F
+[58 <./Figures/results/tracking/roll_trac_dis_m1_sto-eps-converted-to.pdf> <./F
 igures/results/tracking/roll_trac_dis_m1_kdo-eps-converted-to.pdf> <./Figures/r
 esults/tracking/pitch_trac_dis_m1_ndo-eps-converted-to.pdf>]
 
-LaTeX Warning: Text page 63 contains only floats.
+LaTeX Warning: Text page 59 contains only floats.
 
-[63 <./Figures/results/tracking/pitch_trac_dis_m1_sto-eps-converted-to.pdf> <./
+[59 <./Figures/results/tracking/pitch_trac_dis_m1_sto-eps-converted-to.pdf> <./
 Figures/results/tracking/pitch_trac_dis_m1_kdo-eps-converted-to.pdf> <./Figures
-/results/tracking/yaw_trac_dis_m1_ndo-eps-converted-to.pdf>] [64 <./Figures/res
-ults/tracking/yaw_trac_dis_m1_sto-eps-converted-to.pdf> <./Figures/results/trac
-king/yaw_trac_dis_m1_kdo-eps-converted-to.pdf>]
+/results/tracking/yaw_trac_dis_m1_ndo-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `dis_m2_pos' on page 60 undefined on input line 1406.
+
+
+LaTeX Warning: Reference `dis_m2_att' on page 60 undefined on input line 1406.
+
+[60 <./Figures/results/tracking/yaw_trac_dis_m1_sto-eps-converted-to.pdf> <./Fi
+gures/results/tracking/yaw_trac_dis_m1_kdo-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/results/chaotic_disturbances/dis_m
 2_pos.eps>
 (epstopdf)                    date: 2019-02-11 17:05:08
@@ -2379,15 +2988,15 @@ Package epstopdf Info: Source file: <Figures/results/chaotic_disturbances/dis_m
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_dis
 turbances/dis_m2_pos-eps-converted-to.pdf Figures/results/chaotic_disturbances/
 dis_m2_pos.eps>
-(epstopdf)             \includegraphics on input line 1396.
+(epstopdf)             \includegraphics on input line 1410.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/chaotic_disturbances/dis_m2_pos-eps-converted-to.pdf, id=1487,
- 482.80376pt x 346.29375pt>
+<Figures/results/chaotic_disturbances/dis_m2_pos-eps-converted-to.pdf, id=791, 
+482.80376pt x 346.29375pt>
 File: Figures/results/chaotic_disturbances/dis_m2_pos-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use Figures/results/chaotic_disturbances/dis_m2_pos-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/chaotic_disturbances/dis_m2_pos-eps-co
-nverted-to.pdf  used on input line 1396.
+nverted-to.pdf  used on input line 1410.
 (pdftex.def)             Requested size: 252.94534pt x 144.5441pt.
 Package epstopdf Info: Source file: <Figures/results/chaotic_disturbances/dis_m
 2_att.eps>
@@ -2400,15 +3009,15 @@ Package epstopdf Info: Source file: <Figures/results/chaotic_disturbances/dis_m
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_dis
 turbances/dis_m2_att-eps-converted-to.pdf Figures/results/chaotic_disturbances/
 dis_m2_att.eps>
-(epstopdf)             \includegraphics on input line 1402.
+(epstopdf)             \includegraphics on input line 1416.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/results/chaotic_disturbances/dis_m2_att-eps-converted-to.pdf, id=1488,
- 1403.2425pt x 713.66624pt>
+<Figures/results/chaotic_disturbances/dis_m2_att-eps-converted-to.pdf, id=792, 
+1403.2425pt x 713.66624pt>
 File: Figures/results/chaotic_disturbances/dis_m2_att-eps-converted-to.pdf Grap
 hic file (type pdf)
 <use Figures/results/chaotic_disturbances/dis_m2_att-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/results/chaotic_disturbances/dis_m2_att-eps-co
-nverted-to.pdf  used on input line 1402.
+nverted-to.pdf  used on input line 1416.
 (pdftex.def)             Requested size: 252.93675pt x 144.53839pt.
 Package epstopdf Info: Source file: <Figures/results/chaotic_2_estimates/dis_m2
 _est_y_ndo.eps>
@@ -2421,18 +3030,18 @@ _est_y_ndo-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_2_e
 stimates/dis_m2_est_y_ndo-eps-converted-to.pdf Figures/results/chaotic_2_estima
 tes/dis_m2_est_y_ndo.eps>
-(epstopdf)             \includegraphics on input line 1431.
+(epstopdf)             \includegraphics on input line 1445.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_2_estimates/dis_m2_est_y_ndo-eps-converted-to.pdf, id=
-1489, 421.575pt x 316.18124pt>
+793, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_2_estimates/dis_m2_est_y_ndo-eps-converted-to.pdf
  Graphic file (type pdf)
 <use Figures/results/chaotic_2_estimates/dis_m2_est_y_ndo-eps-converted-to.pdf>
 
 Package pdftex.def Info: Figures/results/chaotic_2_estimates/dis_m2_est_y_ndo-e
-ps-converted-to.pdf  used on input line 1431.
+ps-converted-to.pdf  used on input line 1445.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
- [65 <./Figures/results/chaotic_disturbances/dis_m2_pos-eps-converted-to.pdf> <
+ [61 <./Figures/results/chaotic_disturbances/dis_m2_pos-eps-converted-to.pdf> <
 ./Figures/results/chaotic_disturbances/dis_m2_att-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/results/chaotic_2_estimates/dis_m2
 _est_y_sto.eps>
@@ -2445,16 +3054,16 @@ _est_y_sto-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_2_e
 stimates/dis_m2_est_y_sto-eps-converted-to.pdf Figures/results/chaotic_2_estima
 tes/dis_m2_est_y_sto.eps>
-(epstopdf)             \includegraphics on input line 1437.
+(epstopdf)             \includegraphics on input line 1451.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_2_estimates/dis_m2_est_y_sto-eps-converted-to.pdf, id=
-1506, 421.575pt x 316.18124pt>
+812, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_2_estimates/dis_m2_est_y_sto-eps-converted-to.pdf
  Graphic file (type pdf)
 <use Figures/results/chaotic_2_estimates/dis_m2_est_y_sto-eps-converted-to.pdf>
 
 Package pdftex.def Info: Figures/results/chaotic_2_estimates/dis_m2_est_y_sto-e
-ps-converted-to.pdf  used on input line 1437.
+ps-converted-to.pdf  used on input line 1451.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
 Package epstopdf Info: Source file: <Figures/results/chaotic_2_estimates/dis_m2
 _est_y_kdo.eps>
@@ -2467,309 +3076,608 @@ _est_y_kdo-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/results/chaotic_2_e
 stimates/dis_m2_est_y_kdo-eps-converted-to.pdf Figures/results/chaotic_2_estima
 tes/dis_m2_est_y_kdo.eps>
-(epstopdf)             \includegraphics on input line 1443.
+(epstopdf)             \includegraphics on input line 1457.
 Package epstopdf Info: Output file is already uptodate.
 <Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo-eps-converted-to.pdf, id=
-1507, 421.575pt x 316.18124pt>
+813, 421.575pt x 316.18124pt>
 File: Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo-eps-converted-to.pdf
  Graphic file (type pdf)
 <use Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo-eps-converted-to.pdf>
 
 Package pdftex.def Info: Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo-e
-ps-converted-to.pdf  used on input line 1443.
+ps-converted-to.pdf  used on input line 1457.
 (pdftex.def)             Requested size: 252.94695pt x 144.54294pt.
- [66 <./Figures/results/chaotic_2_estimates/dis_m2_est_y_ndo-eps-converted-to.p
-df>] [67 <./Figures/results/chaotic_2_estimates/dis_m2_est_y_sto-eps-converted-
+ [62 <./Figures/results/chaotic_2_estimates/dis_m2_est_y_ndo-eps-converted-to.p
+df>] [63 <./Figures/results/chaotic_2_estimates/dis_m2_est_y_sto-eps-converted-
 to.pdf> <./Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo-eps-converted-t
-o.pdf>] [68]
+o.pdf>] [64]
 Chapter 5
-[69
+[65
 
-] [70]
-<Figures/practical/quad_red_balls.png, id=1547, 4047.12pt x 3035.34pt>
+] [66]
+
+Package natbib Warning: Citation `brice2017thesis' on page 67 undefined on inpu
+t line 1541.
+
+<Figures/practical/quad_red_balls.png, id=863, 4047.12pt x 3035.34pt>
 File: Figures/practical/quad_red_balls.png Graphic file (type png)
 <use Figures/practical/quad_red_balls.png>
 Package pdftex.def Info: Figures/practical/quad_red_balls.png  used on input li
-ne 1530.
+ne 1545.
 (pdftex.def)             Requested size: 338.76563pt x 254.04051pt.
-<Figures/practical/quad_flying.png, id=1548, 1284.8pt x 963.6pt>
+<Figures/practical/quad_flying.png, id=864, 1284.8pt x 963.6pt>
 File: Figures/practical/quad_flying.png Graphic file (type png)
 <use Figures/practical/quad_flying.png>
 Package pdftex.def Info: Figures/practical/quad_flying.png  used on input line 
-1536.
+1551.
 (pdftex.def)             Requested size: 338.76563pt x 254.0736pt.
- [71] (Tikz/Distributed/distributed.tex
+[67] (Tikz/Distributed/distributed.tex
 Overfull \hbox (4.42587pt too wide) in paragraph at lines 22--23
 []\T1/ptm/b/n/12 Quadcopter 
  []
 
-) [72 <./Figures/practical/quad_red_balls.png>]
-<Figures/practical/battery.png, id=1559, 4047.12pt x 3035.34pt>
+) [68 <./Figures/practical/quad_red_balls.png>]
+<Figures/practical/battery.png, id=875, 4047.12pt x 3035.34pt>
 File: Figures/practical/battery.png Graphic file (type png)
 <use Figures/practical/battery.png>
-Package pdftex.def Info: Figures/practical/battery.png  used on input line 1554
+Package pdftex.def Info: Figures/practical/battery.png  used on input line 1569
 .
 (pdftex.def)             Requested size: 338.76563pt x 254.04051pt.
- [73 <./Figures/practical/quad_flying.png>] [74] [75 <./Figures/practical/batte
-ry.png>] [76] [77]
-(Tikz/Window/Figure.tex) [78] [79]
-<Figures/results/practical/res1/xyztrac.png, id=1623, 361.35pt x 401.24907pt>
+ [69 <./Figures/practical/quad_flying.png>] [70] [71 <./Figures/practical/batte
+ry.png>]
+
+LaTeX Warning: Reference `eqn:kernVec1' on page 72 undefined on input line 1589
+.
+
+
+LaTeX Warning: Reference `eqn:kernVec2' on page 72 undefined on input line 1589
+.
+
+
+Package natbib Warning: Citation `oliphant2006guide' on page 72 undefined on in
+put line 1589.
+
+[72]
+
+Package natbib Warning: Citation `RN76' on page 73 undefined on input line 1597
+.
+
+
+LaTeX Warning: Reference `y_E' on page 73 undefined on input line 1597.
+
+
+LaTeX Warning: Reference `eqn:forward' on page 73 undefined on input line 1611.
+
+
+
+LaTeX Warning: Reference `eqn:backward' on page 73 undefined on input line 1611
+.
+
+
+LaTeX Warning: Reference `eqn:forward' on page 73 undefined on input line 1613.
+
+
+
+LaTeX Warning: Reference `eqn:forward' on page 73 undefined on input line 1619.
+
+
+[73] (Tikz/Window/Figure.tex) [74]
+
+LaTeX Warning: Reference `Kfi' on page 75 undefined on input line 1698.
+
+[75]
+
+Package natbib Warning: Citation `RN117' on page 76 undefined on input line 170
+8.
+
+
+LaTeX Warning: Reference `eqn:x_traj' on page 76 undefined on input line 1710.
+
+
+LaTeX Warning: Reference `eqn:z_traj' on page 76 undefined on input line 1710.
+
+
+LaTeX Warning: Reference `Tab:realNDOGains' on page 76 undefined on input line 
+1710.
+
+
+LaTeX Warning: Reference `Tab:realControllerGains' on page 76 undefined on inpu
+t line 1710.
+
+<Figures/results/practical/res1/xyztrac.png, id=926, 361.35pt x 401.24907pt>
 File: Figures/results/practical/res1/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res1/xyztrac.png>
 Package pdftex.def Info: Figures/results/practical/res1/xyztrac.png  used on in
-put line 1723.
+put line 1738.
 (pdftex.def)             Requested size: 383.93712pt x 426.3322pt.
- [80]
+[76]
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1728.
-(pdftex.def)             Requested size: 90.33612pt x 67.75294pt.
-<Figures/results/practical/res1/xyzerr.png, id=1628, 481.8pt x 361.35pt>
+Package pdftex.def Info: Figures/blank.png  used on input line 1743.
+(pdftex.def)             Requested size: 180.67224pt x 135.5059pt.
+<Figures/results/practical/res1/xyzerr.png, id=933, 481.8pt x 361.35pt>
 File: Figures/results/practical/res1/xyzerr.png Graphic file (type png)
 <use Figures/results/practical/res1/xyzerr.png>
 Package pdftex.def Info: Figures/results/practical/res1/xyzerr.png  used on inp
-ut line 1732.
+ut line 1747.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res1/yaw.png, id=1629, 481.8pt x 361.35pt>
+<Figures/results/practical/res1/yaw.png, id=934, 481.8pt x 361.35pt>
 File: Figures/results/practical/res1/yaw.png Graphic file (type png)
 <use Figures/results/practical/res1/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res1/yaw.png  used on input 
-line 1738.
+line 1753.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res1/view.png, id=1630, 867.24pt x 594.72188pt>
+<Figures/results/practical/res1/view.png, id=935, 867.24pt x 594.72188pt>
 File: Figures/results/practical/res1/view.png Graphic file (type png)
 <use Figures/results/practical/res1/view.png>
 Package pdftex.def Info: Figures/results/practical/res1/view.png  used on input
- line 1745.
+ line 1760.
 (pdftex.def)             Requested size: 338.76563pt x 232.31265pt.
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1750.
-(pdftex.def)             Requested size: 271.01524pt x 203.28532pt.
- [81] [82 <./Figures/results/practical/res1/xyztrac.png>] [83 <./Figures/result
-s/practical/res1/xyzerr.png> <./Figures/results/practical/res1/yaw.png>] [84 <.
-/Figures/results/practical/res1/view.png>]
-<Figures/results/practical/res2/xyztrac.png, id=1659, 360.59718pt x 422.32782pt
->
+Package pdftex.def Info: Figures/blank.png  used on input line 1765.
+(pdftex.def)             Requested size: 451.6875pt x 338.80713pt.
+ [77] [78 <./Figures/results/practical/res1/xyztrac.png>] [79 <./Figures/result
+s/practical/res1/xyzerr.png> <./Figures/results/practical/res1/yaw.png>]
+[80 <./Figures/results/practical/res1/view.png>]
+
+LaTeX Warning: Reference `eqn:x_traj' on page 81 undefined on input line 1770.
+
+
+LaTeX Warning: Reference `eqn:z_traj' on page 81 undefined on input line 1770.
+
+
+LaTeX Warning: Reference `Tab:realSTOGains' on page 81 undefined on input line 
+1770.
+
+
+LaTeX Warning: Reference `Tab:realControllerGainsSTO' on page 81 undefined on i
+nput line 1770.
+
+<Figures/results/practical/res2/xyztrac.png, id=966, 360.59718pt x 422.32782pt>
+
 File: Figures/results/practical/res2/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res2/xyztrac.png>
 Package pdftex.def Info: Figures/results/practical/res2/xyztrac.png  used on in
-put line 1784.
+put line 1799.
 (pdftex.def)             Requested size: 383.93712pt x 449.66306pt.
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1789.
-(pdftex.def)             Requested size: 90.33612pt x 67.75294pt.
-<Figures/results/practical/res2/xyzerr.png, id=1660, 481.8pt x 361.35pt>
+Package pdftex.def Info: Figures/blank.png  used on input line 1804.
+(pdftex.def)             Requested size: 158.09337pt x 118.5712pt.
+<Figures/results/practical/res2/xyzerr.png, id=967, 481.8pt x 361.35pt>
 File: Figures/results/practical/res2/xyzerr.png Graphic file (type png)
 <use Figures/results/practical/res2/xyzerr.png>
 Package pdftex.def Info: Figures/results/practical/res2/xyzerr.png  used on inp
-ut line 1793.
+ut line 1808.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res2/yaw.png, id=1661, 481.8pt x 361.35pt>
+<Figures/results/practical/res2/yaw.png, id=968, 481.8pt x 361.35pt>
 File: Figures/results/practical/res2/yaw.png Graphic file (type png)
 <use Figures/results/practical/res2/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res2/yaw.png  used on input 
-line 1799.
+line 1814.
 (pdftex.def)             Requested size: 293.59412pt x 220.20262pt.
-<Figures/results/practical/res2/view.png, id=1662, 532.99126pt x 505.13719pt>
+<Figures/results/practical/res2/view.png, id=969, 532.99126pt x 505.13719pt>
 File: Figures/results/practical/res2/view.png Graphic file (type png)
 <use Figures/results/practical/res2/view.png>
 Package pdftex.def Info: Figures/results/practical/res2/view.png  used on input
- line 1804.
+ line 1819.
 (pdftex.def)             Requested size: 338.76563pt x 321.06686pt.
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1809.
-(pdftex.def)             Requested size: 45.1715pt x 33.87823pt.
- [85
+Package pdftex.def Info: Figures/blank.png  used on input line 1824.
+(pdftex.def)             Requested size: 225.84375pt x 169.38591pt.
+[81
 
-]
+] [82 <./Figures/results/practical/res2/xyztrac.png>]
 
-LaTeX Warning: Text page 86 contains only floats.
+LaTeX Warning: Text page 83 contains only floats.
 
-[86 <./Figures/results/practical/res2/xyztrac.png>]
+[83 <./Figures/results/practical/res2/xyzerr.png> <./Figures/results/practical/
+res2/yaw.png>]
 
-LaTeX Warning: Text page 87 contains only floats.
+LaTeX Warning: Reference `Chap:KDO' on page 84 undefined on input line 1830.
 
-[87 <./Figures/results/practical/res2/xyzerr.png> <./Figures/results/practical/
-res2/yaw.png>] [88 <./Figures/results/practical/res2/view.png>]
-<Figures/results/practical/res3/xyztrac.png, id=1691, 361.35pt x 421.575pt>
+
+LaTeX Warning: Reference `eqn:x_traj' on page 84 undefined on input line 1830.
+
+
+LaTeX Warning: Reference `eqn:z_traj' on page 84 undefined on input line 1830.
+
+
+LaTeX Warning: Reference `Tab:realControllerGainsKDO' on page 84 undefined on i
+nput line 1830.
+
+[84 <./Figures/results/practical/res2/view.png>]
+
+LaTeX Warning: Reference `Sec:pseudo' on page 85 undefined on input line 1846.
+
+<Figures/results/practical/res3/xyztrac.png, id=1001, 361.35pt x 421.575pt>
 File: Figures/results/practical/res3/xyztrac.png Graphic file (type png)
 <use Figures/results/practical/res3/xyztrac.png>
 Package pdftex.def Info: Figures/results/practical/res3/xyztrac.png  used on in
-put line 1835.
+put line 1850.
 (pdftex.def)             Requested size: 383.93712pt x 447.92876pt.
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1840.
-(pdftex.def)             Requested size: 45.1715pt x 33.87823pt.
-<Figures/results/practical/res3/xyzerr.png, id=1692, 481.8pt x 361.35pt>
+Package pdftex.def Info: Figures/blank.png  used on input line 1855.
+(pdftex.def)             Requested size: 158.09337pt x 118.5712pt.
+<Figures/results/practical/res3/xyzerr.png, id=1002, 481.8pt x 361.35pt>
 File: Figures/results/practical/res3/xyzerr.png Graphic file (type png)
 <use Figures/results/practical/res3/xyzerr.png>
 Package pdftex.def Info: Figures/results/practical/res3/xyzerr.png  used on inp
-ut line 1844.
+ut line 1859.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res3/yaw.png, id=1693, 481.8pt x 361.35pt>
+<Figures/results/practical/res3/yaw.png, id=1003, 481.8pt x 361.35pt>
 File: Figures/results/practical/res3/yaw.png Graphic file (type png)
 <use Figures/results/practical/res3/yaw.png>
 Package pdftex.def Info: Figures/results/practical/res3/yaw.png  used on input 
-line 1850.
+line 1865.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/results/practical/res3/view.png, id=1694, 520.94624pt x 551.05875pt>
+<Figures/results/practical/res3/view.png, id=1004, 520.94624pt x 551.05875pt>
 File: Figures/results/practical/res3/view.png Graphic file (type png)
 <use Figures/results/practical/res3/view.png>
 Package pdftex.def Info: Figures/results/practical/res3/view.png  used on input
- line 1855.
+ line 1870.
 (pdftex.def)             Requested size: 338.76563pt x 358.3521pt.
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1860.
+Package pdftex.def Info: Figures/blank.png  used on input line 1875.
 (pdftex.def)             Requested size: 135.50761pt x 101.63295pt.
- [89] [90 <./Figures/results/practical/res3/xyztrac.png>] [91 <./Figures/result
-s/practical/res3/xyzerr.png> <./Figures/results/practical/res3/yaw.png>] [92 <.
-/Figures/results/practical/res3/view.png>]
-<Figures/dist_pract/dryer.png, id=1717, 1284.8pt x 963.6pt>
+[85] [86 <./Figures/results/practical/res3/xyztrac.png>]
+
+LaTeX Warning: Text page 87 contains only floats.
+
+
+Overfull \vbox (4.89566pt too high) has occurred while \output is active []
+
+
+[87 <./Figures/results/practical/res3/xyzerr.png> <./Figures/results/practical/
+res3/yaw.png>]
+<Figures/dist_pract/dryer.png, id=1025, 1284.8pt x 963.6pt>
 File: Figures/dist_pract/dryer.png Graphic file (type png)
 <use Figures/dist_pract/dryer.png>
-Package pdftex.def Info: Figures/dist_pract/dryer.png  used on input line 1868.
+Package pdftex.def Info: Figures/dist_pract/dryer.png  used on input line 1883.
 
 (pdftex.def)             Requested size: 338.76563pt x 254.0736pt.
-<Figures/dist_pract/res1/xyztrac.png, id=1723, 451.6875pt x 602.25pt>
+ [88 <./Figures/results/practical/res3/view.png>]
+
+LaTeX Warning: Reference `eqn:x_traj' on page 89 undefined on input line 1887.
+
+
+LaTeX Warning: Reference `eqn:z_traj' on page 89 undefined on input line 1887.
+
+
+LaTeX Warning: Reference `Tab:realNDOGains' on page 89 undefined on input line 
+1887.
+
+
+LaTeX Warning: Reference `Tab:realControllerGains' on page 89 undefined on inpu
+t line 1887.
+
+<Figures/dist_pract/res1/xyztrac.png, id=1035, 451.6875pt x 602.25pt>
 File: Figures/dist_pract/res1/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res1/xyztrac.png>
 Package pdftex.def Info: Figures/dist_pract/res1/xyztrac.png  used on input lin
-e 1875.
+e 1890.
 (pdftex.def)             Requested size: 338.76563pt x 451.71394pt.
- [93
-
- <./Figures/dist_pract/dryer.png>]
-<Figures/dist_pract/res1/xyzerr.png, id=1730, 481.8pt x 361.35pt>
+<Figures/dist_pract/res1/xyzerr.png, id=1036, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res1/xyzerr.png Graphic file (type png)
 <use Figures/dist_pract/res1/xyzerr.png>
 Package pdftex.def Info: Figures/dist_pract/res1/xyzerr.png  used on input line
- 1881.
+ 1896.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res1/yaw.png, id=1731, 481.8pt x 361.35pt>
+<Figures/dist_pract/res1/yaw.png, id=1037, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res1/yaw.png Graphic file (type png)
 <use Figures/dist_pract/res1/yaw.png>
-Package pdftex.def Info: Figures/dist_pract/res1/yaw.png  used on input line 18
-87.
+Package pdftex.def Info: Figures/dist_pract/res1/yaw.png  used on input line 19
+02.
 (pdftex.def)             Requested size: 316.17987pt x 237.14087pt.
-<Figures/dist_pract/res1/view.png, id=1732, 764.10469pt x 603.75563pt>
+<Figures/dist_pract/res1/view.png, id=1038, 764.10469pt x 603.75563pt>
 File: Figures/dist_pract/res1/view.png Graphic file (type png)
 <use Figures/dist_pract/res1/view.png>
 Package pdftex.def Info: Figures/dist_pract/res1/view.png  used on input line 1
-892.
+907.
 (pdftex.def)             Requested size: 316.17987pt x 249.82613pt.
- [94 <./Figures/dist_pract/res1/xyztrac.png>] [95 <./Figures/dist_pract/res1/xy
-zerr.png>]
-[96 <./Figures/dist_pract/res1/yaw.png> <./Figures/dist_pract/res1/view.png>]
-<Figures/dist_pract/res2/xyztrac.png, id=1754, 451.6875pt x 602.25pt>
+[89 <./Figures/dist_pract/dryer.png>] [90 <./Figures/dist_pract/res1/xyztrac.pn
+g>] [91 <./Figures/dist_pract/res1/xyzerr.png> <./Figures/dist_pract/res1/yaw.p
+ng>] [92 <./Figures/dist_pract/res1/view.png>]
+
+LaTeX Warning: Reference `eqn:x_traj' on page 93 undefined on input line 1915.
+
+
+LaTeX Warning: Reference `eqn:z_traj' on page 93 undefined on input line 1915.
+
+
+LaTeX Warning: Reference `Tab:realSTOGains' on page 93 undefined on input line 
+1915.
+
+
+LaTeX Warning: Reference `Tab:realControllerGainsSTO' on page 93 undefined on i
+nput line 1915.
+
+<Figures/dist_pract/res2/xyztrac.png, id=1068, 451.6875pt x 602.25pt>
 File: Figures/dist_pract/res2/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res2/xyztrac.png>
 Package pdftex.def Info: Figures/dist_pract/res2/xyztrac.png  used on input lin
-e 1904.
+e 1919.
 (pdftex.def)             Requested size: 383.93712pt x 511.94247pt.
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1909.
+Package pdftex.def Info: Figures/blank.png  used on input line 1924.
 (pdftex.def)             Requested size: 45.1715pt x 33.87823pt.
-<Figures/dist_pract/res2/xyzerr.png, id=1755, 481.8pt x 361.35pt>
+<Figures/dist_pract/res2/xyzerr.png, id=1069, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res2/xyzerr.png Graphic file (type png)
 <use Figures/dist_pract/res2/xyzerr.png>
 Package pdftex.def Info: Figures/dist_pract/res2/xyzerr.png  used on input line
- 1913.
+ 1928.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res2/yaw.png, id=1756, 481.8pt x 361.35pt>
+<Figures/dist_pract/res2/yaw.png, id=1070, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res2/yaw.png Graphic file (type png)
 <use Figures/dist_pract/res2/yaw.png>
 Package pdftex.def Info: Figures/dist_pract/res2/yaw.png  used on input line 19
-19.
+34.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res2/view.png, id=1757, 782.17218pt x 600.74437pt>
+<Figures/dist_pract/res2/view.png, id=1071, 782.17218pt x 600.74437pt>
 File: Figures/dist_pract/res2/view.png Graphic file (type png)
 <use Figures/dist_pract/res2/view.png>
 Package pdftex.def Info: Figures/dist_pract/res2/view.png  used on input line 1
-925.
+940.
 (pdftex.def)             Requested size: 338.76563pt x 260.18503pt.
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1930.
+Package pdftex.def Info: Figures/blank.png  used on input line 1945.
 (pdftex.def)             Requested size: 225.84375pt x 169.38591pt.
+[93
 
-[97
+] [94 <./Figures/dist_pract/res2/xyztrac.png>] [95 <./Figures/dist_pract/res2/x
+yzerr.png> <./Figures/dist_pract/res2/yaw.png>] [96 <./Figures/dist_pract/res2/
+view.png>]
 
-] [98 <./Figures/dist_pract/res2/xyztrac.png>] [99 <./Figures/dist_pract/res2/x
-yzerr.png> <./Figures/dist_pract/res2/yaw.png>] [100 <./Figures/dist_pract/res2
-/view.png>]
-<Figures/dist_pract/res3/xyztrac.png, id=1786, 451.6875pt x 602.25pt>
+LaTeX Warning: Reference `Chap:KDO' on page 97 undefined on input line 1949.
+
+
+LaTeX Warning: Reference `eqn:x_traj' on page 97 undefined on input line 1949.
+
+
+LaTeX Warning: Reference `eqn:z_traj' on page 97 undefined on input line 1949.
+
+
+LaTeX Warning: Reference `Tab:realControllerGainsKDO' on page 97 undefined on i
+nput line 1949.
+
+
+LaTeX Warning: Reference `Sec:pseudo' on page 97 undefined on input line 1951.
+
+<Figures/dist_pract/res3/xyztrac.png, id=1100, 451.6875pt x 602.25pt>
 File: Figures/dist_pract/res3/xyztrac.png Graphic file (type png)
 <use Figures/dist_pract/res3/xyztrac.png>
 Package pdftex.def Info: Figures/dist_pract/res3/xyztrac.png  used on input lin
-e 1940.
+e 1955.
 (pdftex.def)             Requested size: 338.76563pt x 451.71394pt.
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1945.
+Package pdftex.def Info: Figures/blank.png  used on input line 1960.
 (pdftex.def)             Requested size: 90.33612pt x 67.75294pt.
-<Figures/dist_pract/res3/xyzerr.png, id=1787, 481.8pt x 361.35pt>
+<Figures/dist_pract/res3/xyzerr.png, id=1101, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res3/xyzerr.png Graphic file (type png)
 <use Figures/dist_pract/res3/xyzerr.png>
 Package pdftex.def Info: Figures/dist_pract/res3/xyzerr.png  used on input line
- 1949.
+ 1964.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res3/yaw.png, id=1788, 481.8pt x 361.35pt>
+<Figures/dist_pract/res3/yaw.png, id=1102, 481.8pt x 361.35pt>
 File: Figures/dist_pract/res3/yaw.png Graphic file (type png)
 <use Figures/dist_pract/res3/yaw.png>
 Package pdftex.def Info: Figures/dist_pract/res3/yaw.png  used on input line 19
-55.
+70.
 (pdftex.def)             Requested size: 338.76563pt x 254.0791pt.
-<Figures/dist_pract/res3/view.png, id=1789, 606.01407pt x 522.45187pt>
+<Figures/dist_pract/res3/view.png, id=1103, 606.01407pt x 522.45187pt>
 File: Figures/dist_pract/res3/view.png Graphic file (type png)
 <use Figures/dist_pract/res3/view.png>
 Package pdftex.def Info: Figures/dist_pract/res3/view.png  used on input line 1
-960.
+975.
 (pdftex.def)             Requested size: 338.76563pt x 292.05287pt.
 File: Figures/blank.png Graphic file (type png)
 <use Figures/blank.png>
-Package pdftex.def Info: Figures/blank.png  used on input line 1965.
+Package pdftex.def Info: Figures/blank.png  used on input line 1980.
 (pdftex.def)             Requested size: 225.84375pt x 169.38591pt.
- [101
+[97
 
 ]
 
-LaTeX Warning: Text page 102 contains only floats.
+LaTeX Warning: Text page 98 contains only floats.
 
-[102 <./Figures/dist_pract/res3/xyztrac.png>] [103 <./Figures/dist_pract/res3/x
-yzerr.png> <./Figures/dist_pract/res3/yaw.png>] [104 <./Figures/dist_pract/res3
-/view.png>] [105
+[98 <./Figures/dist_pract/res3/xyztrac.png>] [99 <./Figures/dist_pract/res3/xyz
+err.png> <./Figures/dist_pract/res3/yaw.png>] [100 <./Figures/dist_pract/res3/v
+iew.png>]
 
-] [106] [107
+LaTeX Warning: Reference `eqn:rmse' on page 101 undefined on input line 1986.
 
-] [108] [109] [110
+
+LaTeX Warning: Reference `Tab:rmse' on page 101 undefined on input line 1986.
+
+
+LaTeX Warning: Reference `Tab:rmseDist' on page 101 undefined on input line 198
+6.
+
+[101
+
+] [102]
+
+Package natbib Warning: Citation `RN118' on page 103 undefined on input line 20
+26.
+
+[103
+
+]
+
+Package natbib Warning: Citation `fleming1997deterministic' on page 104 undefin
+ed on input line 2032.
+
+
+Package natbib Warning: Citation `krener2015minimum' on page 104 undefined on i
+nput line 2032.
+
+[104] [105] [106
 
 ]
 Appendix I
-[111] [112] [113] [114]
-Overfull \hbox (24.34859pt too wide) detected at line 2200
+
+Package natbib Warning: Citation `RN120' on page 107 undefined on input line 20
+55.
+
+
+LaTeX Warning: Reference `eqn:A1' on page 107 undefined on input line 2056.
+
+
+LaTeX Warning: Reference `eqn:A2' on page 107 undefined on input line 2056.
+
+[107]
+
+LaTeX Warning: Reference `eqn:A3' on page 108 undefined on input line 2079.
+
+
+LaTeX Warning: Reference `eqn:A4' on page 108 undefined on input line 2079.
+
+[108]
+
+LaTeX Warning: Reference `eqn:A5' on page 109 undefined on input line 2100.
+
+
+LaTeX Warning: Reference `eqn:A6' on page 109 undefined on input line 2100.
+
+[109]
+
+Package natbib Warning: Citation `fliess2003algebraic' on page 110 undefined on
+ input line 2168.
+
+
+Package natbib Warning: Citation `fliess2003algebraic' on page 110 undefined on
+ input line 2169.
+
+
+LaTeX Warning: Reference `eqn.29' on page 110 undefined on input line 2176.
+
+
+LaTeX Warning: Reference `eqn.30' on page 110 undefined on input line 2176.
+
+
+LaTeX Warning: Reference `eqn.30' on page 110 undefined on input line 2185.
+
+[110]
+
+LaTeX Warning: Reference `eqn.31' on page 111 undefined on input line 2194.
+
+
+Overfull \hbox (24.34859pt too wide) detected at line 2215
 []
  []
 
-[115] [116] [117] [118] [119] [120] [121] [122] [123] (main.bbl [124
+[111] [112]
 
-]
+LaTeX Warning: Reference `eqn.35' on page 113 undefined on input line 2251.
+
+[113]
+
+Package natbib Warning: Citation `RN119' on page 114 undefined on input line 23
+02.
+
+
+LaTeX Warning: Reference `eqn:98' on page 114 undefined on input line 2303.
+
+
+Package natbib Warning: Citation `RN119' on page 114 undefined on input line 23
+03.
+
+
+LaTeX Warning: Reference `eqn:local' on page 114 undefined on input line 2305.
+
+
+LaTeX Warning: Reference `eqn:forward' on page 114 undefined on input line 2305
+.
+
+
+LaTeX Warning: Reference `eqn:backward' on page 114 undefined on input line 230
+5.
+
+
+Package natbib Warning: Citation `RN120' on page 114 undefined on input line 23
+07.
+
+[114]
+
+LaTeX Warning: Reference `eqn.103' on page 115 undefined on input line 2319.
+
+
+LaTeX Warning: Reference `eqn.105' on page 115 undefined on input line 2319.
+
+
+LaTeX Warning: Reference `eqn.106' on page 115 undefined on input line 2319.
+
+
+LaTeX Warning: Reference `eqn.106' on page 115 undefined on input line 2323.
+
+
+LaTeX Warning: Reference `eqn.107' on page 115 undefined on input line 2327.
+
+
+LaTeX Warning: Reference `eqn.108' on page 115 undefined on input line 2327.
+
+
+LaTeX Warning: Reference `eqn.110.5' on page 115 undefined on input line 2327.
+
+
+LaTeX Warning: Reference `eqn.104' on page 115 undefined on input line 2340.
+
+
+LaTeX Warning: Reference `eqn.105' on page 115 undefined on input line 2340.
+
+[115]
+
+LaTeX Warning: Reference `eqn.108' on page 116 undefined on input line 2351.
+
+
+LaTeX Warning: Reference `eqn.110.5' on page 116 undefined on input line 2351.
+
+[116]
+
+LaTeX Warning: Reference `eqn.114' on page 117 undefined on input line 2404.
+
+
+LaTeX Warning: Reference `eqn.116.5' on page 117 undefined on input line 2404.
+
+
+LaTeX Warning: Reference `eqn.117' on page 117 undefined on input line 2434.
+
+
+LaTeX Warning: Reference `eqn.123' on page 117 undefined on input line 2434.
+
+[117]
+
+LaTeX Warning: Reference `eqn:98' on page 118 undefined on input line 2460.
+
+[118] (main.bbl
 Underfull \hbox (badness 1226) in paragraph at lines 50--55
 []\T1/ptm/m/n/12 Barker, A. L., Brown, D. E. & Mar-tin, W. N.  (1995).  Bayesia
 n es-ti-ma-tion and
  []
 
-[125] [126] [127] [128] [129]) [130]
+[119
+
+] [120] [121] [122] [123]) [124]
 No file refs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2515.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2515.
-(main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2515.
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2530.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2530.
+(main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2530.
 
 
  *File List*
@@ -2918,6 +3826,7 @@ algorithm2e.sty    2017/07/18 v5.2 algorithms environments
   xspace.sty    2014/10/28 v1.13 Space after command names (DPC,MH)
  relsize.sty    2013/03/29 ver 4.1
   framed.sty    2011/10/22 v 0.96: framed or shaded text with page breaks
+    pbox.sty    2011/12/07 v1.2 Dynamic parboxes
     refs.aux
 supp-pdf.mkii
  nameref.sty    2019/09/16 v2.46 Cross-referencing by name of section
@@ -3019,23 +3928,35 @@ Figures/blank.png
     main.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2515.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2530.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 26E5FA8CA6666A2937F3FDA74326D76D;3603.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 723B14D151B72DF37A493841BF3605C3;912
+(rerunfilecheck)             After:  26E5FA8CA6666A2937F3FDA74326D76D;3603.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.05998pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 33362 strings out of 481553
- 677978 string characters out of 2911953
- 1047881 words of memory out of 3000000
- 47224 multiletter control sequences out of 15000+200000
+ 33347 strings out of 481553
+ 677852 string characters out of 2911953
+ 1030031 words of memory out of 3000000
+ 47213 multiletter control sequences out of 15000+200000
  646485 words of font info for 213 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,26n,84p,1834b,1178s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,26n,84p,1626b,1178s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Bashar/AppData/Local/Programs/MiKTeXNew 2.9/fonts/enc/dvips/base/8r
 .enc}<C:/Users/Bashar/AppData/Local/Programs/MiKTeXNew 2.9/fonts/type1/public/a
 msfonts/cm/cmex10.pfb><C:/Users/Bashar/AppData/Local/Programs/MiKTeXNew 2.9/fon
@@ -3053,9 +3974,9 @@ s/Bashar/AppData/Local/Programs/MiKTeXNew 2.9/fonts/type1/urw/times/utmb8a.pfb>
 <C:/Users/Bashar/AppData/Local/Programs/MiKTeXNew 2.9/fonts/type1/urw/times/utm
 r8a.pfb><C:/Users/Bashar/AppData/Local/Programs/MiKTeXNew 2.9/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on main.pdf (152 pages, 53859941 bytes).
+Output written on main.pdf (144 pages, 53739592 bytes).
 PDF statistics:
- 2195 PDF objects out of 2487 (max. 8388607)
- 551 named destinations out of 1000 (max. 500000)
- 716 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1525 PDF objects out of 1728 (max. 8388607)
+ 543 named destinations out of 1000 (max. 500000)
+ 452 words of extra memory for PDF output out of 10000 (max. 10000000)
 
