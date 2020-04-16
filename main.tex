@@ -108,9 +108,9 @@
 \author{Mohammed Basharnavaz KHAN}
 \authorcopyright{Mohammed Basharnavaz Khan}
 
-\datesoutenance{Defense date}
+\datesoutenance{April 15, 2020}
 
-\datedepot{March 2, 2020}
+\datedepot{April 17, 2020}
 
 \directeur{Mr. }{Maarouf Saad}{Departement of Electrical Engineering, École de technologie supérieure}
 
@@ -764,7 +764,7 @@ where $e_3$ and $e_4$ are the attitude and angular velocity tracking error vecto
 \chapter{Kernel Disturbance Observer} \label{Chap:KDO}
 The Kernel Disturbance Observer (KDO) is a multi-step algorithm, as outlined in Algorithm 3.1 and uses the double-sided kernel estimation approach. The Double-sided Kernel approach was developed in \citep{RN119} and \citep{RN76}, and further developed for fourth-order kernel representation in \citep{RN83} and \citep{RN120} and will be produced here for completeness. We start by presenting the details of the different steps in Algorithm 3.1. 
 
-The steps 2-7 present the procedure in obtaining the disturbance estimates, $\hat{d_p}(t_k)$ and $\hat{d_\Theta}(t_k)$, at the time instant $t_k$, for the positional and rotational systems respectively. The input is the complete attitude between the time instants $t_k-\delta$ and $t_k$. This is represented by the vectors $[p_M(t_k-\delta) : p_{M}(t_k)]$ and $[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$. The variable $\zeta_M$ refers to the flat measured output from a system that is being observed, $\hat{\zeta}$ refers to the estimated output. ${\zeta}^{(2)}$ is the higher order derivative. The algorithm uses a sliding window approach to take input for the algorithm; this is explained in Section \ref{Sec:MovWin}. Step 3 of the algorithm is parameter estimation; the different approaches are explained in Section \ref{Sec:ParEst}. Steps 4-7 estimate the full state of the quadcopter and thereby observe the disturbances using methods explained in Section \ref{Sec:FullStateEst}.
+The steps 2-7 present the procedure in obtaining the disturbance estimates, $\hat{d_p}(t_k)$ and $\hat{d_\Theta}(t_k)$, at the time instant $t_k$, for the positional and rotational systems respectively. The input is the complete attitude between the time instants $t_k-\delta$ and $t_k$. This is represented by the vectors $[p_M(t_k-\delta) : p_{M}(t_k)]$ and $[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$. The variable $\zeta_M$ refers to the flat measured output from a system that is being observed, $\hat{\zeta}$ refers to the estimated output. ${\zeta}^{(2)}$ is the higher order derivative. The expressions for higher order derivatives, \eqref{eqn:A1}-\eqref{eqn:A6}, are in Section \ref{Sec:App1} of the Appendix and omitted from the main text for the purposes of brevity. The algorithm uses a sliding window approach to take input for the algorithm; this is explained in Section \ref{Sec:MovWin}. Step 3 of the algorithm is parameter estimation; the different approaches are explained in Section \ref{Sec:ParEst}. Steps 4-7 estimate the full state of the quadcopter and thereby observe the disturbances using methods explained in Section \ref{Sec:FullStateEst}.
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%% Algorithm %%%%%%%%%%%%%%%
@@ -817,7 +817,7 @@ The Kernel Disturbance Observer employs the moving window regime to estimate the
 \end{equation}
 where $\zeta(t)$ represents each angle and position. The observation window is traveling ahead in time while the local surrogate model is refitted, allowing the parameters to vary with time while the window size remains constant. Since the local surrogate model is a linear fourth order differential equation, it is a differentially flat system such that the the observed trajectory is a flat output $F(t) := \zeta(t), t \in [t_k-\delta,t_{k}]$ over the observation window $[t_k-\delta,t_k]$. This is the local surrogate model that best represents the underlying non-linear system that produces the output that is being observed.  
 
-It should be noted that the algorithm uses only the positions and angles of the quadcopter and not the higher derivatives. This is done by exploiting the flatness property of the local surrogate model wherein the complete state is expressed as a function of the output (individual position coordinates and angles) of the form given by equation \eqref{eqn:diffflat}. A more detailed inspection is done in \citep{pandey2018variational}. 
+It should be noted that the algorithm uses only the positions and angles of the quadcopter and not the higher derivatives. This is done by exploiting the flatness property of the local surrogate model wherein the complete state is expressed as a function of the output (individual position coordinates and angles) of the form given by Equation \eqref{eqn:diffflat}. A more detailed inspection is done in \citep{pandey2018variational}. 
 
 \section{Parameter Estimation of Local Surrogate Model} \label{Sec:ParEst}
 In this section we present the methods available to find the parameters that of a local surrogate model for each of the position within the window.
@@ -854,7 +854,8 @@ We define practical linear identifiability mathematically as \citep{pandey2018va
 \begin{definitionNewStyle}
 The homogeneous system \eqref{eqn:local} is practically linearly identifiable on $[a, b]$ with respect to a particular realization of the output measurement, $\zeta(t)$; $t \in [a; b]$, if and only if there exist distinct time instants $t_1,..., t_m \in [a, b]$ such that rank$[P(\zeta)] = n$. By analogy with the nomenclature used in \citep{fliess2003algebraic} output trajectories which render rank$[P(\zeta)] = n$ will be called persistent.
 \end{definitionNewStyle}
-We present a couple of approaches presented in the literature \citep{fliess2003algebraic}, \citep{ghoshal2017using}, which were done for second and third order systems, and derive the expressions in the form of \eqref{eqn:pracliniden} for fourth order LTI SISO systems. The first method to obtain the parameters for the local surrogate model is by repeated integration. The detailed derivation of this method is given in Appendix \ref{Sec:App3}.
+
+We present an approach presented in the literature, \citep{ghoshal2017using}, which was done for second and third order systems, and derive the expressions in the form of \eqref{eqn:pracliniden} for fourth order LTI SISO systems. The detailed derivation of this method is given in Appendix \ref{Sec:App4}.
 
 Using the fourth order kernel expressions, we use the observed trajectory in a {\it single isolated window} $k$ where a full rank matrix $rank \ P_k(\zeta_M) =n$ would yield an estimate $\hat{w}_k := P_k(\zeta_M)^\dagger Q_k(\zeta_M)$. The detailed method is added in the appendix, while the description gives insight on how the matrix $P$ and vector $Q$ is computed. Since the double sided kernel is a linear combination of system parameters, 
 \begin{align} \label{eqn:evalEST} 
@@ -867,12 +868,12 @@ The above integral representation can be written in the form of component kernel
 &  g_i( t, \zeta) := \int_a^b K_{\zeta,i} (t,\tau) \zeta(\tau) d \tau  \ \ i = 0, \dots, n \label{rep3} \\
 & h(t,u) := \int_a^b K_{u}(t,\tau) u(\tau) \ d \tau \nonumber
 \end{align}
-This representation allows us to obtain the the matrices $P$ and $Q$ in the form of equation \eqref{eqn:pracliniden}. The detailed derivation of it is presented in Appendix \ref{Sec:App4}.
+This representation allows us to obtain the the matrices $P$ and $Q$ in the form of equation \eqref{eqn:pracliniden}. This approach is used in deriving the closed form expression for parameter estimation using Least Square Methods. The detailed derivation of it is presented in Appendix \ref{Sec:App4}. Obtaining a closed form expression allows us to bypass the recursive and iterative optimization problem presented by Equation \eqref{eqn:paramdynamic} and instead obtain the optimal parameters in a straight forward manner. 
 
 
 \section{Full State Estimation and Disturbance Observer} \label{Sec:FullStateEst}
 \subsection{Double Sided Kernel \citep{RN120}}
-The double sided kernel for a general fourth order characteristic polynomial of the form \eqref{eqn:local} for an arbitrary interval $[a,b]$ was derived in \citep{RN83} and \citep{RN120}. The closed form expressions for $\hat{\zeta}(t)$, $\hat{\zeta}^{(1)}(t)$, $\hat{\zeta}^{(2)}(t)$ and $\hat{\zeta}^{(3)}(t)$ in the literature give the estimates of the states and its higher order derivatives of the output for a given instant $t$ $\forall$ $t \in [a,b]$. The derivation of the double sided kernel from the differential invariant expression \eqref{eqn:local} is omitted for the purposes for brevity and can be found in \citep{RN120}. The expression for the solution of $\zeta(t)$ which is used as the estimate for the output at the chosen instant $t$, is given by, 
+The double sided kernel for a general fourth order characteristic polynomial of the form \eqref{eqn:local} for an arbitrary interval $[a,b]$ was derived in \citep{RN83} and \citep{RN120}. The closed form expressions for $\hat{\zeta}(t)$, $\hat{\zeta}^{(1)}(t)$, $\hat{\zeta}^{(2)}(t)$ and $\hat{\zeta}^{(3)}(t)$ in the literature give the estimates of the states and its higher order derivatives of the output for a given instant $t$ $\forall$ $t \in [a,b]$. The expressions for higher order derivatives, \eqref{eqn:A1}-\eqref{eqn:A6}, are in Section \ref{Sec:App1} of the Appendix and omitted from the main text for the purposes of brevity. The derivation of the double sided kernel from the differential invariant expression \eqref{eqn:local} is omitted for the purposes for brevity and can be found in \citep{RN120}. The expression for the solution of $\zeta(t)$ which is used as the estimate for the output at the chosen instant $t$, is given by, 
 \begin{equation}\label{eqn:y_estimate}
 \hat{\zeta}(t) = \int_{a}^{b} K_{DS}(t,\tau)\zeta(\tau)\mathrm{d}\tau
 \end{equation} where $K_{DS}(t,\tau)$ is the double sided kernel given by, 
@@ -905,7 +906,7 @@ These equations are mentioned here without the derivation as they will be refere
 \subsection{Observing the Disturbances} \label{Sec:estimationtoobserver}
 With the time-tagged measurements of the position and angles available, a linear model is sought that best explains the behaviour of the quadcopter. Each component of interest (i.e. a position or an angle) is considered as a zero input LTI SISO system. Since the model is linear, it is a differentially flat system of the form \eqref{eqn:local} and using the differentially flat output, $\mathbf{p_M}$ over the window between the time instants $t_k-\delta$ and $t_k$. The window is given by $p_M[t_k-\delta:t_k]$, $\Theta_M[t_k-\delta:t_k]$. 
 
-Consider the $x$-translational coordinate array, $x[t_k-\delta:t_k]$ with the kernel parameters, $\hat{\mathbf{w}}_{x_k}$ estimated using either equation \eqref{eqn:paramdynamic}. The estimated trajectory within the window can be calculated using \eqref{eqn:y_estimate}. Similarly, $\hat{\zeta}(t_k)$, $\hat{\zeta}^{(1)}(t_k)$, $\hat{\zeta}^{(2)}(t_k)$, $\zeta=x,y,z,\theta,\phi,\psi$ is computed and hence the full state of the quadcopter is estimated.
+Consider the $x$-translational coordinate array, $x[t_k-\delta:t_k]$ with the kernel parameters, $\hat{\mathbf{w}}_{x_k}$ estimated using either equation \eqref{eqn:paramdynamic}. The estimated trajectory within the window can be calculated using \eqref{eqn:y_estimate}. Similarly, $\hat{\zeta}(t_k)$, $\hat{\zeta}^{(1)}(t_k)$, $\hat{\zeta}^{(2)}(t_k)$, $\zeta=x,y,z,\theta,\phi,\psi$ is computed and hence the full state of the quadcopter is estimated. The expressions for higher order derivatives, \eqref{eqn:A1}-\eqref{eqn:A6}, are in Section \ref{Sec:App1} of the Appendix and omitted from the main text for the purposes of brevity.
 
 It should be noted that this estimation problem is different in a sense it does not assume any initial conditions of the state of the quadcopter, as well as it is non-asymptotic in nature. At the same time, the observation principle is finite, and the position and the angles are sufficient to obtain an estimate of the higher-order derivatives (or in this case, the velocities and the accelerations).
 
@@ -1206,7 +1207,7 @@ where the constants $\sigma=10$, $\rho=28$, $\beta=\sfrac{8}{3}$, $k=0.0.1$, $\o
 
 \begin{figure}[H]
 \centering
-\fbox{\includegraphics[width=3.5in,height=2in]{Figures/results/chaotic_disturbances/dis_m1_att.eps}}
+\fbox{\includegraphics[width=3.5in,height=2in]{Figures/results/chaotic_disturbances/dis_m1_att.png}}
 \\ \parbox{0.75\textwidth}{\caption{Chaotic Disturbances 1 in Attitude Subsystem}\label{dis_m1_att}}
 \end{figure}
 
@@ -1399,7 +1400,7 @@ where the constants $\sigma=10$, $\rho=28$, $\beta=\sfrac{8}{3}$, $k=0.0.1$, $\o
 
 \begin{figure}[H]
 \centering
-\fbox{\includegraphics[width=3.5in,height=2in]{Figures/results/chaotic_disturbances/dis_m2_att.eps}}
+\fbox{\includegraphics[width=3.5in,height=2in]{Figures/results/chaotic_disturbances/dis_m2_att.png}}
 \\ \parbox{0.75\textwidth}{\caption{Chaotic Disturbances 2 in Attitude Subsystem} \label{dis_m2_att}}
 \end{figure}
 
@@ -1560,7 +1561,7 @@ The estimation algorithm was developed and implemented by a former Graduate stud
 
 \FloatBarrier
 \section{Computational Implementation}
-\textbf{Vectorization:} Vectorization refers to Single Instruction Multiple Data operations on several operands in parallel. Most hardware is capable of performing multiple ALU operations simultaneously on data, and instead of running the same operation iteratively using for loops, we can vectorize the operations in terms of matrix computations. Several libraries have optimized code for performing matrix computations and thus, vectorizing code is not only shorter but runs much faster than corresponding loops. In this thesis, we use the GNU Scientific Library (GSL), which provides a stable API for scientific computing which is used for vectorization.
+{\bf Vectorization:} Vectorization refers to Single Instruction Multiple Data operations on several operands in parallel. Most hardware is capable of performing multiple ALU operations simultaneously on data, and instead of running the same operation iteratively using for loops, we can vectorize the operations in terms of matrix computations. Several libraries have optimized code for performing matrix computations and thus, vectorizing code is not only shorter but runs much faster than corresponding loops. In this thesis, we use the GNU Scientific Library (GSL), which provides a stable API for scientific computing which is used for vectorization.
 \begin{table}
 \parbox{0.65\textwidth}{\caption{Time reductions using vectorization in different programming environments}\label{Tab:vect}}
 \begin{tabular}{|c|c|c|c|}
@@ -2154,139 +2155,140 @@ The closed form expression for $y^{(3)}(t)$ is obtained by adding equations \eqr
 % Conventional Method: 0.004082
 %Vectorization Method: 0.000553
 %\end{lstlisting}
-\section{Parameter Estimation by Repeated Integration \citep{fliess2003algebraic}} \label{Sec:App3}
-In this sub section we discuss algebraic parameter estimation through repeated integration of the system output. This was shown in \citep{fliess2003algebraic} for a second order system. We derive the expressions for a fourth order system. Let us consider the following 4th order LTI system with input shown below:
-\begin{equation}\label{eqn.29}
-\begin{split}
-y^{(4)}(t)+a_{3}y^{(3)}(t)+a_{2}y^{(2)}(t)+a_{1}y^{(1)}(t)+a_{0}y(t) = b u(t) +A_{0}
-\end{split}
-\end{equation}
-Here $a_{3}$, $a_{2}, a_{1}$, $a_{0}$ are the parameters of the $A$ matrix, $b$ is the parameter of the input and $A_{0}$ is a constant load perturbation of an unknown magnitude where $A_{0}$ $\in$ $\mathrm{R}$.
-\par Transforming the above equation \eqref{eqn.29} into the Laplace domain we get \eqref{eqn.30},
-\begin{equation}\label{eqn.30}
-\begin{split}
-s^4Y(s) - s^3y(0) - s^2y^{(1)}(0) - sy^{(2)}(0) - y^{(3)}(0) + & \\
-a_{3}(s^3Y(s) - s^2y(0) - sy^{(1)}(0) - y^{(2)}(0)) + & \\
-a_{2}(s^2Y(s) - sy(0) - y^{(1)}(0)) + a_{1}(sY(s)-y(0)) + & \\
-a_{0}Y(s) &= b U(s) + \frac{A_{0}}{s}
-\end{split}
-\end{equation}
-multiplying the above equation \eqref{eqn.30} by $s$ we get,
-\begin{equation}\label{eqn.31}
-\begin{split}
-s^5Y(s) - s^4y(0) - s^3y^{(1)}(0) - s^2y^{(2)}(0) - sy^{(3)}(0) + & \\
-a_{3}(s^4Y(s) - s^3y(0) - s^2y^{(1)}(0) - sy^{(2)}(0)) + & \\
-a_{2}(s^3Y(s) - s^2y(0) - ay^{(1)}(0)) + a_{1}(s^2Y(s)-sy(0)) + &\\
-sa_{0}Y(s) &= bs U(s) + A_{0}
-\end{split}
-\end{equation}
-We now differentiate the above equation \eqref{eqn.31} five times to eliminate the unknown parameter $A_{0}$ and the initial conditions $y(0)$, $y^{(1)}(0), y^{(2)}(0)$, $y^{(3)}(0)$. We get,
-\begin{equation}\label{eqn.32}
-\begin{split}
-5b&\frac{\mathrm{d}^4U(s)}{\mathrm{d}s^4} + bs\frac{\mathrm{d}^5U(s)}{\mathrm{d}s^5} = \\ 
-&\qquad{}120Y(s) + 600s\frac{\mathrm{d}Y(s)}{\mathrm{d}s} + 600s^2\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 200s^3\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 25s^4\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^5 \frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \, \\
-&\qquad{}+ a_3\bigg(120\frac{\mathrm{d}Y(s)}{\mathrm{d}s} + 240s\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 120s^2\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 20s^3\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^4 \frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5}\bigg) \, \\
-&\qquad{}+ a_2\bigg(60\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 60s\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 15s^2\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^3\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg) \, \\  
-&\qquad{}+ a_1\bigg(20\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 10s\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^2\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg) \, \\
-&\qquad{}+ a_0\bigg(5\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg)
-\end{split}
-\end{equation}
-Multiplying both sides of the resulting expression by $s^{-5}$ we have,
-\begin{equation}\label{eqn.33}
-\begin{split}
-5s^{-5}b&\frac{\mathrm{d}^4U(s)}{\mathrm{d}s^4} + bs^{-4}\frac{\mathrm{d}^5U(s)}{\mathrm{d}s^5} = \\
-&\qquad{}120s^{-5}Y(s) + 600s^{-4}\frac{\mathrm{d}Y(s)}{\mathrm{d}s} + 600s^{-3}\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 200s^{-2}\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 25s^{-1}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + \frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \, \\
-&\qquad{}+ a_3\bigg(120s^{-5}\frac{\mathrm{d}Y(s)}{\mathrm{d}s} + 240s^{-4}\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 120s^{-3}\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 20s^{-2}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^{-1} \frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5}\bigg) \, \\
-&\qquad{}+ a_2\bigg(60s^{-5}\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 60s^{-4}\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 15s^{-3}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^{2}\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg) \, \\  
-&\qquad{}+ a_1\bigg(20s^{-5}\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 10s^{-4}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^{-3}\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg) \, \\
-&\qquad{}+ a_0\bigg(5s^{-5}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^{-4}\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg)
-\end{split}
-\end{equation}
-Transforming the above expression back to the time domain we get the following expression:
-\begin{equation}\label{eqn.34}
-\begin{split}
-b\big(5 &\int\limits^{(5)} t^4 u(t) \mathrm{d}t - \int\limits^{(4)} t^5 u(t) \mathrm{d}t\big) =\\
-&\qquad{}120\int\limits^{(5)}y(t) \mathrm{d}t - 600\int\limits^{(4)}ty(t)\mathrm{d}t + 600\int\limits^{(3)}t^2y(t)\mathrm{d}t - 200\int\limits^{(2)}t^3y(t)\mathrm{d}t + 25\int t^4y(t)\mathrm{d}t- t^5y(t)  \, \\
-&\qquad{}+ a_{3}\bigg(-120\int\limits^{(5)}ty(t) \mathrm{d}t + 240\int\limits^{(4)}t^2y(t)\mathrm{d}t - 120\int\limits^{(3)}t^3y(t)\mathrm{d}t + 20\int\limits^{(2)}t^4y(t)\mathrm{d}t - \int t^5y(t)\mathrm{d}t\bigg)  \, \\ 
-&\qquad{}+ a_{2}\bigg(60\int\limits^{(5)}t^2y(t) \mathrm{d}t - 60\int\limits^{(4)}t^3y(t)\mathrm{d}t + 15\int\limits^{(3)}t^4y(t)\mathrm{d}t - \int\limits^{(2)} t^5y(t)\mathrm{d}t \bigg)  \, \\
-&\qquad{} a_{1}\bigg(-20\int\limits^{(5)}t^3y(t) \mathrm{d}t + 10\int\limits^{(4)}t^4y(t)\mathrm{d}t - \int\limits^{(3)}t^5y(t)\mathrm{d}t \bigg)  \, \\
-&\qquad{}+ a_{0}\bigg(5\int\limits^{(5)}t^4y(t) \mathrm{d}t - \int\limits^{(4)}t^5y(t)\mathrm{d}t \bigg)
-\end{split}
-\end{equation}
-this can be expressed as relation of the form
-\begin{equation}\label{eqn.35}
-a_{0}\pi_{0}(t) + a_{1}\pi_{1}(t) + a_{2}\pi_{2}(t) + a_{3}\pi_{3}(t) + b\pi_{4}(t) = q(t)
-\end{equation}
-with
-\begin{equation*}
-\pi_{0}(t) = \bigg[5\int\limits^{(5)}t^4y(t) \mathrm{d}t - \int\limits^{(4)}t^5y(t)\mathrm{d}t\bigg]
-\end{equation*}
-\begin{equation*}
-\pi_{1}(t) = \bigg[-20\int\limits^{(5)}t^3y(t) \mathrm{d}t + 10\int\limits^{(4)}t^4y(t)\mathrm{d}t - \int\limits^{(3)}t^5y(t)\mathrm{d}t\bigg]
-\end{equation*}
-\begin{equation*}
-\pi_{2} (t) = \bigg[60\int\limits^{(5)}t^2y(t) \mathrm{d}t - 60\int\limits^{(4)}t^3y(t)\mathrm{d}t + 15\int\limits^{(3)}t^4y(t)\mathrm{d}t - \int\limits^{(2)} t^5y(t)\mathrm{d}t \bigg]
-\end{equation*}
-\begin{equation*}
-\pi_{3}(t) = \bigg[-120\int\limits^{(5)}ty(t) \mathrm{d}t + 240\int\limits^{(4)}t^2y(t)\mathrm{d}t - 120\int\limits^{(3)}t^3y(t)\mathrm{d}t + 20\int\limits^{(2)}t^4y(t)\mathrm{d}t - \int t^5y(t)\mathrm{d}t \bigg]
-\end{equation*}
-\begin{equation*}
-\pi_{4}(t) = \bigg[5 \int\limits^{(5)} t^4 u(t) \mathrm{d}t - \int\limits^{(4)} t^5 u(t) \mathrm{d}t \bigg]
-\end{equation*}
-\begin{equation*}
-q(t) = \bigg[120\int\limits^{(5)}y(t) \mathrm{d}t - 600\int\limits^{(4)}ty(t)\mathrm{d}t + 600\int\limits^{(3)}t^2y(t)\mathrm{d}t - 200\int\limits^{(2)}t^3y(t)\mathrm{d}t + 25\int t^4y(t)\mathrm{d}t- t^5y(t) \bigg]
-\end{equation*}
 
-\par Now, in order to identify the parameters $a_{0}$, $a_{1}$, $a_{2}$, $a_{3}$ and $b$, we need to ensure that the above system is \textit{linearly identifiable}. We need a system of linear equations to make them \textit{linearly identifiable}. And thus, we integrate the \eqref{eqn.35} one time and two times with respect to $t$. This gives us the following system of linear equation for the estimation of the unknown parameters $a_{0}$, $a_{1}$, $a_{2}$, $a_{3}$ and $b$.
-\begin{equation}\label{eqn:98}
-\begin{bmatrix}
-P_{11}(t) & P_{12}(t) & P_{13}(t) & P_{14}(t) & P_{15}(t) \\
-P_{21}(t) & P_{22}(t) & P_{23}(t) & P_{24}(t) & P_{25}(t)) \\
-P_{31}(t) & P_{32}(t) & P_{33}(t) & P_{34}(t) & P_{35}(t) \\
-P_{41}(t) & P_{42}(t) & P_{43}(t) & P_{44}(t) & P_{45}(t) \\
-P_{51}(t) & P_{52}(t) & P_{53}(t) & P_{54}(t) & P_{55}(t) \\
-\end{bmatrix}
-\begin{bmatrix}
-a_{0e} \\
-a_{1e} \\
-a_{2e} \\
-a_{3e} \\
-b_{e} \\
-\end{bmatrix}
-= 
-\begin{bmatrix}
-Q_{1}(t) \\
-Q_{2}(t) \\
-Q_{3}(t) \\
-Q_{4}(t) \\
-Q_{5}(t) \\
-\end{bmatrix}
-\end{equation}
-with 
-\begin{align*}
-P_{11}(t) = \pi_{0}(t), \; P_{12}(t) = \pi_{1}(t), \; P_{13} = \pi_{2}(t), \; P_{14}(t) = \pi_{3}(t), \; P_{15} = \pi_{4}(t)
-\end{align*}
-\begin{align*}
-P_{11}(t) = \pi_{0}(t), \; P_{12}(t) = \pi_{1}(t), \; P_{13} = \pi_{2}(t), \; P_{14}(t) = \pi_{3}(t), \; P_{15} = \pi_{4}(t)
-\end{align*}
-\begin{align*}
-P_{21}(t) = \int \pi_{0}(t) \mathrm{d}t, \; P_{22}(t) = \int \pi_{1}(t) \mathrm{d}t, \; P_{23} = \int \pi_{2}(t) \mathrm{d}t, \; P_{24}(t) = \int \pi_{3}(t) \mathrm{d}t, \; P_{25} = \int \pi_{4}(t) \mathrm{d}t
-\end{align*}
-\begin{align*}
-P_{31}(t) = \int\limits^{(2)} \pi_{0}(t) \mathrm{d}t, \; P_{32}(t) = \int\limits^{(2)} \pi_{1}(t) \mathrm{d}t, \; P_{33} = \int\limits^{(2)} \pi_{2}(t) \mathrm{d}t, \; P_{34}(t) = \int\limits^{(2)} \pi_{3}(t) \mathrm{d}t, \; P_{35} = \int\limits^{(2)} \pi_{4}(t) \mathrm{d}t
-\end{align*}
-and
-\begin{align*}
-P_{41}(t) = \int\limits^{(3)} \pi_{0}(t) \mathrm{d}t, \; P_{42}(t) = \int\limits^{(3)} \pi_{1}(t) \mathrm{d}t, \; P_{43} = \int\limits^{(3)} \pi_{2}(t) \mathrm{d}t, \; P_{44}(t) = \int\limits^{(3)} \pi_{3}(t) \mathrm{d}t, \; P_{45} = \int\limits^{(3)} \pi_{4}(t) \mathrm{d}t
-\end{align*}
-\begin{align*}
-P_{51}(t) = \int\limits^{(4)} \pi_{0}(t) \mathrm{d}t, \; P_{52}(t) = \int\limits^{(4)} \pi_{1}(t) \mathrm{d}t, \; P_{53} = \int\limits^{(4)} \pi_{2}(t) \mathrm{d}t, \; P_{54}(t) = \int\limits^{(4)} \pi_{3}(t) \mathrm{d}t, \; P_{55} = \int\limits^{(4)} \pi_{4}(t) \mathrm{d}t
-\end{align*}
-and
-\begin{align*}
-Q_{1}(t) = q(t), \; Q_{2}(t) = \int q(t) \mathrm{d}t, \; Q_{3} = \int\limits^{(2)} q(t) \mathrm{d}t, \; Q_{4}(t) = \int\limits^{(3)} q(t) \mathrm{d}t, \; Q_{5} = \int\limits^{(4)} q(t) \mathrm{d}t
-\end{align*}
-Using the above system of equations, we can estimate the unknown parameters while at the same time due to the low pass filtering property, the noise can be alleviated.
+%\section{Parameter Estimation by Repeated Integration \citep{fliess2003algebraic}} \label{Sec:App3}
+%In this sub section we discuss algebraic parameter estimation through repeated integration of the system output. This was shown in \citep{fliess2003algebraic} for a second order system. We derive the expressions for a fourth order system. Let us consider the following 4th order LTI system with input shown below:
+%\begin{equation}\label{eqn.29}
+%\begin{split}
+%y^{(4)}(t)+a_{3}y^{(3)}(t)+a_{2}y^{(2)}(t)+a_{1}y^{(1)}(t)+a_{0}y(t) = b u(t) +A_{0}
+%\end{split}
+%\end{equation}
+%Here $a_{3}$, $a_{2}, a_{1}$, $a_{0}$ are the parameters of the $A$ matrix, $b$ is the parameter of the input and $A_{0}$ is a constant load perturbation of an unknown magnitude where $A_{0}$ $\in$ $\mathrm{R}$.
+%\par Transforming the above equation \eqref{eqn.29} into the Laplace domain we get \eqref{eqn.30},
+%\begin{equation}\label{eqn.30}
+%\begin{split}
+%s^4Y(s) - s^3y(0) - s^2y^{(1)}(0) - sy^{(2)}(0) - y^{(3)}(0) + & \\
+%a_{3}(s^3Y(s) - s^2y(0) - sy^{(1)}(0) - y^{(2)}(0)) + & \\
+%a_{2}(s^2Y(s) - sy(0) - y^{(1)}(0)) + a_{1}(sY(s)-y(0)) + & \\
+%a_{0}Y(s) &= b U(s) + \frac{A_{0}}{s}
+%\end{split}
+%\end{equation}
+%multiplying the above equation \eqref{eqn.30} by $s$ we get,
+%\begin{equation}\label{eqn.31}
+%\begin{split}
+%s^5Y(s) - s^4y(0) - s^3y^{(1)}(0) - s^2y^{(2)}(0) - sy^{(3)}(0) + & \\
+%a_{3}(s^4Y(s) - s^3y(0) - s^2y^{(1)}(0) - sy^{(2)}(0)) + & \\
+%a_{2}(s^3Y(s) - s^2y(0) - ay^{(1)}(0)) + a_{1}(s^2Y(s)-sy(0)) + &\\
+%sa_{0}Y(s) &= bs U(s) + A_{0}
+%\end{split}
+%\end{equation}
+%We now differentiate the above equation \eqref{eqn.31} five times to eliminate the unknown parameter $A_{0}$ and the initial conditions $y(0)$, $y^{(1)}(0), y^{(2)}(0)$, $y^{(3)}(0)$. We get,
+%\begin{equation}\label{eqn.32}
+%\begin{split}
+%5b&\frac{\mathrm{d}^4U(s)}{\mathrm{d}s^4} + bs\frac{\mathrm{d}^5U(s)}{\mathrm{d}s^5} = \\ 
+%&\qquad{}120Y(s) + 600s\frac{\mathrm{d}Y(s)}{\mathrm{d}s} + 600s^2\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 200s^3\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 25s^4\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^5 \frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \, \\
+%&\qquad{}+ a_3\bigg(120\frac{\mathrm{d}Y(s)}{\mathrm{d}s} + 240s\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 120s^2\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 20s^3\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^4 \frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5}\bigg) \, \\
+%&\qquad{}+ a_2\bigg(60\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 60s\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 15s^2\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^3\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg) \, \\  
+%&\qquad{}+ a_1\bigg(20\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 10s\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^2\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg) \, \\
+%&\qquad{}+ a_0\bigg(5\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg)
+%\end{split}
+%\end{equation}
+%Multiplying both sides of the resulting expression by $s^{-5}$ we have,
+%\begin{equation}\label{eqn.33}
+%\begin{split}
+%5s^{-5}b&\frac{\mathrm{d}^4U(s)}{\mathrm{d}s^4} + bs^{-4}\frac{\mathrm{d}^5U(s)}{\mathrm{d}s^5} = \\
+%&\qquad{}120s^{-5}Y(s) + 600s^{-4}\frac{\mathrm{d}Y(s)}{\mathrm{d}s} + 600s^{-3}\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 200s^{-2}\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 25s^{-1}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + \frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \, \\
+%&\qquad{}+ a_3\bigg(120s^{-5}\frac{\mathrm{d}Y(s)}{\mathrm{d}s} + 240s^{-4}\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 120s^{-3}\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 20s^{-2}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^{-1} \frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5}\bigg) \, \\
+%&\qquad{}+ a_2\bigg(60s^{-5}\frac{\mathrm{d}^2Y(s)}{\mathrm{d}s^2} + 60s^{-4}\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 15s^{-3}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^{2}\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg) \, \\  
+%&\qquad{}+ a_1\bigg(20s^{-5}\frac{\mathrm{d}^3Y(s)}{\mathrm{d}s^3} + 10s^{-4}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^{-3}\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg) \, \\
+%&\qquad{}+ a_0\bigg(5s^{-5}\frac{\mathrm{d}^4Y(s)}{\mathrm{d}s^4} + s^{-4}\frac{\mathrm{d}^5Y(s)}{\mathrm{d}s^5} \bigg)
+%\end{split}
+%\end{equation}
+%Transforming the above expression back to the time domain we get the following expression:
+%\begin{equation}\label{eqn.34}
+%\begin{split}
+%b\big(5 &\int\limits^{(5)} t^4 u(t) \mathrm{d}t - \int\limits^{(4)} t^5 u(t) \mathrm{d}t\big) =\\
+%&\qquad{}120\int\limits^{(5)}y(t) \mathrm{d}t - 600\int\limits^{(4)}ty(t)\mathrm{d}t + 600\int\limits^{(3)}t^2y(t)\mathrm{d}t - 200\int\limits^{(2)}t^3y(t)\mathrm{d}t + 25\int t^4y(t)\mathrm{d}t- t^5y(t)  \, \\
+%&\qquad{}+ a_{3}\bigg(-120\int\limits^{(5)}ty(t) \mathrm{d}t + 240\int\limits^{(4)}t^2y(t)\mathrm{d}t - 120\int\limits^{(3)}t^3y(t)\mathrm{d}t + 20\int\limits^{(2)}t^4y(t)\mathrm{d}t - \int t^5y(t)\mathrm{d}t\bigg)  \, \\ 
+%&\qquad{}+ a_{2}\bigg(60\int\limits^{(5)}t^2y(t) \mathrm{d}t - 60\int\limits^{(4)}t^3y(t)\mathrm{d}t + 15\int\limits^{(3)}t^4y(t)\mathrm{d}t - \int\limits^{(2)} t^5y(t)\mathrm{d}t \bigg)  \, \\
+%&\qquad{} a_{1}\bigg(-20\int\limits^{(5)}t^3y(t) \mathrm{d}t + 10\int\limits^{(4)}t^4y(t)\mathrm{d}t - \int\limits^{(3)}t^5y(t)\mathrm{d}t \bigg)  \, \\
+%&\qquad{}+ a_{0}\bigg(5\int\limits^{(5)}t^4y(t) \mathrm{d}t - \int\limits^{(4)}t^5y(t)\mathrm{d}t \bigg)
+%\end{split}
+%\end{equation}
+%this can be expressed as relation of the form
+%\begin{equation}\label{eqn.35}
+%a_{0}\pi_{0}(t) + a_{1}\pi_{1}(t) + a_{2}\pi_{2}(t) + a_{3}\pi_{3}(t) + b\pi_{4}(t) = q(t)
+%\end{equation}
+%with
+%\begin{equation*}
+%\pi_{0}(t) = \bigg[5\int\limits^{(5)}t^4y(t) \mathrm{d}t - \int\limits^{(4)}t^5y(t)\mathrm{d}t\bigg]
+%\end{equation*}
+%\begin{equation*}
+%\pi_{1}(t) = \bigg[-20\int\limits^{(5)}t^3y(t) \mathrm{d}t + 10\int\limits^{(4)}t^4y(t)\mathrm{d}t - \int\limits^{(3)}t^5y(t)\mathrm{d}t\bigg]
+%\end{equation*}
+%\begin{equation*}
+%\pi_{2} (t) = \bigg[60\int\limits^{(5)}t^2y(t) \mathrm{d}t - 60\int\limits^{(4)}t^3y(t)\mathrm{d}t + 15\int\limits^{(3)}t^4y(t)\mathrm{d}t - \int\limits^{(2)} t^5y(t)\mathrm{d}t \bigg]
+%\end{equation*}
+%\begin{equation*}
+%\pi_{3}(t) = \bigg[-120\int\limits^{(5)}ty(t) \mathrm{d}t + 240\int\limits^{(4)}t^2y(t)\mathrm{d}t - 120\int\limits^{(3)}t^3y(t)\mathrm{d}t + 20\int\limits^{(2)}t^4y(t)\mathrm{d}t - \int t^5y(t)\mathrm{d}t \bigg]
+%\end{equation*}
+%\begin{equation*}
+%\pi_{4}(t) = \bigg[5 \int\limits^{(5)} t^4 u(t) \mathrm{d}t - \int\limits^{(4)} t^5 u(t) \mathrm{d}t \bigg]
+%\end{equation*}
+%\begin{equation*}
+%q(t) = \bigg[120\int\limits^{(5)}y(t) \mathrm{d}t - 600\int\limits^{(4)}ty(t)\mathrm{d}t + 600\int\limits^{(3)}t^2y(t)\mathrm{d}t - 200\int\limits^{(2)}t^3y(t)\mathrm{d}t + 25\int t^4y(t)\mathrm{d}t- t^5y(t) \bigg]
+%\end{equation*}
+%
+%\par Now, in order to identify the parameters $a_{0}$, $a_{1}$, $a_{2}$, $a_{3}$ and $b$, we need to ensure that the above system is \textit{linearly identifiable}. We need a system of linear equations to make them \textit{linearly identifiable}. And thus, we integrate the \eqref{eqn.35} one time and two times with respect to $t$. This gives us the following system of linear equation for the estimation of the unknown parameters $a_{0}$, $a_{1}$, $a_{2}$, $a_{3}$ and $b$.
+%\begin{equation}\label{eqn:98}
+%\begin{bmatrix}
+%P_{11}(t) & P_{12}(t) & P_{13}(t) & P_{14}(t) & P_{15}(t) \\
+%P_{21}(t) & P_{22}(t) & P_{23}(t) & P_{24}(t) & P_{25}(t)) \\
+%P_{31}(t) & P_{32}(t) & P_{33}(t) & P_{34}(t) & P_{35}(t) \\
+%P_{41}(t) & P_{42}(t) & P_{43}(t) & P_{44}(t) & P_{45}(t) \\
+%P_{51}(t) & P_{52}(t) & P_{53}(t) & P_{54}(t) & P_{55}(t) \\
+%\end{bmatrix}
+%\begin{bmatrix}
+%a_{0e} \\
+%a_{1e} \\
+%a_{2e} \\
+%a_{3e} \\
+%b_{e} \\
+%\end{bmatrix}
+%= 
+%\begin{bmatrix}
+%Q_{1}(t) \\
+%Q_{2}(t) \\
+%Q_{3}(t) \\
+%Q_{4}(t) \\
+%Q_{5}(t) \\
+%\end{bmatrix}
+%\end{equation}
+%with 
+%\begin{align*}
+%P_{11}(t) = \pi_{0}(t), \; P_{12}(t) = \pi_{1}(t), \; P_{13} = \pi_{2}(t), \; P_{14}(t) = \pi_{3}(t), \; P_{15} = \pi_{4}(t)
+%\end{align*}
+%\begin{align*}
+%P_{11}(t) = \pi_{0}(t), \; P_{12}(t) = \pi_{1}(t), \; P_{13} = \pi_{2}(t), \; P_{14}(t) = \pi_{3}(t), \; P_{15} = \pi_{4}(t)
+%\end{align*}
+%\begin{align*}
+%P_{21}(t) = \int \pi_{0}(t) \mathrm{d}t, \; P_{22}(t) = \int \pi_{1}(t) \mathrm{d}t, \; P_{23} = \int \pi_{2}(t) \mathrm{d}t, \; P_{24}(t) = \int \pi_{3}(t) \mathrm{d}t, \; P_{25} = \int \pi_{4}(t) \mathrm{d}t
+%\end{align*}
+%\begin{align*}
+%P_{31}(t) = \int\limits^{(2)} \pi_{0}(t) \mathrm{d}t, \; P_{32}(t) = \int\limits^{(2)} \pi_{1}(t) \mathrm{d}t, \; P_{33} = \int\limits^{(2)} \pi_{2}(t) \mathrm{d}t, \; P_{34}(t) = \int\limits^{(2)} \pi_{3}(t) \mathrm{d}t, \; P_{35} = \int\limits^{(2)} \pi_{4}(t) \mathrm{d}t
+%\end{align*}
+%and
+%\begin{align*}
+%P_{41}(t) = \int\limits^{(3)} \pi_{0}(t) \mathrm{d}t, \; P_{42}(t) = \int\limits^{(3)} \pi_{1}(t) \mathrm{d}t, \; P_{43} = \int\limits^{(3)} \pi_{2}(t) \mathrm{d}t, \; P_{44}(t) = \int\limits^{(3)} \pi_{3}(t) \mathrm{d}t, \; P_{45} = \int\limits^{(3)} \pi_{4}(t) \mathrm{d}t
+%\end{align*}
+%\begin{align*}
+%P_{51}(t) = \int\limits^{(4)} \pi_{0}(t) \mathrm{d}t, \; P_{52}(t) = \int\limits^{(4)} \pi_{1}(t) \mathrm{d}t, \; P_{53} = \int\limits^{(4)} \pi_{2}(t) \mathrm{d}t, \; P_{54}(t) = \int\limits^{(4)} \pi_{3}(t) \mathrm{d}t, \; P_{55} = \int\limits^{(4)} \pi_{4}(t) \mathrm{d}t
+%\end{align*}
+%and
+%\begin{align*}
+%Q_{1}(t) = q(t), \; Q_{2}(t) = \int q(t) \mathrm{d}t, \; Q_{3} = \int\limits^{(2)} q(t) \mathrm{d}t, \; Q_{4}(t) = \int\limits^{(3)} q(t) \mathrm{d}t, \; Q_{5} = \int\limits^{(4)} q(t) \mathrm{d}t
+%\end{align*}
+%Using the above system of equations, we can estimate the unknown parameters while at the same time due to the low pass filtering property, the noise can be alleviated.
 
 \section{Parameter Estimation through Reproducing Kernel Property \citep{RN119}} \label{Sec:App4}
 An alternate approach can be used to obtain parameter estimate equations in the form of \eqref{eqn:98} from the kernel expressions. This approach was used in \citep{RN119} for a third-order system using the least square method. In this subsection, we develop similar expressions using the double-sided kernel for fourth-order systems. 

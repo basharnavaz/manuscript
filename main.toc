@@ -43,4 +43,4 @@
 \contentsline {section}{\numberline {5.5}Summary}{105}{section.267}%
 \contentsline {chapter}{CONCLUSION AND RECOMMENDATIONS}{107}{chapter*.271}%
 \contentsline {chapter}{{\hbox to\@tempdima {\uppercase {Appendix\ I}\hfil }\uppercase {Appendix example }}}{111}{chapter.272}%
-\contentsline {chapter}{BIBLIOGRAPHY}{124}{equation.324}%
+\contentsline {chapter}{BIBLIOGRAPHY}{119}{equation.315}%
