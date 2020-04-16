@@ -486,7 +486,7 @@ To provide better clarity on the concept of differential flatness, we take the e
 The system can be described by the system differential equations, 
 \begin{align}
 \begin{aligned} \label{eqn:diffex1}
-m_1\ddot{p_1} + K_1p_1 + \gamma_1(\dot{p_1})&= k_2(p_2-p_1)\\
+m_1\ddot{p_1} + k_1p_1 + \gamma_1(\dot{p_1})&= k_2(p_2-p_1)\\
 m_2\ddot{p_2} +k_2(p_2-p_1) + \gamma(\dot{p_2})&= u
 \end{aligned}
 \end{align} 
@@ -792,7 +792,7 @@ Obtain Full State Estimate \\
 		\hat{\zeta}(t_k) = \frac{1}{((t_k)-(t_k-\delta))^4}\int_{t_k-\delta}^{t_k} K_{DS}(t_k,\tau)\zeta_M(\tau)\mathrm{d}\tau
 	\]
 
-\textbf{Higher Order Derivatives:} Compute the higher order derivatives $\hat{\dot{\zeta}}(t_k)$ and $\hat{\ddot{\zeta}}(t_k)$ using \eqref{eqn:A1}-\eqref{eqn:A6} in Section \ref{Sec:App1} of Appendix. 
+\textbf{Higher Order Derivatives:} Compute the higher order derivatives $\hat{\dot{\zeta}}(t_k)$ and $\hat{\ddot{\zeta}}(t_k)$ using equations \eqref{eqn:A1}-\eqref{eqn:A6} in Section \ref{Sec:App1} of Appendix. 
 }
 Compute External Disturbances $\hat{d_p}(t_k)=[\hat{d_x},\hat{d_y},\hat{d_z}]$ and $\hat{d_\Theta}(t_k)=[\hat{d_\phi},\hat{d_\theta},\hat{d_\psi}]$: 
 	\[
@@ -1444,8 +1444,13 @@ The cases where the observers estimate the disturbances with the worst performan
 \fbox{\includegraphics[width=3.5in,height=2in]{Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo.eps}}
 \\ \parbox{0.75\textwidth}{\caption{Chaotic Disturbances estimation of $y$ component using KDO} \label{dis_m2_est_y_kdo}}
 \end{figure}
+%%%%%Blank image inserted
+\begin{figure}[H]
+	\includegraphics[width=3.5in,height=2in]{Figures/blank.png}
+\end{figure}
+
 \FloatBarrier
-\subsection{Disturbance Model: Linear}
+\section{Disturbance Model: Linear}
 The same quadcopter system was also simulated with disturbances that increased or decreased with time. The disturbances were of the form, 
 \begin{equation}
 d_i = k_i.t
@@ -1693,7 +1698,7 @@ The above method can be applied to the Backward Kernel and result in a Double-Si
 \section{Experimental Validation without Disturbances}
 The three algorithms were first tested on the quadcopter without any external disturbances. The results for each algorithm are presented in different subsections. The controller gains were tuned by trial and error. The controller gains presented in \citep{RN117} were used as a starting point for tuning. The gains were adjusted in either increments or decrements of 0.1. The gains obtained are presented in individual subsections. 
 \subsection{Non-Linear Disturbance Observer Results}
-The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. Similar to the finding in simulations, the performance of NDO was found to be susceptible to improper tuning of the observer gains. After several iterations the values of gains that gave the best tracking in terms of error and overshoot is presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. The figures \ref{Fig:xyztracNDO} - \ref{Fig:3dNDO} show the real flight tracking of the reference trajectory variables, which are the position($x$, $y$, $z$) and yaw ($\psi$). 
+The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. Similar to the finding in simulations, the performance of NDO was found to be susceptible to improper tuning of the observer gains. After several iterations the values of gains that gave the best tracking in terms of error and overshoot is presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. The figures \ref{Fig:xyztracNDO} - \ref{Fig:3dNDO} show the real flight tracking of the reference trajectory variables, which are the position ($x$, $y$, $z$) and yaw ($\psi$). 
 \begin{table}
 \parbox{0.65\textwidth}{\caption{Observer gains for NDO}\label{Tab:realNDOGains}}
 \begin{tabular}{|c|c|c|c|}
@@ -1870,7 +1875,7 @@ The three algorithms were tested on the quadcopter under external disturbances f
 	\parbox{0.75\textwidth}{\caption{{Quadcopter with the applied disturbances \label{Fig:dryer}}}}
 \end{figure}
 \subsection{Non-Linear Disturbance Observer Results}
-The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. The control gains were same ones that were used without external disturbances  presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. Figures \ref{Fig:xyztracNDODist} - \ref{Fig:3dNDODist} show the real flight tracking of the reference trajectory variables, which are the position($x$, $y$, $z$) and yaw ($\psi$). 
+The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. The control gains were same ones that were used without external disturbances  presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. Figures \ref{Fig:xyztracNDODist} - \ref{Fig:3dNDODist} show the real flight tracking of the reference trajectory variables, which are the position ($x$, $y$, $z$) and yaw ($\psi$). 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/xyztrac.png}}
