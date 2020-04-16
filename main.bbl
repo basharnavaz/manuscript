@@ -1,4 +1,4 @@
-\begin{thebibliography}{72}
+\begin{thebibliography}{71}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -160,13 +160,6 @@ Fathella, N.
   helicopter}.
 \newblock (\bibphd,~Ecole de technologie superieure ETS,~Montreal).
 \newblock \biburlrep~Note.
-
-\bibitem[Fethalla(2019)Fethalla, N.]{RN121}
-Fethalla, N.
-\newblock (2019).
-\newblock \emph{Modelling, Identification and Control of a Quadrotor
-  Helicopter}.
-\newblock (Thesis).
 
 \bibitem[Fethalla\emph{ et~al.}(2017{\natexlab{a}})Fethalla, N., Saad, M.,
   Michalska, H.~\&~Ghommam, J.]{RN114}

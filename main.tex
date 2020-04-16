@@ -306,15 +306,15 @@ The project will focus on the development and implementation of algebraic observ
 	 
 \tocless \section{Thesis Organization}
 \begin{itemize} [label={}]
-\item {\bf Chapter 0:} This chapter introduces control systems while giving a brief background into the different types of techniques in control available in the literature. It presents the literature reviewed on quadcopter modelling and control, while also presenting the concept of differential flatness. The supporting literature on algebraic differentiation is presented, which is used to develop the Kernel Disturbance Observer. 
+\item {\bf Introduction:} This chapter introduces control systems while giving a brief background into the different types of techniques in control available in the literature. It presents the literature reviewed on quadcopter modelling and control, while also presenting the concept of differential flatness. The supporting literature on algebraic differentiation is presented, which is used to develop the Kernel Disturbance Observer. 
 \item {\bf Chapter \ref{Chap:Quad}:} This chapter focuses entirely on presenting the dynamical model of the quadcopter and its differential flatness property. Mathematical definitions of differential flatness is provided along with an example to illustrate this property. The chapter concludes by presenting the simulation and practical methods used at GREPCI Robotics Lab to identify the parameters of the quadcopter.
 \item {\bf Chapter \ref{Chap:Observers}:} This chapter presents the two observers, Nonlinear Disturbance Observer and Super-Twisting Observer, from the literature that will be compared against the Kernel Disturbance Observer. The chapter also presents the observer based control tracking scheme that is used. 
-\item {\bf Chapter \ref{Chap:KDO}:} This chapter presents the Kernel Disturbance Observer that is developed in this thesis. The KDO is developed using the algebraic differentiators presented previously in Chapter 0. Section \ref{Sec:ThmKdo} develops closed-form expressions for parameter estimation using repeated integration and kernel reproducing property. The chapter concludes by presenting an example of using Kernel Estimation techniques on a non-linear system with white Gaussian noise. 
+\item {\bf Chapter \ref{Chap:KDO}:} This chapter presents the Kernel Disturbance Observer that is developed in this thesis. The KDO is developed using the algebraic differentiators presented previously in the Introduction chapter. Section \ref{Sec:ThmKdo} develops closed-form expressions for parameter estimation using repeated integration and kernel reproducing property. The chapter concludes by presenting an example of using Kernel Estimation techniques on a non-linear system with white Gaussian noise. 
 \item {\bf Chapter \ref{Chap:ResultsSim}:} This chapter presents the results of simulation of the observer based controller on the quadcopter. The simulations are conducted in SIMULINK and the disturbances are chaotic unlike the sinusoidal disturbances used in the simulations in literature. 
 
 \item {\bf Chapter \ref{Chap:ResultsPrac}:} The algorithms are validated on an the Pixhawk S500 experimental setup. The chapter details the different components in setting up the distributed computing setup using ROS. The external disturbances are generated using a CONAIR 1600 air blower. The chapter concludes by presenting the root mean square error in tracking in both cases. 
 
-\item {\bf Chapter 6:} This chapter provides a conclusion of the work presented in the previous chapters, reiterates the results and suggests future work.
+\item {\bf Conclusion:} This chapter provides a conclusion of the work presented in the previous chapters, reiterates the results and suggests future work.
 \end{itemize}
 
 
@@ -360,7 +360,7 @@ C_{\theta}S_{\psi} & S_{\phi}S_{\theta}S_{\psi}+C_{\phi}C_{\psi} & C_{\phi}S_{\t
 -S_{\theta}  & S_{\phi}C_{\theta}  & C_{\phi}C_{\theta}
 \end{array}\right]
 \end{equation} 
-For the purpose of estimation and control, the quadcopter system is viewed as separate subsystems: translational, the linear motion of the center of mass of the quadcopter, and, rotational, the attitude of the quadcopter. The equations of motion in the inertial frame $\mathcal{I}$ are expressed as,
+For the purpose of estimation and control, the quadcopter system is viewed as two separate subsystems: translational, the linear motion of the center of mass of the quadcopter, and, rotational, the attitude of the quadcopter. The equations of motion in the inertial frame $\mathcal{I}$ are expressed as,
 \begin{subequations} \label{eq:dynamic_basic}
 \begin{align} 
 \ddot{p} &=\frac{1}{m}R(\Theta)F_{prop}-G+d_{p}(t)\nonumber \\ \label{eq:dynamic_basic_translation} \\
@@ -436,7 +436,7 @@ q_{2}=\frac{h}{I_{y}},
 q_{3}=\frac{1}{I_{z}}
 \end{aligned}
 \end{align}\\
-The equations \eqref{eq:quad_dynamics} and \eqref{eq:quad_dynamics_2} effectively describe the dynamics of the quadcopter which are used to model it in simulations in section \ref{section:SimulationResults}
+The equations \eqref{eq:quad_dynamics} and \eqref{eq:quad_dynamics_2} effectively describe the dynamics of the quadcopter which are used to model it in simulations in Chapter \ref{Chap:ResultsSim}
 
 \section{Differential Flatness of the quadcopter system}
 Differential flatness is a structural property of a system that allows an engineer to parameterize every system variable in terms of set "free" variables of the system. In this section, we give a more detailed insight into the differential flatness property and how it relates to the quadcopter.
@@ -486,7 +486,7 @@ To provide better clarity on the concept of differential flatness, we take the e
 The system can be described by the system differential equations, 
 \begin{align}
 \begin{aligned} \label{eqn:diffex1}
-m_1\ddot{p_1} + K-1p_1 + \gamma_1(\dot{p_1})&= k_2(p_2-p_1)\\
+m_1\ddot{p_1} + K_1p_1 + \gamma_1(\dot{p_1})&= k_2(p_2-p_1)\\
 m_2\ddot{p_2} +k_2(p_2-p_1) + \gamma(\dot{p_2})&= u
 \end{aligned}
 \end{align} 
@@ -517,7 +517,7 @@ u = \frac{m_1m_2}{k_2} p_1^{(4)} &+ \bigg(\frac{k_1m_2}{k_2} + m_1 + m_2\bigg)\d
 Using \eqref{eqn:diffex4} and \eqref{eqn:diffex5}, $p_2$ and $u$ can be expressed as functions of $p_1$ and a finite number of its derivatives and thus the system \eqref{eqn:diffex1} is flat with the flat output given by $y=p_1$. 
 
 \subsection{In the context of the quadcopter system}
-Section \ref{subsec:diffflatnessquad} reviews the literature on the differential flatness property and the works that have proved the differential flatness of a quadcopter system. For the purposes of brevity we will not include the derivation of the proof but mention the relationship between the free variables and system variables. The expressions are mentioned in \citep{RN81}, and the detail derivation while assuming rotor drag can be found in the technical report accompanying \citep{faessler2017differential}. Both these sources uses a different co-ordinate system for the body vector. While this thesis assumes the rotors to be placed on the axes of the body frame, the literature pertaining to differential flatness of the quadcopter places the rotors 45 degrees ofset from the $x$ and $y$ axes of the body frame. With that in mind, and using the quadcopter model of the form, 
+Section \ref{subsec:diffflatnessquad} reviews the literature on the differential flatness property and the works that have proved the differential flatness of a quadcopter system. For the purposes of brevity we will not include the derivation of the proof but mention the relationship between the free variables and system variables. The expressions are mentioned in \citep{RN81}, and the detail derivation while assuming rotor drag can be found in the technical report accompanying \citep{faessler2017differential}. Both these sources use a different coordinate system for the body vector. While this thesis assumes the rotors to be placed on the axes of the body frame, the literature pertaining to differential flatness of the quadcopter places the rotors 45 degrees ofset from the $x$ and $y$ axes of the body frame. With that in mind, and using the quadcopter model of the form, 
 \begin{align}
 m\ddot{p} &=\ -u\sin\beta, \\
 m\ddot{q} &=u\cos\beta\sin\alpha, \\
@@ -553,7 +553,7 @@ F=(p, q, r, \gamma)^{T}.
 This shows that the quadcopter system is a differentially flat system. Even though the derivation is based on a different configuration the property still holds. To get the expressions in the configuration that is used in this thesis one can use rotation matrices to get the coordinates$[x,y,z]$, $[\phi, \theta, \psi]$ from $[p,q,r]$, $[\alpha,\beta,\gamma]$.
 \section{Parameter Identification} \label{parameter_identification}
 Computing the control signals of the quadcopter usually requires a knowledge of the current state of the system and how the system will react to given control inputs. Equations \eqref{eq:quad_dynamics} describe how the quadcopter will behave to the control inputs $U_1$, $U_2$, $U_3$ and $U_4$ which depends on the physical parameters, $m$, $r_1$, $r_2$, $r_3$, $r_4$, $r_5$, $q_1$, $q_2$, $q_3$ of the quadcopter. Identifying these parameters allows the controller to have better predictions about the dynamics of the quadcopter. These parameters depend on the moment of inertia of the quadcopter about the $x$, $y$, and $z$ axes and the polar moment of inertia. 
-Thus parameter identification of the quadcopter essentially boils down to identifying the different moments of inertia and mass. The practical identification of quadcopter parameters is done before in \citep{RN121}, and the methods have been summarized here for completeness. The parameters obtained in this work are used in simulations and practical implementation of the algorithms, which is discussed in the Chapters \ref{Chap:ResultsSim} and \ref{Chap:ResultsPrac}.\\
+Thus parameter identification of the quadcopter essentially boils down to identifying the different moments of inertia and mass. The practical identification of quadcopter parameters is done before in \citep{nuradeen2019thesis}, and the methods have been summarized here for completeness. The parameters obtained in this work are used in simulations and practical implementation of the algorithms, which is discussed in the Chapters \ref{Chap:ResultsSim} and \ref{Chap:ResultsPrac}.\\
 \begin{figure}
 	\centering 
 	\fbox{
@@ -562,7 +562,7 @@ Thus parameter identification of the quadcopter essentially boils down to identi
 	 \parbox{0.75\textwidth}{
 		\begin{center}
 		\setlength{\belowcaptionskip}{0pt}
-		\caption{Wired Triangle Pendulum Method\label{swm_c2}}Taken from Fethalla et al. (2019) %\citep{RN121}
+		\caption{Wired Triangle Pendulum Method\label{swm_c2}}Taken from Fethalla et al. (2019) %\citep{nuradeen2019thesis}
 		\end{center}	
 	} 
 \end{figure}
@@ -576,12 +576,12 @@ where the moment of inertia along the $x$ axis is given by the computation done 
 	\parbox{0.65\textwidth}{
 		\begin{center}
 		\captionsetup{belowskip=12pt,aboveskip=4pt}
-		\caption{Inertia moments of quadcopter S500 using experimental method\label{tim}}Taken from Fethalla et al. (2019) %\citep{RN121}
+		\caption{Inertia moments of quadcopter S500 using experimental method\label{tim}}Taken from Fethalla et al. (2019) %\citep{nuradeen2019thesis}
 		\end{center}	
 	}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
-		{\bf } & {\bf Reference} & {\bf Disc} & \multicolumn{3}{|c|}{\bf Qudrotor} \\
+		{\bf } & {\bf Reference} & {\bf Disc} & \multicolumn{3}{|c|}{\bf Quadrotor} \\
 		\cline{4-6}
 		& & & \bf I$_{xx}$ & \bf I$_{yy}$ & \bf I$_{zz}$\\
 		\hline
@@ -615,7 +615,7 @@ At the same time the controller needs to know the precise Pulse Width Modulating
 	\parbox{0.75\textwidth}{
 		\begin{center}
 		\setlength{\belowcaptionskip}{0pt}
-		\caption{Motor force measuring device\label{rcd_c2}}Taken from Fethalla et al. (2019) %\citep{RN121}
+		\caption{Motor force measuring device\label{rcd_c2}}Taken from Fethalla et al. (2019) %\citep{nuradeen2019thesis}
 		\end{center}	
 	}
 \end{figure}
@@ -732,7 +732,7 @@ v_\Theta&=-\lambda_\Theta \vert e_\Theta \vert ^{1/2}\text{sign}(e_\Theta)+u_\Th
 \end{split}
 \end{align}
 \end{subequations}
-where sign(.) is the signum function extended to a vector. $\lambda_p$, $\alpha_p$, $\lambda_\Theta$, and $\alpha_\Theta$ are the gains ob the observer that the user needs to tune. It is suggested in \citep{levant1998robust} that the observer gains be chosen sufficiently large enough for the observer error dynamics to converge to zero. 
+where sign(.) is the signum function extended to a vector. $\lambda_p$, $\alpha_p$, $\lambda_\Theta$, and $\alpha_\Theta$ are the gains of the observer that the user needs to tune. It is suggested in \citep{levant1998robust} that the observer gains be chosen sufficiently large enough for the observer error dynamics to converge to zero. 
 
 \section{Position and Attitude Control} \label{Sec:Control}
 This thesis treats the position and attitude subsystems separately and controls them using different controllers. The backstepping controller is used to control the position subsystem and the sliding mode controller is used to control the attitude subsystem since it is more robust than the backstepping controller. The backstepping controller is similar to the PID controller and is much easy to tune. This scheme was also used in \citep{RN114} and \citep{RN117} where the complete development and analysis were also presented. For the purposes of brevity we state the developed expressions that were used in the thesis. \\
@@ -764,7 +764,7 @@ where $e_3$ and $e_4$ are the attitude and angular velocity tracking error vecto
 \chapter{Kernel Disturbance Observer} \label{Chap:KDO}
 The Kernel Disturbance Observer (KDO) is a multi-step algorithm, as outlined in Algorithm 3.1 and uses the double-sided kernel estimation approach. The Double-sided Kernel approach was developed in \citep{RN119} and \citep{RN76}, and further developed for fourth-order kernel representation in \citep{RN83} and \citep{RN120} and will be produced here for completeness. We start by presenting the details of the different steps in Algorithm 3.1. 
 
-The steps 2-7 present the procedure in obtaining the disturbance estimates, $\hat{d_p}(t_k)$ and $\hat{d_\Theta}(t_k)$, at the time instant $t_k$, for the positional and rotational systems respectively. The input is the complete attitude between the time instants $t_k-\delta$ and $t_k$. This is represented by the vectors $[p_M(t_k-\delta) : p_{M}(t_k-\delta)]$ and $[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$. The variable $\zeta_M$ refers to the flat measured output from a system that is being observed, $\hat{\zeta}$ refers to the estimated output. ${\zeta}^{(2)}$ is the higher order derivative. The algorithm uses a sliding window approach to take input for the algorithm; this is explained in Section \ref{Sec:MovWin}. Step 3 of the algorithm is parameter estimation; the different approaches are explained in Section \ref{Sec:ParEst}. Steps 4-7 estimate the full state of the quadcopter and thereby observe the disturbances using methods explained in Section \ref{Sec:FullStateEst}.
+The steps 2-7 present the procedure in obtaining the disturbance estimates, $\hat{d_p}(t_k)$ and $\hat{d_\Theta}(t_k)$, at the time instant $t_k$, for the positional and rotational systems respectively. The input is the complete attitude between the time instants $t_k-\delta$ and $t_k$. This is represented by the vectors $[p_M(t_k-\delta) : p_{M}(t_k)]$ and $[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$. The variable $\zeta_M$ refers to the flat measured output from a system that is being observed, $\hat{\zeta}$ refers to the estimated output. ${\zeta}^{(2)}$ is the higher order derivative. The algorithm uses a sliding window approach to take input for the algorithm; this is explained in Section \ref{Sec:MovWin}. Step 3 of the algorithm is parameter estimation; the different approaches are explained in Section \ref{Sec:ParEst}. Steps 4-7 estimate the full state of the quadcopter and thereby observe the disturbances using methods explained in Section \ref{Sec:FullStateEst}.
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%% Algorithm %%%%%%%%%%%%%%%
@@ -776,7 +776,7 @@ The steps 2-7 present the procedure in obtaining the disturbance estimates, $\ha
 \parbox[c][][t]{\textwidth}{ 
 \begin{algorithm} [H] %add [H] for Here
 \SetAlgoLined
-\KwIn{$\mathbf{p_M}=[p_M(t_k-\delta) : p_{M}(t_k-\delta)]$, $\Theta_\mathbf{M}=[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$}
+\KwIn{$\mathbf{p_M}=[p_M(t_k-\delta) : p_{M}(t_k)]$, $\Theta_\mathbf{M}=[\Theta_M(t_k-\delta) : \Theta_M(t_k)]$}
 \KwOut{$\hat{d_p}(t_k)$, $\hat{d_\Theta}(t_k)$}
 %\KwResult{Write here the result }
 Set $\mathbf{w}_{1}^{0}= [1, 1, 1, 1]$, $k=1$ \\
@@ -825,7 +825,7 @@ In this section we present the methods available to find the parameters that of 
 \subsection{Dynamic Ridge Regression} \label{Sec:ridge}
 The double-sided kernel method adapts a local linear fourth-order model to a nonlinear system that generates the measured output between the points $(t_k-\delta)$ and $t_k$ such that the local linear model satisfies the equation \eqref{eqn:local}. The estimate at a point $t_k$ to this linearized fitting is given by equation \eqref{eqn:y_estimate} - \eqref{eqn:backward}. The forward and backward kernel computation requires knowledge of the parameters $a_0$, $a_1$, $a_2$ and $a_3$. In this subsection, we describe methods that can be used to find the parameters that optimally fits a local surrogate system in the window $[t_k-\delta,t_k]$ containing noisy output measurements. The method to obtain optimal parameters for double-sided kernels was first developed in \citep{RN118} for second-order systems while was further expanded to fourth-order systems in \citep{RN83}.
 
-The optimal parameters defined by the vector $\mathbf{w}:=\begin{bmatrix}a_1& a_2& a_3&a_4\end{bmatrix}^{\intercal}$ are obtained by dynamic ridge regression over a sliding window $[t_k-\delta,t_k]$ with $\delta>0$ where $\delta$ represents the length of the window with the number of samples being $\Delta$. The interval $[t_k-\delta,t_k]$ which coincides with $[a,b]$ of the corresponding continuous domain expressions, \eqref{eqn:y_estimate} - \eqref{eqn:backward}. This window is slid ahead by discrete quanta where and the parameter vector for the local surrogate model is given by $\hat{\mathbf{w}}_{\zeta_k}$. For smooth underlying nonlinear system dynamics it can be expected that the iteratively estimated parameters are somewhat smooth. It is proposed that the estimate for a window be computed by the formulation, 
+The optimal parameters defined by the vector $\mathbf{w}:=\begin{bmatrix}a_0& a_1& a_2&a_3\end{bmatrix}^{\intercal}$ are obtained by dynamic ridge regression over a sliding window $[t_k-\delta,t_k]$ with $\delta>0$ where $\delta$ represents the length of the window with the number of samples being $\Delta$. The interval $[t_k-\delta,t_k]$ which coincides with $[a,b]$ of the corresponding continuous domain expressions, \eqref{eqn:y_estimate} - \eqref{eqn:backward}. This window is slid ahead by discrete quanta where and the parameter vector for the local surrogate model is given by $\hat{\mathbf{w}}_{\zeta_k}$. For smooth underlying nonlinear system dynamics it can be expected that the iteratively estimated parameters are somewhat smooth. It is proposed that the estimate for a window be computed by the formulation, 
 \begin{equation}\label{eqn:paramdynamic}
 \hat{\mathbf{w}}_{\zeta_k}=\underset{\mathbf{w}_{\zeta_k}}{\text{argmin}} 	\big\{\gamma||\mathbf{w}_{\zeta_k}-\mathbf{\hat{w}}_{\zeta_{k-1}}||^{2}_{2} + \lambda||\mathbf{w}_{\zeta_k}||^{2}_{2} + ||\mathbf{\zeta}_M-\mathbf{\zeta}_{est}||^{2}_{2}\big\}
 \end{equation}
@@ -835,7 +835,7 @@ The initial estimate of for the optimization of $\mathbf{\hat{w}}_{k}$ denoted b
 % The penalty coefficients $\gamma$ and $\lambda$ are chosen 0.25 and 0.5. 
 
 \subsection{Practical identifiability and parameter estimation using double-sided kernel} \label{Sec:pseudo}
-In \citep{RN120}, the parameter estimation relied on optimization of the the error using ridge regression explained in Section \ref{Sec:ridge}. In this section, we develop closed-form deterministic expressions to bypass the ridge regression optimization, which has an indefinite convergence rate. Using this method to estimate the parameters allows us to use the KDO in real-time systems with time constraints on computation time. We start with understanding what \textit{practical linear identifiablilty} is and how it is related to algebraic parameter estimation.  
+In \citep{RN120}, the parameter estimation relied on optimization of the the error using ridge regression explained in Section \ref{Sec:ridge}. In this section, we develop closed-form deterministic expressions to bypass the ridge regression optimization, which has an indefinite convergence rate. Using this method to estimate the parameters allows us to use the KDO in real-time systems with time constraints on computation time. We start with understanding what \textit{practical linear identifiability} is and how it is related to algebraic parameter estimation.  
 
 %This part discusses algebraic parameter estimation employing \textit{repeated} integration of the system output. The parameter estimation is explained through an example of a general 2nd order system as shown in \textbf{reference: Fliess2004c}. But, before proceed to the development of the kernel, we must first understand \textit{linear identifiablilty}. This is an useful and important property for a model to estimate the parameters using a system of equations.
 \par A system is said to be \textit{linearly identifiable} if and only if \citep{fliess2003algebraic}, 
@@ -846,7 +846,7 @@ P\begin{bmatrix} \theta_1 \\ \vdots \\ \theta_r \end{bmatrix} = Q
 \end{equation}
 where
 \begin{itemize}
-\item $P$ and $Q$ are respectives $r \times r$ and $r \times 1$ matrices.
+\item $P$ and $Q$ are respectively $r \times r$ and $r \times 1$ matrices.
 \item the $\det(P)$ $\neq$ $0$. 
 \item the entries of $P$ and $Q$ belong to the span of the field generated by $y(t)$ and $u(t)$, where $y(t)$ is the output and $u(t)$ is the input to the system.
 \end{itemize}
@@ -1135,9 +1135,8 @@ As time progresses, the window is slid ahead and using $t_i=b$, or in other word
 \FloatBarrier
 
 \chapter{Simulation Testing of Observer Based Tracking Control} \label{Chap:ResultsSim}
-The three observers, KDO, NDO, and STO, are tested on quadcopter under similar conditions of external disturbances and the same control algorithms. This is tested in simulations and on a quadcopter. The simulation conditions with the results and the quadcopter setup with the results are presented in this section. 
+The three observers, KDO, NDO, and STO, are tested on quadcopter under similar conditions of external disturbances and the same control algorithms. This is tested in simulations and on a quadcopter. The simulation conditions with the results and the quadcopter setup with the results are presented in this chapter. 
 
-\section{Simulation Results} \label{section:SimulationResults}
 The the observer-based tracking algorithms presented in detail in Chapter \ref{Chap:Observers} are first validated in simulation, prior to testing them with actual quadcopter. This is done for a number of reasons: testing in simulation is vital to ensure the algorithms perform as expected especially considering that quadcopters are inherently unstable and a poor disturbance estimates can result in catastrophic failures. Another reason is, simulations give an idea of the computational complexity of the algorithms before implementing them on the embedded hardware that is subjected to computational time constraints. 
 
 The simulations were carried out in SIMULINK under four different kinds of disturbances, which were considered as a 'gust of wind.' To compare the effectiveness of the observers, disturbances of interest were chaotic in nature, while to compare the convergence rates of NDO and STO, disturbances which are constant and linear with respect to time were considered. 
@@ -1148,7 +1147,7 @@ The SIMULINK simulation used in this thesis builds upon the simulation environme
 	\parbox{0.95\textwidth}{\caption{Block diagram of different quadcopter components in simulation \label{Fig:block_simulation}}}
 \end{figure}
 
-Figure \ref{Fig:block_simulation} gives a general idea of how the different components of the quadcopter are linked in simulation. The four different disturbances are given by the equations, \eqref{eq:dist_1}, \eqref{eq:dist_2}, \eqref{eq:dist_3} and \eqref{eq:dist_4}; while the quadcopter dynamics are modeled on based on the equations \eqref{eq:quad_dynamics}. The KDO is modeled based on the equations described in \eqref{eq:KDO} and similarly the NDO is modeled based on equations \eqref{eqn:NDO1}-\eqref{eqn:NDO2} and STO are modeled based on equations, \eqref{eqn:STO1}-\eqref{eqn:STO6}. The attitude controller and position controller compute the signals based on the equations \eqref{eqn:posCon}-\eqref{eqn:attCon}. The desired trajectory are given by equations, \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. 
+Figure \ref{Fig:block_simulation} gives a general idea of how the different components of the quadcopter are linked in simulation. The four different disturbances are given by the equations, \eqref{eq:dist_1}, \eqref{eq:dist_2}, \eqref{eq:dist_3} and \eqref{eq:dist_4}; while the quadcopter dynamics are modeled on based on the equations \eqref{eq:quad_dynamics}. The KDO is modeled based on the equations described in Equations \eqref{eq:KDO} and \eqref{eqn:A1}-\eqref{eqn:A6} in Section \ref{Sec:App1} of Appendix. Similarly the NDO is modeled based on equations \eqref{eqn:NDO1}-\eqref{eqn:NDO2} and STO are modeled based on equations, \eqref{eqn:STO1}-\eqref{eqn:STO6}. The attitude controller and position controller compute the signals based on the equations \eqref{eqn:posCon}-\eqref{eqn:attCon}. The desired trajectory are given by equations, \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. 
 
 \begin{equation}\label{eqn:x_traj}
 x=
@@ -1183,7 +1182,7 @@ z=
 \end{cases}
 \end{equation}
 
-\subsection{Disturbance Model: Chaotic 1}
+\section{Disturbance Model: Chaotic 1}
 This section presents results of simulations carried under a chaotic system. The disturbances are of the form,
 \begin{equation}
 d_i = k.a_i(t)sin(\omega t-\phi_i)
@@ -1212,13 +1211,11 @@ where the constants $\sigma=10$, $\rho=28$, $\beta=\sfrac{8}{3}$, $k=0.0.1$, $\o
 \end{figure}
 
 
-For this set of chaotic disturbances, the estimation results are summarized in the table below. The convergence time is the time taken by NDO and STO to have an estimation error within the range of $\pm0.1$ when the observers are initialized with the initial observer state of 0.45 for each component. 
-
-
+For this set of chaotic disturbances, the estimation results are summarized in Table \ref{Table:SimChaoticRes1}. The convergence time is the time taken by NDO and STO to have an estimation error within the range of $\pm0.1$ when the observers are initialized with the initial observer state of 0.45 for each component. 
 
 \begin{table}[!htbp]
 \centering
-\caption{Chaotic System 1}
+\caption{Chaotic System 1 \label{Table:SimChaoticRes1}}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
 {}  &  \multicolumn{2}{c|}{\textbf{NDO}} & \multicolumn{2}{c|}{\textbf{STO}} & \multicolumn{2}{c|}{\textbf{KDO}}\\
@@ -1235,14 +1232,7 @@ $d_\psi$  &  20.47 & 0.260   & 0.951  & 0.091 & NA     & $1.955*10^{-4}$\\
 \end{tabular}
 \end{table}
 
-
-
-
-
-
-
-
-The cases where the observers estimate the disturbances with the worst performance, is presented below:
+The cases where the observers estimate the disturbances with the worst performance, is given in Figures \ref{dis_m1_est_yaw_ndo} - \ref{dis_m1_est_yaw_kdo}.
 
 \begin{figure}[H]
 \centering
@@ -1262,7 +1252,7 @@ The cases where the observers estimate the disturbances with the worst performan
 \\ \parbox{0.75\textwidth}{\caption{Chaotic Disturbances estimation of yaw component using KDO}\label{dis_m1_est_yaw_kdo}}
 \end{figure}
 
-It is also observed that among the two chaotic disturbances, the attitude and position tracking performance is worse in this case. The tracking performance is presented below: 
+It is also observed that among the two chaotic disturbances, the attitude and position tracking performance is worse in this case. The tracking performance is presented in Figures \ref{x_trac_dis_m1_ndo} - \ref{yaw_trac_dis_m1_kdo}: 
 
 \begin{figure}[H]
 \centering
@@ -1384,7 +1374,8 @@ It is also observed that among the two chaotic disturbances, the attitude and po
 \label{yaw_trac_dis_m1_kdo}}
 \end{figure}
 
-\subsection{Disturbance Model: Chaotic 2}
+\FloatBarrier
+\section{Disturbance Model: Chaotic 2}
 This section presents results of simulations carried under a chaotic system. The disturbances are again of the form,
 \begin{equation}
 d_i = k.a_i(t)sin(\omega t-\phi_i)
@@ -1412,11 +1403,11 @@ where the constants $\sigma=10$, $\rho=28$, $\beta=\sfrac{8}{3}$, $k=0.0.1$, $\o
 \\ \parbox{0.75\textwidth}{\caption{Chaotic Disturbances 2 in Attitude Subsystem} \label{dis_m2_att}}
 \end{figure}
 
-For this set of chaotic disturbances, the estimation results are summarized in the table below. The convergence time is the time taken by NDO and STO to have an estimation error within the range $\pm0.1$ when the observers are initialized with the initial observer state of 0.45. 
+For this set of chaotic disturbances, the estimation results are summarized in Table \ref{Table:SimChaoticRes2}. The convergence time is the time taken by NDO and STO to have an estimation error within the range $\pm0.1$ when the observers are initialized with the initial observer state of 0.45. 
 
 \begin{table}[!htbp]
 \centering
-\caption{Chaotic System 2}
+\caption{Chaotic System 2 \label{Table:SimChaoticRes2}}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
 {}  &  \multicolumn{2}{c|}{\textbf{NDO}} & \multicolumn{2}{c|}{\textbf{STO}} & \multicolumn{2}{c|}{\textbf{KDO}}\\
@@ -1433,7 +1424,7 @@ $d_\psi$  &  12.34& 0.396   & 2.157  & 0.086 & NA     & $4.893*10^{-4}$\\
 \end{tabular}
 \end{table}
 
-The cases where the observers estimate the disturbances with the worst performance, is presented below:
+The cases where the observers estimate the disturbances with the worst performance, is presented in Figures \ref{dis_m2_est_y_ndo} - \ref{dis_m2_est_y_kdo}.
 
 \begin{figure}[H]
 \centering
@@ -1452,7 +1443,7 @@ The cases where the observers estimate the disturbances with the worst performan
 \fbox{\includegraphics[width=3.5in,height=2in]{Figures/results/chaotic_2_estimates/dis_m2_est_y_kdo.eps}}
 \\ \parbox{0.75\textwidth}{\caption{Chaotic Disturbances estimation of $y$ component using KDO} \label{dis_m2_est_y_kdo}}
 \end{figure}
-
+\FloatBarrier
 \subsection{Disturbance Model: Linear}
 The same quadcopter system was also simulated with disturbances that increased or decreased with time. The disturbances were of the form, 
 \begin{equation}
@@ -1460,10 +1451,10 @@ d_i = k_i.t
 \label{eq:dist_3}
 \end{equation}
 where the vector $k=[1,-3,2,1.5,2.5,-2.5]*10^{-3}$. 
-For the set of linear disturbances the estimation results are summarized in the table below. The convergence time is the time taken by NDO and STO to have an estimation error within the range $\pm0.1$ when the observers are initialized with the initial observer state of 0.45 for each component. The KDO does not have a convergence time since it is a deadbeat observer unlike NDO and STO which are asymptotic.
+For the set of linear disturbances the estimation results are summarized in Table \ref{Table:SimLinRes}. The convergence time is the time taken by NDO and STO to have an estimation error within the range $\pm0.1$ when the observers are initialized with the initial observer state of 0.45 for each component. The KDO does not have a convergence time since it is a deadbeat observer unlike NDO and STO which are asymptotic.
 \begin{table}[!htbp]
 \centering
-\caption{Linear Disturbances}
+\caption{Linear Disturbances \label{Table:SimLinRes}}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
 {}  &  \multicolumn{2}{c|}{\textbf{NDO}} & \multicolumn{2}{c|}{\textbf{STO}} & \multicolumn{2}{c|}{\textbf{KDO}}\\
@@ -1479,17 +1470,18 @@ $d_\psi$  &  41.543 & 0.052   & 2.487  & 0.0005 & NA     & $2.504*10^{-6}$\\
 \end{tabular}
 \end{table}
 
-\subsection{Disturbance Model: Constant}
+\FloatBarrier
+\section{Disturbance Model: Constant}
 Similar to the case of applying linear disturbances, linear disturbances were applied to the same quadcopter system where the disturbances remained constant with time. The disturbances were of the form, 
 \begin{equation}
 d_i = c_i
 \label{eq:dist_4}
 \end{equation}
 where the vector $c=[0.1,0.3,-0.2,-0.05,-0.25,0.15]$. 
-For the set of constant disturbances the estimation results are summarized in the table below. The convergence time is the time taken by NDO and STO to have an estimation error within the range $\pm0.1$ when the observers are initialized with the initial observer state of 0.45 for each component.
+For the set of constant disturbances the estimation results are summarized in Table \ref{Table:SimConsRes}. The convergence time is the time taken by NDO and STO to have an estimation error within the range $\pm0.1$ when the observers are initialized with the initial observer state of 0.45 for each component.
 \begin{table}[!htbp]
 \centering
-\caption{Constant Disturbances}
+\caption{Constant Disturbances \label{Table:SimConsRes}}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
 {}  &  \multicolumn{2}{c|}{\textbf{NDO}} & \multicolumn{2}{c|}{\textbf{STO}} & \multicolumn{2}{c|}{\textbf{KDO}}\\
@@ -1570,7 +1562,7 @@ The estimation algorithm was developed and implemented by a former Graduate stud
 \section{Computational Implementation}
 \textbf{Vectorization:} Vectorization refers to Single Instruction Multiple Data operations on several operands in parallel. Most hardware is capable of performing multiple ALU operations simultaneously on data, and instead of running the same operation iteratively using for loops, we can vectorize the operations in terms of matrix computations. Several libraries have optimized code for performing matrix computations and thus, vectorizing code is not only shorter but runs much faster than corresponding loops. In this thesis, we use the GNU Scientific Library (GSL), which provides a stable API for scientific computing which is used for vectorization.
 \begin{table}
-\parbox{0.65\textwidth}{\caption{Time reductions using vectorization in differenct programming environments}\label{Tab:vect}}
+\parbox{0.65\textwidth}{\caption{Time reductions using vectorization in different programming environments}\label{Tab:vect}}
 \begin{tabular}{|c|c|c|c|}
 \hline
          & \multicolumn{3}{c|}{\textbf{Programming Language}}\\\cline{2-4} 
@@ -1592,7 +1584,7 @@ The purpose of representing kernel equations in the form \eqref{eqn:kernVec1} an
 The double sided kernel method was introduced in \citep{RN76} where the expression for estimate value at a particular instant $t_k$, denoted by $\hat{\zeta}(t_k)$ from the measured value $\zeta_M(t)$ is given by the Equation (\ref{y_E}). 
 
 \begin{equation}\label{y_E}
-\hat{\zeta}(t_k) = \int\limits_{a}^{b}K_{DS}(t,\tau) y_M(\tau)\, \mathrm{d}\tau
+\hat{\zeta}(t_k) = \int\limits_{a}^{b}K_{DS}(t_k,\tau) \zeta_M(\tau)\, \mathrm{d}\tau
 \end{equation}
 \begin{equation}
 K_{DS}(t_k,\tau) \triangleq \left\{
@@ -1700,7 +1692,7 @@ The above method can be applied to the Backward Kernel and result in a Double-Si
 \section{Experimental Validation without Disturbances}
 The three algorithms were first tested on the quadcopter without any external disturbances. The results for each algorithm are presented in different subsections. The controller gains were tuned by trial and error. The controller gains presented in \citep{RN117} were used as a starting point for tuning. The gains were adjusted in either increments or decrements of 0.1. The gains obtained are presented in individual subsections. 
 \subsection{Non-Linear Disturbance Observer Results}
-The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. Similar to the finding in simulations, the performance of NDO was found to be susceptible to improper tuning of the observer gains. After several iterations the values of gains that gave the best tracking in terms of error and overshoot is presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. The figures subsequent to the tables show the real flight tracking of the referenct trajectory variables, which are the position($x$, $y$, $z$) and yaw ($\psi$). 
+The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. Similar to the finding in simulations, the performance of NDO was found to be susceptible to improper tuning of the observer gains. After several iterations the values of gains that gave the best tracking in terms of error and overshoot is presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. The figures \ref{Fig:xyztracNDO} - \ref{Fig:3dNDO} show the real flight tracking of the reference trajectory variables, which are the position($x$, $y$, $z$) and yaw ($\psi$). 
 \begin{table}
 \parbox{0.65\textwidth}{\caption{Observer gains for NDO}\label{Tab:realNDOGains}}
 \begin{tabular}{|c|c|c|c|}
@@ -1747,7 +1739,7 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 	\parbox{0.85\textwidth}{\caption{Real flight yaw tracking using NDO based controller\label{Fig:yawtracNDO}}}
 \end{figure}
 The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. Due to problems with the battery life, the complete trajectory could not be tracked. Although it should be noted that the part of the trajectory that could not be tracked does not change values and similar results can be expected for the subsequent duration of the flight. \\
-The observer was initialized with the initial state of the observer as, $z_p(0)=[2,2,2]$ and $z_\Theta(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
+The observer was initialized with the initial state of the observer as, $z_p(0)=[2,2,2]$ and $z_\Theta(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in Section \ref{Sec:PracSumm}.
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/results/practical/res1/view.png}}
@@ -1816,7 +1808,7 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 \begin{figure}[H]
 	\includegraphics[width=0.5\textwidth]{Figures/blank.png}
 \end{figure}
-The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
+The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in Section \ref{Sec:PracSumm}.
 
 \FloatBarrier
 \subsection{Kernel Disturbance Observer}
@@ -1836,7 +1828,7 @@ $k_{zz}$   & 0.116       & $k_{\psi\psi}$     & 10.961       \\ \hline
 \end{tabular}
 \end{table}
 
-Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. However, the KDO has certain parameters that were kept constant such as the window length and latency in estimation. The window length was of 51 samples, and the latency in estimation was 0s, i.e. the full state was estimated at the time of the latest sample of position and angles. The practical implementation used real-time parameter estimation from kernel expressions by optimizing the least square errors, as shown in Section \ref{Sec:pseudo}. The KDO does not need initial conditions since it is a dead-beat observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in the next subsection.
+Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. However, the KDO has certain parameters that were kept constant such as the window length and latency in estimation. The window length was of 51 samples, and the latency in estimation was 0s, i.e. the full state was estimated at the time of the latest sample of position and angles. The practical implementation used real-time parameter estimation from kernel expressions by optimizing the least square errors, as shown in Section \ref{Sec:pseudo}. The KDO does not need initial conditions since it is a dead-beat observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in Section \ref{Sec:PracSumm}.
 
 \begin{figure}[H]
 	\centering
@@ -1877,7 +1869,7 @@ The three algorithms were tested on the quadcopter under external disturbances f
 	\parbox{0.75\textwidth}{\caption{{Quadcopter with the applied disturbances \label{Fig:dryer}}}}
 \end{figure}
 \subsection{Non-Linear Disturbance Observer Results}
-The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. The control gains were same ones that were used without external disturbances  presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. The figures sbelow show the real flight tracking of the reference trajectory variables, which are the position($x$, $y$, $z$) and yaw ($\psi$). 
+The Non-Linear Disturbance Observer described in Section \ref{Sec:NDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. The control gains were same ones that were used without external disturbances  presented in Tables \ref{Tab:realNDOGains} and \ref{Tab:realControllerGains}. Figures \ref{Fig:xyztracNDODist} - \ref{Fig:3dNDODist} show the real flight tracking of the reference trajectory variables, which are the position($x$, $y$, $z$) and yaw ($\psi$). 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res1/xyztrac.png}}
@@ -1931,7 +1923,7 @@ The Super-Twisting Observer described in Section \ref{Sec:STO} is implemented on
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/yaw.png}}
 	\parbox{0.75\textwidth}{\caption{Real flight tracking of yaw using STO based controller under external disturbances\label{Fig:yawtracSTODist}}}
 \end{figure}
-The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in a later subsection.
+The roll and pitch angles are not considered since those values are dynamically dependent on the desired reference trajectory and are not tracked. In this experiment, we are able to run the quadcopter for the entire duration of the intended flight time. The observer was initialized with the initial state of the observer as, $\hat{p}(0)=[2,2,2]$ and $\hat{\Theta}(0)=[4,4,4]$. This incorrect state of the observer was set similar to the simulations to test the real asymptotic nature of the observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in Section \ref{Sec:PracSumm}.
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.75\textwidth]{Figures/dist_pract/res2/view.png}}
@@ -1945,7 +1937,7 @@ The roll and pitch angles are not considered since those values are dynamically 
 \subsection{Kernel Disturbance Observer}
 The Kernel Disturbance Observer described in Chapter \ref{Chap:KDO} is implemented on the quadcopter in conjugation with the backstepping and sliding mode controller to track the reference trajectory $[x,y,z,\psi]$ described in \eqref{eqn:x_traj} - \eqref{eqn:z_traj}. The KDO controller combination gives similar performance results for a variety of controller gains. The controller gains were the same ones that were used in the case of testing without external disturbances presented in Table  \ref{Tab:realControllerGainsKDO}.
 
-Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. However, the KDO has certain parameters that were kept constant such as the window length and latency in estimation. The window length was of 51 samples, and the latency in estimation was 0s, i.e. the full state was estimated at the time of the latest sample of position and angles. The practical implementation used real-time parameter estimation from kernel expressions by optimizing the least square errors, as shown in Section \ref{Sec:pseudo}. The KDO does not need initial conditions since it is a dead-beat observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in the next subsection.
+Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. However, the KDO has certain parameters that were kept constant such as the window length and latency in estimation. The window length was of 51 samples, and the latency in estimation was 0s, i.e. the full state was estimated at the time of the latest sample of position and angles. The practical implementation used real-time parameter estimation from kernel expressions by optimizing the least square errors, as shown in Section \ref{Sec:pseudo}. The KDO does not need initial conditions since it is a dead-beat observer. The root-mean-square of the error in tracking is mentioned along with the RMSE of other observers in Section \ref{Sec:PracSumm}.
 
 \begin{figure}[H]
 	\centering
@@ -1979,7 +1971,7 @@ Unlike NDO and STO, the KDO does not have observer gains or tuning parameters. H
 \FloatBarrier
 
 
-\section{Summary}
+\section{Summary} \label{Sec:PracSumm}
 From the experimental results shown above, it can be seen that the quadcopter is able to track the reference trajectory provided , even in the case of  "external disturbances" experienced in the form of "gusts of wind". The root-mean-square error given by \eqref{eqn:rmse} for the three observers in each of the components of the reference trajectory is tabulated in Table \ref{Tab:rmse} for the case without external disturbances and in Table \ref{Tab:rmseDist} with external disturbances. 
 
 \begin{align}\label{eqn:rmse}
